@@ -1,0 +1,41 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix midi:    <http://lv2plug.in/ns/ext/midi#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix doap:    <http://usefulinc.com/ns/doap#> .
+@prefix work:    <http://lv2plug.in/ns/ext/worker#> .
+
+<sorcerBasicBass.ttl>
+	a pset:Preset ;
+	rdfs:label "BasicBass" ;
+	rdfs:seeAlso <sorcerBasicBass.ttl> ;
+	lv2:appliesTo <http://www.openavproductions.com/sorcer> .
+
+<sorcerBasicBip.ttl>
+	a pset:Preset ;
+	rdfs:label "BasicBasicBip" ;
+	rdfs:seeAlso <sorcerBasicBip.ttl> ;
+	lv2:appliesTo <http://www.openavproductions.com/sorcer> .
+
+<sorcerBasicOrgan.ttl>
+	a pset:Preset ;
+	rdfs:label "BasicOrgan" ;
+	rdfs:seeAlso <sorcerBasicOrgan.ttl> ;
+	lv2:appliesTo <http://www.openavproductions.com/sorcer> .
+
+<sorcerBasicWobble.ttl>
+	a pset:Preset ;
+	rdfs:label "BasicWobble" ;
+	rdfs:seeAlso <sorcerBasicWobble.ttl> ;
+	lv2:appliesTo <http://www.openavproductions.com/sorcer> .
+
+<sorcerChords.ttl>
+	a pset:Preset ;
+	rdfs:label "BasicChords" ;
+	rdfs:seeAlso <sorcerChords.ttl> ;
+	lv2:appliesTo <http://www.openavproductions.com/sorcer> .
