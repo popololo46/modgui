@@ -1,0 +1,412 @@
+/* STYLES FOR THE BOXY PEDAL */
+
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/questrial/stylesheet.css);
+
+
+/* = CONTAINER
+================================================ */
+.mod-amsynth{{{cns}}} {
+	background-image:url(/resources/utils/bg.png{{{ns}}});
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:700px 726px;
+    height:726px;
+    position:absolute;
+    width:700px;
+    border-radius: 21px;
+}
+
+
+/* PORTS
+================================================ */
+.mod-amsynth{{{cns}}} .mod-pedal-input,
+.mod-amsynth{{{cns}}} .mod-pedal-output {
+    top: 66px;
+}
+
+
+/* = PLUGIN'S AUTHOR
+================================================ */
+.mod-amsynth{{{cns}}} .mod-plugin-brand {
+    left:78px;
+    position:absolute;
+    text-transform:uppercase;
+    bottom:10px;
+    display:inline-block;
+    font-family:"Nexa";
+    font-size:20px;
+    padding:3px;
+	color:white;
+}
+
+
+/* = FOOTSWITCH
+================================================ */
+.mod-amsynth{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/utils/switch-led.png{{{ns}}});
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:auto 146px;
+    bottom: 80px;
+    left: 45px;
+    cursor:pointer;
+    height:73px;
+    width: 30px;
+    margin: auto;
+    position:absolute !important;
+}
+.mod-amsynth{{{cns}}} .mod-footswitch.on {
+    background-position-y: bottom !important
+}
+
+
+/* = KNOBS
+================================================ */
+.mod-amsynth{{{cns}}} .mod-knob {
+    background-image: url(/resources/knobs/light-knob.png{{{ns}}});
+	background-repeat:no-repeat;
+    background-size:auto 65px;
+    height: 65px;
+    position: absolute;
+    width: 65px;
+    z-index: 48;
+	cursor:pointer;
+}
+
+.mod-amsynth{{{cns}}} .mod-knob > span.mod-knob-title {
+    display:block;
+	color:#fff;
+    font-size:15px;
+    line-height:1;
+    overflow:hidden;
+    position:relative;
+	text-align:center;
+    text-transform:uppercase;
+	top:70px;
+}
+
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-mastervol {
+    left: 38px;
+	top: 33px;
+	background-size:auto 75px;
+    height: 75px;
+    width: 75px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-mastervol > span.mod-knob-title {
+	top:80px;
+}
+
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-drive {
+    left: 152px;
+	top: 38px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-oscmix {
+    left: 372px;
+	top: 38px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-osc2range {
+    left: 592px;
+	top: 38px;
+}
+
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-osc1pulse {
+    left: 262px;
+	top: 138px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-oscring {
+    left: 372px;
+	top: 138px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-osc2pulse {
+    left: 482px;
+	top: 138px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-osc2pitch {
+    left: 592px;
+	top: 138px;
+}
+
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-filcutoff {
+    left: 42px;
+	top: 275px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-filkeytrack {
+    left: 152px;
+	top: 275px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-filenvamount {
+    left: 262px;
+	top: 275px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-freqmodamount {
+    left: 482px;
+	top: 275px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-osc2detune {
+    left: 592px;
+	top: 250px;
+}
+
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-filresonance {
+    left: 42px;
+	top: 385px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-lfofreq {
+    left: 372px;
+	top: 385px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-ampveloc {
+    left: 482px;
+	top: 385px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-ampmodamount {
+    left: 592px;
+	top: 385px;
+}
+
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-filveloc {
+    left: 482px;
+	top: 495px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-filmodamount {
+    left: 592px;
+	top: 495px;
+}
+
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-revwet {
+    left: 267px;
+	top: 525px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-revsize {
+    left: 367px;
+	top: 525px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-revwidth {
+    left: 267px;
+	top: 620px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-revdamp {
+    left: 367px;
+	top: 620px;
+}
+.mod-amsynth{{{cns}}} .mod-knob.mod-knob-portatime {
+    left: 482px;
+	top: 628px;
+}
+
+
+/* SLIDER
+================================================ */
+.mod-amsynth{{{cns}}} .mod-slider:first-child {
+    margin-left:2px;
+}
+
+.mod-amsynth{{{cns}}} .mod-slider {
+	background-image:url(/resources/knobs/light-slider.png{{{ns}}});
+    background-repeat:no-repeat;
+	background-size:auto 80px;
+    height:100px;
+	width:25px;
+    overflow:hidden;
+    position:absolute;
+	
+	z-index: 40;
+	cursor:pointer;
+}
+
+.mod-amsynth{{{cns}}} .mod-slider > span.mod-slider-title {
+    display:block;
+	color:#fff;
+    font-size:13px;
+    font-weight:bold;
+    line-height:1;
+    margin-bottom:3px;
+    overflow:hidden;
+    position:relative;
+	text-align:center;
+	top:84px;
+}
+
+.mod-amsynth{{{cns}}} .mod-slider.mod-slider-ampatt {
+    left: 30px;
+	top: 140px;
+}
+.mod-amsynth{{{cns}}} .mod-slider.mod-slider-ampdec {
+    left: 85px;
+	top: 140px;
+}
+.mod-amsynth{{{cns}}} .mod-slider.mod-slider-ampsus {
+    left: 140px;
+	top: 140px;
+}
+.mod-amsynth{{{cns}}} .mod-slider.mod-slider-amprel {
+    left: 195px;
+	top: 140px;
+}
+
+.mod-amsynth{{{cns}}} .mod-slider.mod-slider-filatt {
+    left: 145px;
+	top: 380px;
+}
+.mod-amsynth{{{cns}}} .mod-slider.mod-slider-fildec {
+    left: 195px;
+	top: 380px;
+}
+.mod-amsynth{{{cns}}} .mod-slider.mod-slider-filsus {
+    left: 245px;
+	top: 380px;
+}
+.mod-amsynth{{{cns}}} .mod-slider.mod-slider-filrel {
+    left: 298px;
+	top: 380px;
+}
+
+
+.mod-amsynth{{{cns}}} .mod-slider:first-child {
+    margin-left:2px;
+}
+
+
+/* = SWITCH
+================================================ */
+.mod-amsynth{{{cns}}} .mod-switch {
+    background-image:url(/resources/utils/switch.png{{{ns}}});
+    background-position:left center;
+    background-repeat:no-repeat;
+    background-size:auto 21px;
+	position:absolute !important;
+	height:21px;
+    width: 75px;
+    cursor:pointer;
+	z-index: 40;
+}
+.mod-amsynth{{{cns}}} .mod-switch.on {
+    background-position:right center;
+}
+.mod-amsynth{{{cns}}} .mod-switch > span.mod-switch-title {
+	display: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    text-align: center;
+    top: 1px;
+    left: 0px;
+    right: 0px;
+}
+.mod-amsynth{{{cns}}} .mod-switch.mod-switch-osc2sync {
+    left: 580px;
+	top: 11px;
+}
+
+
+/* = ENUMERATED LIST
+================================================ */
+.mod-amsynth{{{cns}}} .mod-enumerated {
+	background-image:url(/resources/utils/dropdown-white.png{{{ns}}});
+	background-position:right center;
+    background-repeat:no-repeat;
+	background-color:#262525;
+    position: absolute;
+	width: 89px;
+	height: 89px;
+    color: #ccc;
+    cursor: pointer;
+	text-align: center;
+    font-size: 17px;
+	font-weight: bold;
+	text-transform:uppercase;
+	z-index: 49;
+}
+
+.mod-amsynth{{{cns}}} .mod-enumerated .mod-enumerated-list {
+	bottom:25px;
+    background-color:#262525;
+    display: none;
+    width: 300px;
+	text-align: left;
+    font-size: 22px;
+	text-transform:uppercase;
+	z-index: 55;
+}
+.mod-amsynth{{{cns}}} .mod-enumerated .mod-enumerated-list > div.selected {
+    background-color:#393939;
+}
+
+.mod-amsynth{{{cns}}} .mod-enumerated.mod-osc1waveform {
+    left: 250px;
+    top: 35px;
+	z-index: 53;
+}
+
+.mod-amsynth{{{cns}}} .mod-enumerated.mod-osc2waveform {
+    left: 470px;
+    top: 35px;
+}
+
+.mod-amsynth{{{cns}}} .mod-enumerated.mod-lfowaveform {
+    left: 360px;
+    top: 275px;
+	z-index: 50;
+}
+
+.mod-amsynth{{{cns}}} .mod-enumerated.mod-kbdmode {
+    left: 582px;
+    width: 85px;
+	height: 22px;
+    top: 690px;
+}
+.mod-amsynth{{{cns}}} .mod-enumerated.mod-portamode {
+    left: 582px;
+    width: 85px;
+	height: 22px;
+    top: 625px;
+}
+.mod-amsynth{{{cns}}} .mod-enumerated.mod-filtype {
+    left: 142px;
+    width: 95px;
+	height: 22px;
+    top: 249px;
+	z-index: 52;
+}
+.mod-amsynth{{{cns}}} .mod-enumerated.mod-filslope {
+    left: 245px;
+    width: 85px;
+	height: 22px;
+    top: 249px;
+	z-index: 51;
+}
+.mod-amsynth{{{cns}}} .mod-enumerated.mod-freqmodosc {
+    left: 472px;
+    width: 85px;
+    height: 22px;
+    top: 345px;
+	z-index: 49;
+}
+
+
+/* = PRESET LIST
+================================================ */
+.mod-amsynth{{{cns}}} .mod-presets {
+	position: absolute;
+    top: 500px;
+	left: 28px;
+    z-index: 22;
+    font-size: 20px;
+}
+.mod-amsynth{{{cns}}} .mod-presets > select {
+    background-color: #3B3939;
+    width: 200px;
+	height: 30px;
+    cursor: pointer;
+	border: solid 2px #3B3939;
+	font-size: 16px;
+	color:#ccc;
+}
+.mod-amsynth{{{cns}}} .mod-presets > select > option {
+	font-size: 20px;
+	font-weight: bold;
+	color:#ccc;
+}
+
