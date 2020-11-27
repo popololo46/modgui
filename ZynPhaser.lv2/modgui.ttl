@@ -1,0 +1,58 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://zynaddsubfx.sourceforge.net/fx#Phaser>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-zynphaser.html> ;
+        modgui:stylesheet <modgui/stylesheet-zynphaser.css> ;
+        modgui:screenshot <modgui/screenshot-zynphaser.png> ;
+        modgui:thumbnail <modgui/thumbnail-zynphaser.png> ;
+        modgui:brand "ZynFusion" ;
+        modgui:label "ZynPhaser" ;
+        modgui:model "boxy" ;
+        modgui:panel "10-sliders" ;
+        modgui:color "purple" ;
+        modgui:knob "purple" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "lfofreq" ;
+            lv2:name "LFO Frequency" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "lforand" ;
+            lv2:name "LFO Randomness" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "lfotype" ;
+            lv2:name "LFO Type" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "lfostereo" ;
+            lv2:name "LFO Stereo" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "depth" ;
+            lv2:name "LFO Depth" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "fb" ;
+            lv2:name "Feed Back" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "stages" ;
+            lv2:name "Stages" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "lrcross" ;
+            lv2:name "L/R Cross" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "phase" ;
+            lv2:name "Phase Width" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "dist" ;
+            lv2:name "Distor -tion" ;
+        ] ;
+    ] .

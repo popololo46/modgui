@@ -1,0 +1,62 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://zynaddsubfx.sourceforge.net/fx#Reverb>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-zynreverb.html> ;
+        modgui:stylesheet <modgui/stylesheet-zynreverb.css> ;
+        modgui:screenshot <modgui/screenshot-zynreverb.png> ;
+        modgui:thumbnail <modgui/thumbnail-zynreverb.png> ;
+        modgui:brand "ZynFusion" ;
+        modgui:label "ZynReverb" ;
+        modgui:model "boxy" ;
+        modgui:panel "12-sliders" ;
+        modgui:color "purple" ;
+        modgui:knob "purple" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "time" ;
+            lv2:name "Time" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "delay" ;
+            lv2:name "Delay" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "fb" ;
+            lv2:name "Feed Back" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "unused_bw" ;
+            lv2:name "BW" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "unused_er" ;
+            lv2:name "E/R" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "lpf" ;
+            lv2:name "Low-Pass" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "hpf" ;
+            lv2:name "High-Pass" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "damp" ;
+            lv2:name "Damp" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "type" ;
+            lv2:name "Type" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "size" ;
+            lv2:name "Room size" ;
+        ] , [
+            lv2:index 10 ;
+            lv2:symbol "bw" ;
+            lv2:name "Band-width" ;
+        ] ;
+    ] .
