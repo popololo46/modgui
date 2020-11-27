@@ -1,0 +1,338 @@
+/* STYLES FOR THE BOXY PEDAL */
+
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/questrial/stylesheet.css);
+
+
+/* = CONTAINER
+================================================ */
+.mod-sorcer{{{cns}}} {
+	background-image:url(/resources/pedals/bg.png{{{ns}}});
+    background-repeat:no-repeat;
+    background-size:1580px 310px;
+	position:absolute;
+    height:310px;
+    width:1580px;
+    border-radius: 21px;
+}
+
+
+/* PORTS
+================================================ */
+
+.mod-sorcer{{{cns}}} .mod-pedal-input,
+.mod-sorcer{{{cns}}} .mod-pedal-output {
+    top: 150px;
+}
+
+/* = PLUGIN'S AUTHOR
+================================================ */
+.mod-sorcer{{{cns}}} .mod-plugin-brand {
+    position:absolute;
+    text-align:right;
+    text-transform:uppercase;
+    top:290px;
+	left:10px;
+}
+
+.mod-sorcer{{{cns}}} .mod-plugin-brand h1 {
+    border-color:#fff;
+    border-radius:12px;
+    border-style:solid;
+    border-width:4px;
+    display:inline-block;
+    font-family:"Nexa";
+	text-transform:uppercase;
+    font-size:35px;
+	padding: 3px;
+}
+
+
+/* = PLUGIN'S NAME
+================================================ */
+.mod-sorcer{{{cns}}} .mod-plugin-name {
+    position:absolute;
+    text-align:right;
+	text-transform:uppercase;
+    top:300px;
+	right:10px;
+}
+
+.mod-sorcer{{{cns}}} .mod-plugin-name h1 {
+    font-family:"Nexa";
+	text-transform:uppercase;
+    font-size:35px;
+    line-height:1;
+}
+
+/* = SLIDER
+================================================ */
+.mod-sorcer{{{cns}}} .mod-slider:first-child {
+    margin-left:2px;
+}
+
+.mod-sorcer{{{cns}}} .mod-slider {
+	background-image:url(/resources/knobs/slider.png{{{ns}}});
+    background-repeat:no-repeat;
+    background-size:auto 200px;
+    height:200px;
+    overflow:hidden;
+    position:absolute;
+	width:80px;
+	z-index: 40;
+	cursor:pointer;
+}
+
+
+.mod-sorcer{{{cns}}} .mod-slider > span.mod-slider-title {
+    display:block;
+	color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    line-height:1;
+    margin-bottom:3px;
+    overflow:hidden;
+    position:relative;
+	text-align:center;
+	top:0px;
+}
+
+
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-attack {
+    left: 60px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-decay {
+    left: 130px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-sustain {
+    left: 200px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-release {
+    left: 270px;
+	bottom: 25px;
+}
+
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-lfo1_wavetable1pos {
+    left: 840px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-lfo1_wavetable2pos {
+    left: 910px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-lfo1amp {
+    left: 980px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-lfo1freq {
+    left: 1050px;
+	bottom: 25px;
+}
+
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-osc1vol {
+    left: 1160px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-osc2vol {
+    left: 1230px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-osc3vol {
+    left: 1300px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-wavetable1pos {
+    left: 1370px;
+	bottom: 25px;
+}
+.mod-sorcer{{{cns}}} .mod-slider.mod-slider-wavetable2pos {
+    left: 1440px;
+	bottom: 25px;
+}
+
+
+/* = KNOBS
+================================================ */
+
+.mod-sorcer{{{cns}}} .mod-knob {
+    background-image: url(/resources/knobs/aluminium.png{{{ns}}});
+	background-repeat:no-repeat;
+    background-size:auto 98px;
+    height: 98px;
+    position: absolute;
+    width: 98px;
+    z-index: 40;
+}
+
+.mod-sorcer{{{cns}}} .mod-knob > span.mod-knob-title {
+    display:block;
+	color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    line-height:1;
+    overflow:hidden;
+    position:relative;
+	text-align:center;
+    text-transform:uppercase;
+	top:-10px;
+}
+
+.mod-sorcer{{{cns}}} .mod-knob.mod-knob-compAttack {
+    left: 385px;
+	top: 35px;
+}
+
+.mod-sorcer{{{cns}}} .mod-knob.mod-knob-compMakeup {
+    left: 495px;
+	top: 35px;
+}
+
+.mod-sorcer{{{cns}}} .mod-knob.mod-knob-compRelease {
+    left: 605px;
+	top: 35px;
+}
+
+.mod-sorcer{{{cns}}} .mod-knob.mod-knob-compThreshold {
+    left: 715px;
+	top: 35px;
+}
+
+.mod-sorcer{{{cns}}} .mod-knob.mod-knob-filter1cutoff {
+    left: 495px;
+	bottom: 25px;
+}
+
+.mod-sorcer{{{cns}}} .mod-knob.mod-knob-filter1lfo1range {
+    left: 605px;
+	bottom: 25px;
+}
+
+.mod-sorcer{{{cns}}} .mod-knob.mod-knob-nvoices {
+    left: 715px;
+	bottom: 25px;
+}
+
+/* = TEXTE
+================================================ */
+.mod-sorcer{{{cns}}} .mod-knob-comp-title {
+	display:block;
+	color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    line-height:1;
+    overflow:hidden;
+    position:relative;
+    text-transform:uppercase;
+	left: 530px;
+	top: 0px;
+}
+
+.mod-sorcer{{{cns}}} .mod-knob-filter-title {
+	display:block;
+	color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    line-height:1;
+    overflow:hidden;
+    position:relative;
+    text-transform:uppercase;
+	left:570px;
+	top:125px;
+}
+
+.mod-sorcer{{{cns}}} .mod-slider-lfo-title {
+	display:block;
+	color:#fff;
+    font-size:30px;
+    font-weight:bold;
+    overflow:hidden;
+    position:absolute;
+    text-transform:uppercase;
+	left: 960px;
+	top: 25px;
+}
+
+.mod-sorcer{{{cns}}} .mod-slider-osc-title {
+	display:block;
+	color:#fff;
+    font-size:30px;
+    font-weight:bold;
+    overflow:hidden;
+    position:absolute;
+    text-transform:uppercase;
+	left: 1310px;
+	top: 25px;
+}
+
+/* = SWITCH
+================================================ */
+.mod-sorcer{{{cns}}} .mod-switch-comp {
+    position:absolute;
+    background-image:url(/resources/utils/switch-002.png{{{ns}}});
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:auto 120px;
+    height:120px;
+    width: 68px;
+	bottom: 15px;
+    left: 400px;
+	z-index: 40;
+}
+
+.mod-sorcer{{{cns}}} .mod-switch-comp.on {
+    background-position:left center;
+}
+.mod-sorcer{{{cns}}} .mod-switch-comp.off {
+    background-position:right center;
+}
+
+.mod-sorcer{{{cns}}} .mod-switch-comp > span.mod-switch-title {
+    display:inline;
+	color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    line-height:1;
+	text-align:center;
+    overflow:hidden;
+    position:absolute;
+	top:-30px;
+}
+
+/* = LIST
+================================================ */
+.mod-sorcer{{{cns}}} .mod-preset {
+	background-color: rgba(51, 51, 51, .9);
+	position: absolute;
+	top: 25px;
+    left: 100px;
+    width: 220px;
+	height: 35px;
+    z-index: 22;
+}
+.mod-sorcer{{{cns}}} .mod-preset > select {
+    background-color: rgba(51, 51, 51, .9);
+    width: 220px;
+	height: 35px;
+    cursor: pointer;
+	border: solid 2px #3B3939;
+	font-size: 25px;
+	color:#fff;
+}
+.mod-sorcer{{{cns}}} .mod-preset > select > option {
+	font-size: 25px;
+	color:#fff;
+}
+
+.mod-sorcer{{{cns}}} h1,
+.mod-sorcer{{{cns}}} .mod-enumerated,
+.mod-sorcer{{{cns}}} .mod-control-group .mod-knob > span.mod-knob-title
+{
+    color:white;
+}
+.mod-sorcer{{{cns}}} h1
+{
+    border-color:white;
+}

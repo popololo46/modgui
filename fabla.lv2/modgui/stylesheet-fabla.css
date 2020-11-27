@@ -1,0 +1,308 @@
+@import url(/fonts/epf/stylesheet.css);
+@import url(/fonts/pirulen/stylesheet.css);
+
+/* = CONTAINER
+================================================ */
+.mod-fabla{{{cns}}} {
+	background-image:url(/resources/utils/bg.png{{{ns}}});
+    /* background-repeat:no-repeat; */
+    background-size: 750px 100px;
+    position: absolute;
+    height: 900px;
+    width: 1500px;
+    border-radius: 21px;
+}
+
+
+/* PORTS
+================================================ */
+
+.mod-fabla{{{cns}}} .mod-pedal-input,
+.mod-fabla{{{cns}}} .mod-pedal-output {
+    top: 150px;
+}
+
+/* = PLUGIN'S AUTHOR
+================================================ */
+.mod-fabla{{{cns}}} .mod-plugin-brand {
+    position:absolute;
+    text-transform:uppercase;
+    top: -80px;
+	left:10px;
+}
+
+.mod-fabla{{{cns}}} .mod-plugin-brand h1 {
+	font-family: "epflul" !important;
+    display:inline-block;
+	text-transform:uppercase;
+    font-size:35px;
+	padding: 3px;
+	color: #fff;
+	border-color:#fff;
+    border-radius:12px;
+    border-style:solid;
+    border-width:4px;
+}
+
+
+/* = PLUGIN'S NAME
+================================================ */
+.mod-fabla{{{cns}}} .mod-plugin-name {
+    position:absolute;
+	text-transform:uppercase;
+    top: -70px;
+    left: 170px;
+}
+
+.mod-fabla{{{cns}}} .mod-plugin-name h1 {
+    font-family: "epflul" !important;
+	display:inline-block;
+	text-transform: uppercase;
+    font-size: 35px;
+	padding: 3px;
+	color: #fff;
+}
+
+
+/* = FOOTSWITCH
+================================================ */
+.mod-fabla{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/utils/switch-led.png{{{ns}}});
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 194px;
+    bottom: -5px;
+    right: 45px;
+    cursor: pointer;
+    height: 97px;
+    width: 40px;
+    margin: auto;
+    position: absolute !important;
+}
+.mod-fabla{{{cns}}} .mod-footswitch.on {
+    background-position-y: bottom !important
+}
+
+
+/* = TITLE
+================================================ */
+.mod-fabla{{{cns}}} .mod-title {
+	font-family: "pirulen",Sans-serif !important;
+    position: absolute;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 16px;
+    padding-top: 10px;
+	text-align: center;
+	color: #fff;
+}
+
+
+/* = KNOBS
+================================================ */
+.mod-fabla{{{cns}}} .mod-knob {
+    background-image: url(/resources/knobs/light-knob.png{{{ns}}});
+	background-repeat:no-repeat;
+    background-size:auto 60px;
+    height: 60px;
+    position: absolute;
+    width: 60px;
+    z-index: 48;
+	cursor:pointer;
+}
+.mod-fabla{{{cns}}} .altknob {
+	background-image: url(/resources/knobs/aluminium.png{{{ns}}});
+}
+.mod-fabla{{{cns}}} .altknob2 {
+	background-image: url(/resources/knobs/strip.png{{{ns}}});
+	top: -10px;
+	background-size: auto 75px;
+    height: 75px;
+    position: absolute;
+    width: 75px;
+}
+
+.mod-fabla{{{cns}}} .mod-knob > span.mod-knob-title {
+	font-family: "epflul" !important;
+    display:block;
+	color:#fff;
+    font-size:15px;
+    line-height:1;
+    overflow:hidden;
+    position:relative;
+	text-align:center;
+    text-transform:uppercase;
+	top:63px;
+}
+
+.mod-fabla{{{cns}}} .mod-knob.mod-knob-master {
+
+	background-size:auto 75px;
+    height: 75px;
+    width: 75px;
+	top: -5px;
+}
+.mod-fabla{{{cns}}} .mod-knob.mod-knob-master > span.mod-knob-title {
+	top:75px;
+	display: none;
+}
+
+.mod-fabla{{{cns}}} .line1 {
+	position: absolute;
+    top: 20px;
+}
+.mod-fabla{{{cns}}} .line2 {
+	position: absolute;
+    top: 120px;
+}
+.mod-fabla{{{cns}}} .line3 {
+	position: absolute;
+    top: 220px;
+}
+.mod-fabla{{{cns}}} .line4 {
+	position: absolute;
+    top: 320px;
+}
+.mod-fabla{{{cns}}} .line5 {
+	position: absolute;
+    top: 420px;
+}
+.mod-fabla{{{cns}}} .line6 {
+	position: absolute;
+    top: 520px;
+}
+.mod-fabla{{{cns}}} .line7 {
+	position: absolute;
+    top: 620px;
+}
+.mod-fabla{{{cns}}} .line8 {
+	position: absolute;
+    top: 720px;
+}
+.mod-fabla{{{cns}}} .line9 {
+	position: absolute;
+    top: 820px;
+}
+
+.mod-fabla{{{cns}}} .col0 {
+    left: 45px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col1 {
+    left: 130px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col2 {
+    left: 210px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col3 {
+    left: 290px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col4 {
+    left: 400px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col5 {
+    left: 480px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col6 {
+    left: 560px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col7 {
+    left: 640px;
+}
+
+.mod-fabla{{{cns}}} .col8 {
+    left: 795px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col9 {
+    left: 880px;
+}
+
+.mod-fabla{{{cns}}} .mod-knob.col10 {
+    left: 960px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col11 {
+    left: 1040px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col12 {
+    left: 1150px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col13 {
+    left: 1230px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col14 {
+    left: 1310px;
+}
+.mod-fabla{{{cns}}} .mod-knob.col15 {
+    left: 1390px;
+}
+.mod-fabla{{{cns}}} .mod-knob.compattack {
+    left: 220px;
+}
+.mod-fabla{{{cns}}} .mod-knob.compdecay {
+    left: 310px;
+}
+.mod-fabla{{{cns}}} .mod-knob.comptreshold {
+    left: 400px;
+}
+.mod-fabla{{{cns}}} .mod-knob.compratio {
+    left: 490px;
+}
+.mod-fabla{{{cns}}} .mod-knob.compmakeup {
+    left: 580px;
+}
+
+/* = SWITCH
+================================================ */
+.mod-fabla{{{cns}}} .mod-switch {
+    background-image:url(/resources/utils/switch-led.png{{{ns}}});
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: auto 146px;
+    cursor: pointer;
+    height: 73px;
+    width: 55px;
+    left: 140px;
+    top: -5px;
+    position: absolute !important;
+	z-index: 40;
+}
+.mod-fabla{{{cns}}} .mod-switch.on {
+    background-position:top center;
+}
+.mod-fabla{{{cns}}} .mod-switch > span.mod-switch-title {
+    display:none;
+	color:#fff;
+    font-size:15px;
+    line-height:1;
+    overflow:hidden;
+    position:relative;
+	text-align:center;
+    text-transform:uppercase;
+	top:75px;
+}
+
+/* = PRESETS
+================================================ */
+.mod-fabla{{{cns}}} .mod-presets {
+	position: absolute;
+    top: 828px;
+    left: 800px;
+    z-index: 22;
+    cursor: pointer;
+}
+.mod-fabla{{{cns}}} .mod-presets > select {
+    background-color: #3B3939;
+	font-family: "epflul" !important;
+    width: 300px;
+    height: 45px;
+    cursor: pointer;
+    border: solid 2px #3B3939;
+	text-transform: capitalize;
+    font-size: 35px;
+    color: #fff;
+}
+.mod-fabla{{{cns}}} .mod-presets > select > option {
+	font-size: 20px;
+	color: #ccc;
+}
+
+

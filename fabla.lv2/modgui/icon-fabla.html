@@ -1,0 +1,693 @@
+<div class="mod-pedal mod-fabla{{{cns}}}">
+    <div mod-role="drag-handle" class="mod-drag-handle"></div>
+    <div class="mod-plugin-brand"><h1>{{brand}}</h1></div>
+    <div class="mod-plugin-name"><h1>{{label}}</h1></div>
+    <div class="mod-footswitch" mod-role="bypass"></div>
+	
+    <div class="mod-presets clearfix">
+        <select mod-role="presets">
+            
+            {{#effect.presets}}
+            <option mod-role="preset-label" value="{{uri}}">{{label}}</option>
+            {{/effect.presets}}
+        </select>
+    </div>
+	
+	<div class="line1">
+	{{#controls.7}}
+		<div class="mod-knob col1 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.7}}
+	{{#controls.23}}
+		<div class="mod-knob col2 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.23}}
+	{{#controls.39}}
+		<div class="mod-knob col3 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.39}}
+	{{#controls.55}}
+		<div class="mod-knob col4" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.55}}
+	{{#controls.71}}
+		<div class="mod-knob col5" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.71}}
+	{{#controls.87}}
+		<div class="mod-knob col6" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.87}}
+	{{#controls.103}}
+		<div class="mod-knob col7" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.103}}
+	
+	{{#controls.8}}
+		<div class="mod-knob col9 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.8}}
+	{{#controls.24}}
+		<div class="mod-knob col10 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.24}}
+	{{#controls.40}}
+		<div class="mod-knob col11 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.40}}
+	{{#controls.56}}
+		<div class="mod-knob col12" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.56}}
+	{{#controls.72}}
+		<div class="mod-knob col13" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.72}}
+	{{#controls.88}}
+		<div class="mod-knob col14" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.88}}
+	{{#controls.104}}
+		<div class="mod-knob col15" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.104}}
+	</div>
+	
+	<div class="line2">
+	{{#controls.9}}
+	<div class="mod-knob col1 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.9}}
+	{{#controls.25}}
+	<div class="mod-knob col2 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.25}}
+	{{#controls.41}}
+	<div class="mod-knob col3 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.41}}
+	{{#controls.57}}
+	<div class="mod-knob col4" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.57}}
+	{{#controls.73}}
+	<div class="mod-knob col5" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.73}}
+	{{#controls.89}}
+	<div class="mod-knob col6" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.89}}
+	{{#controls.105}}
+	<div class="mod-knob col7" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.105}}
+	{{#controls.10}}
+	<div class="mod-knob col9 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.10}}
+	{{#controls.26}}
+	<div class="mod-knob col10 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.26}}
+	{{#controls.42}}
+	<div class="mod-knob col11 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.42}}
+	{{#controls.58}}
+	<div class="mod-knob col12" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.58}}
+	{{#controls.74}}
+	<div class="mod-knob col13" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.74}}
+	{{#controls.90}}
+	<div class="mod-knob col14" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.90}}
+	{{#controls.106}}
+	<div class="mod-knob col15" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.106}}
+	</div>
+	
+	<div class="line3">
+	{{#controls.11}}
+	<div class="mod-knob col1 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.11}}
+	{{#controls.27}}
+	<div class="mod-knob col2 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.27}}
+	{{#controls.43}}
+	<div class="mod-knob col3 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.43}}
+	{{#controls.59}}
+	<div class="mod-knob col4" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.59}}
+	{{#controls.75}}
+	<div class="mod-knob col5" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.75}}
+	{{#controls.91}}
+	<div class="mod-knob col6" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.91}}
+	{{#controls.107}}
+	<div class="mod-knob col7" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.107}}
+	{{#controls.12}}
+	<div class="mod-knob col9 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.12}}
+	{{#controls.28}}
+	<div class="mod-knob col10 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.28}}
+	{{#controls.44}}
+	<div class="mod-knob col11 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.44}}
+	{{#controls.60}}
+	<div class="mod-knob col12" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.60}}
+	{{#controls.76}}
+	<div class="mod-knob col13" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.76}}
+	{{#controls.92}}
+	<div class="mod-knob col14" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.92}}
+	{{#controls.108}}
+	<div class="mod-knob col15" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-knob-title">{{name}}</span>
+	</div>
+	{{/controls.108}}
+	</div>
+	
+	<div class="line4">
+	{{#controls.13}}
+		<div class="mod-knob col1 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.13}}
+	{{#controls.29}}
+		<div class="mod-knob col2 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.29}}
+	{{#controls.45}}
+		<div class="mod-knob col3 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.45}}
+	{{#controls.61}}
+		<div class="mod-knob col4" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.61}}
+	{{#controls.77}}
+		<div class="mod-knob col5" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.77}}
+	{{#controls.93}}
+		<div class="mod-knob col6" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.93}}
+	{{#controls.109}}
+		<div class="mod-knob col7" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.109}}
+	{{#controls.14}}
+		<div class="mod-knob col9 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.14}}
+	{{#controls.30}}
+		<div class="mod-knob col10 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.30}}
+	{{#controls.46}}
+		<div class="mod-knob col11 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.46}}
+	{{#controls.62}}
+		<div class="mod-knob col12" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.62}}
+	{{#controls.78}}
+		<div class="mod-knob col13" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.78}}
+	{{#controls.94}}
+		<div class="mod-knob col14" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.94}}
+	{{#controls.110}}
+		<div class="mod-knob col15" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.110}}
+	</div>
+	
+	<div class="line5">
+	{{#controls.15}}
+		<div class="mod-knob col1 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.15}}
+	{{#controls.31}}
+		<div class="mod-knob col2 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.31}}
+	{{#controls.47}}
+		<div class="mod-knob col3 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.47}}
+	{{#controls.63}}
+		<div class="mod-knob col4" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.63}}
+	{{#controls.79}}
+		<div class="mod-knob col5" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.79}}
+	{{#controls.95}}
+		<div class="mod-knob col6" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.95}}
+	{{#controls.111}}
+		<div class="mod-knob col7" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.111}}
+	{{#controls.16}}
+		<div class="mod-knob col9 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.16}}
+	{{#controls.32}}
+		<div class="mod-knob col10 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.32}}
+	{{#controls.48}}
+		<div class="mod-knob col11 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.48}}
+	{{#controls.64}}
+		<div class="mod-knob col12" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.64}}
+	{{#controls.80}}
+		<div class="mod-knob col13" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.80}}
+	{{#controls.96}}
+		<div class="mod-knob col14" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.96}}
+	{{#controls.112}}
+		<div class="mod-knob col15" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.112}}
+	</div>
+	
+	<div class="line6">
+	{{#controls.17}}
+		<div class="mod-knob col1 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.17}}
+	{{#controls.33}}
+		<div class="mod-knob col2 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.33}}
+	{{#controls.49}}
+		<div class="mod-knob col3 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.49}}
+	{{#controls.65}}
+		<div class="mod-knob col4" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.65}}
+	{{#controls.81}}
+		<div class="mod-knob col5" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.81}}
+	{{#controls.97}}
+		<div class="mod-knob col6" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.97}}
+	{{#controls.113}}
+		<div class="mod-knob col7" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.113}}
+	{{#controls.18}}
+		<div class="mod-knob col9 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.18}}
+	{{#controls.34}}
+		<div class="mod-knob col10 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.34}}
+	{{#controls.50}}
+		<div class="mod-knob col11 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.50}}
+	{{#controls.66}}
+		<div class="mod-knob col12" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.66}}
+	{{#controls.82}}
+		<div class="mod-knob col13" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.82}}
+	{{#controls.98}}
+		<div class="mod-knob col14" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.98}}
+	{{#controls.114}}
+		<div class="mod-knob col15" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.114}}
+	</div>
+	
+	<div class="line7">
+	{{#controls.19}}
+		<div class="mod-knob col1 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.19}}
+	{{#controls.35}}
+		<div class="mod-knob col2 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.35}}
+	{{#controls.51}}
+		<div class="mod-knob col3 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.51}}
+	{{#controls.67}}
+		<div class="mod-knob col4" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.67}}
+	{{#controls.83}}
+		<div class="mod-knob col5" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.83}}
+	{{#controls.99}}
+		<div class="mod-knob col6" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.99}}
+	{{#controls.115}}
+		<div class="mod-knob col7" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.115}}
+	{{#controls.20}}
+		<div class="mod-knob col9 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.20}}
+	{{#controls.36}}
+		<div class="mod-knob col10 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.36}}
+	{{#controls.52}}
+		<div class="mod-knob col11 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.52}}
+	{{#controls.68}}
+		<div class="mod-knob col12" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.68}}
+	{{#controls.84}}
+		<div class="mod-knob col13" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.84}}
+	{{#controls.100}}
+		<div class="mod-knob col14" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.100}}
+	{{#controls.116}}
+		<div class="mod-knob col15" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.116}}
+	</div>
+	
+	<div class="line8">
+	{{#controls.21}}
+		<div class="mod-knob col1 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.21}}
+	{{#controls.37}}
+		<div class="mod-knob col2 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.37}}
+	{{#controls.53}}
+		<div class="mod-knob col3 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.53}}
+	{{#controls.69}}
+		<div class="mod-knob col4" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.69}}
+	{{#controls.85}}
+		<div class="mod-knob col5" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.85}}
+	{{#controls.101}}
+		<div class="mod-knob col6" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.101}}
+	{{#controls.117}}
+		<div class="mod-knob col7" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.117}}
+	{{#controls.22}}
+		<div class="mod-knob col9 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.22}}
+	{{#controls.38}}
+		<div class="mod-knob col10 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.38}}
+	{{#controls.54}}
+		<div class="mod-knob col11 altknob" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.54}}
+	{{#controls.70}}
+		<div class="mod-knob col12" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.70}}
+	{{#controls.86}}
+		<div class="mod-knob col13" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.86}}
+	{{#controls.102}}
+		<div class="mod-knob col14" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.102}}
+	{{#controls.118}}
+		<div class="mod-knob col15" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.118}}
+	</div>
+	
+		<div class="line9">
+	{{#controls.0}}
+		<div class="mod-knob mod-knob-master col14" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.0}}
+	{{#controls.1}}
+		<div class="mod-knob compattack altknob2" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.1}}
+	{{#controls.2}}
+		<div class="mod-knob compdecay altknob2" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.2}}
+	{{#controls.3}}
+		<div class="mod-knob comptreshold altknob2" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.3}}
+	{{#controls.4}}
+		<div class="mod-knob compratio altknob2" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.4}}
+	{{#controls.5}}
+		<div class="mod-knob compmakeup altknob2" mod-role="input-control-port" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-knob-title">{{name}}</span>
+		</div>
+	{{/controls.5}}
+	{{#controls.6}}
+		<div class="mod-switch" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-switch-title">{{name}}</span>
+		</div>
+	{{/controls.6}}
+	</div>
+	
+	
+		<span class="mod-title line1 col0">PAD 1<br>N 36</span>
+		<span class="mod-title line1 col8">PAD 2<br>N 37</span>
+		<span class="mod-title line2 col0">PAD 3<br>N 38</span>
+		<span class="mod-title line2 col8">PAD 4<br>N 39</span>
+		<span class="mod-title line3 col0">PAD 5<br>N 40</span>
+		<span class="mod-title line3 col8">PAD 6<br>N 41</span>
+		<span class="mod-title line4 col0">PAD 7<br>N 42</span>
+		<span class="mod-title line4 col8">PAD 8<br>N 43</span>
+		<span class="mod-title line5 col0">PAD 9<br>N 44</span>
+		<span class="mod-title line5 col8">PAD 10<br>N 45</span>
+		<span class="mod-title line6 col0">PAD 11<br>N 46</span>
+		<span class="mod-title line6 col8">PAD 12<br>N 47</span>
+		<span class="mod-title line7 col0">PAD 13<br>N 48</span>
+		<span class="mod-title line7 col8">PAD 14<br>N 49</span>
+		<span class="mod-title line8 col0">PAD 15<br>N 50</span>		
+		<span class="mod-title line8 col8">PAD 16<br>N 51</span>
+		<span class="mod-title line9 col0">COMPR<br>-ESSOR</span>
+		
+		
+    <div class="mod-pedal-input">
+        {{#effect.ports.audio.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.audio.input}}
+        {{#effect.ports.midi.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.midi.input}}
+        {{#effect.ports.cv.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input}}
+    </div>
+    <div class="mod-pedal-output">
+        {{#effect.ports.audio.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.audio.output}}
+        {{#effect.ports.midi.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.midi.output}}
+        {{#effect.ports.cv.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.cv.output}}
+    </div>
+</div>
