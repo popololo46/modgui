@@ -1,0 +1,181 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://code.google.com/p/amsynth/amsynth>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-amsynth.html> ;
+        modgui:stylesheet <modgui/stylesheet-amsynth.css> ;
+        modgui:screenshot <modgui/screenshot-amsynth.png> ;
+        modgui:thumbnail <modgui/thumbnail-amsynth.png> ;
+        modgui:brand "Nick D" ;
+        modgui:label "amsynth" ;
+        modgui:model "boxy-small" ;
+        modgui:panel "1-footswitch-presets" ;
+        modgui:color "warning" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "amp_attack" ;
+            lv2:name "ATT" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "amp_decay" ;
+            lv2:name "DEC" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "amp_sustain" ;
+            lv2:name "SUS" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "amp_release" ;
+            lv2:name "REL" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "osc1_waveform" ;
+            lv2:name "Osc1 Waveform" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "filter_attack" ;
+            lv2:name "ATT" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "filter_decay" ;
+            lv2:name "DEC" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "filter_sustain" ;
+            lv2:name "SUS" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "filter_release" ;
+            lv2:name "REL" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "filter_resonance" ;
+            lv2:name "Resonance" ;
+        ] , [
+            lv2:index 10 ;
+            lv2:symbol "filter_env_amount" ;
+            lv2:name "Env Amount" ;
+        ] , [
+            lv2:index 11 ;
+            lv2:symbol "filter_cutoff" ;
+            lv2:name "Cutoff" ;
+        ] , [
+            lv2:index 12 ;
+            lv2:symbol "osc2_detune" ;
+            lv2:name "Detune" ;
+        ] , [
+            lv2:index 13 ;
+            lv2:symbol "osc2_waveform" ;
+            lv2:name "Waveform" ;
+        ] , [
+            lv2:index 14 ;
+            lv2:symbol "master_vol" ;
+            lv2:name "Volume" ;
+        ] , [
+            lv2:index 15 ;
+            lv2:symbol "lfo_freq" ;
+            lv2:name "Freq" ;
+        ] , [
+            lv2:index 16 ;
+            lv2:symbol "lfo_waveform" ;
+            lv2:name "Waveform" ;
+        ] , [
+            lv2:index 17 ;
+            lv2:symbol "osc2_range" ;
+            lv2:name "Octave" ;
+        ] , [
+            lv2:index 18 ;
+            lv2:symbol "osc_mix" ;
+            lv2:name "Osc Mix" ;
+        ] , [
+            lv2:index 19 ;
+            lv2:symbol "freq_mod_amount" ;
+            lv2:name "Freq Mod Amount" ;
+        ] , [
+            lv2:index 20 ;
+            lv2:symbol "filter_mod_amount" ;
+            lv2:name "To Filter" ;
+        ] , [
+            lv2:index 21 ;
+            lv2:symbol "amp_mod_amount" ;
+            lv2:name "To Amp" ;
+        ] , [
+            lv2:index 22 ;
+            lv2:symbol "osc_mix_mode" ;
+            lv2:name "Ring Mod" ;
+        ] , [
+            lv2:index 23 ;
+            lv2:symbol "osc1_pulsewidth" ;
+            lv2:name "Shape" ;
+        ] , [
+            lv2:index 24 ;
+            lv2:symbol "osc2_pulsewidth" ;
+            lv2:name "Shape" ;
+        ] , [
+            lv2:index 25 ;
+            lv2:symbol "reverb_roomsize" ;
+            lv2:name "Size" ;
+        ] , [
+            lv2:index 26 ;
+            lv2:symbol "reverb_damp" ;
+            lv2:name "Damp" ;
+        ] , [
+            lv2:index 27 ;
+            lv2:symbol "reverb_wet" ;
+            lv2:name "Wet" ;
+        ] , [
+            lv2:index 28 ;
+            lv2:symbol "reverb_width" ;
+            lv2:name "Width" ;
+        ] , [
+            lv2:index 29 ;
+            lv2:symbol "distortion_crunch" ;
+            lv2:name "Drive" ;
+        ] , [
+            lv2:index 30 ;
+            lv2:symbol "osc2_sync" ;
+            lv2:name "Sync" ;
+        ] , [
+            lv2:index 31 ;
+            lv2:symbol "portamento_time" ;
+            lv2:name "GLIDE" ;
+        ] , [
+            lv2:index 32 ;
+            lv2:symbol "keyboard_mode" ;
+            lv2:name "KB Mode" ;
+        ] , [
+            lv2:index 33 ;
+            lv2:symbol "osc2_pitch" ;
+            lv2:name "Semitone" ;
+        ] , [
+            lv2:index 34 ;
+            lv2:symbol "filter_type" ;
+            lv2:name "Filter Type" ;
+        ] , [
+            lv2:index 35 ;
+            lv2:symbol "filter_slope" ;
+            lv2:name "Filter Slope" ;
+        ] , [
+            lv2:index 36 ;
+            lv2:symbol "freq_mod_osc" ;
+            lv2:name "Freq Mod to Oscillator" ;
+        ] , [
+            lv2:index 37 ;
+            lv2:symbol "filter_kbd_track" ;
+            lv2:name "Key Track" ;
+        ] , [
+            lv2:index 38 ;
+            lv2:symbol "filter_vel_sens" ;
+            lv2:name "FilterVel" ;
+        ] , [
+            lv2:index 39 ;
+            lv2:symbol "amp_vel_sens" ;
+            lv2:name "AmpVel" ;
+        ] , [
+            lv2:index 40 ;
+            lv2:symbol "portamento_mode" ;
+            lv2:name "Portamento Mode" ;
+        ] ;
+    ] .
