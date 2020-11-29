@@ -1,0 +1,143 @@
+<div class="mod-pedal mod-wolpertinger{{{cns}}}">
+    <div mod-role="drag-handle" class="mod-drag-handle"></div>
+    <div class="mod-plugin-brand"><h1>{{brand}}</h1></div>
+    <div class="mod-plugin-name"><h1>{{label}}</h1></div>
+    <div class="mod-light on" mod-role="bypass-light"></div>
+    <div class="mod-footswitch" mod-role="bypass"></div>
+	
+	<span class="mod-knob-wave-title">Waveform</span>
+	<div class="mod-knob mod-knob-saw" mod-role="input-control-port" mod-port-symbol="saw" title="Saw">
+		<span class="mod-knob-title">Saw</span>
+	</div>
+	<div class="mod-knob mod-knob-rect" mod-role="input-control-port" mod-port-symbol="rect" title="Rect">
+		<span class="mod-knob-title">Rect</span>
+	</div>
+	<div class="mod-knob mod-knob-tri" mod-role="input-control-port" mod-port-symbol="tri" title="Tri">
+		<span class="mod-knob-title">Tri</span>
+	</div>
+	<div class="mod-knob mod-knob-tune" mod-role="input-control-port" mod-port-symbol="tune" title="Tune">
+		<span class="mod-knob-title">Tune</span>
+	</div>
+	
+	<span class="mod-knob-env-title">Envelope</span>
+	<div class="mod-knob mod-knob-attack" mod-role="input-control-port" mod-port-symbol="attack" title="Attack">
+		<span class="mod-knob-title">A</span>
+	</div>
+    
+	<div class="mod-knob mod-knob-decay" mod-role="input-control-port" mod-port-symbol="decay" title="Decay">
+		<span class="mod-knob-title">D</span>
+	</div>
+    
+	<div class="mod-knob mod-knob-sustain" mod-role="input-control-port" mod-port-symbol="sustain" title="Sustain">
+		<span class="mod-knob-title">S</span>
+	</div>
+    
+	<div class="mod-knob mod-knob-release" mod-role="input-control-port" mod-port-symbol="release" title="Release">
+		<span class="mod-knob-title">R</span>
+	</div>
+	
+	<div class="mod-num mod-num-oversampling" mod-role="input-control-port" mod-port-symbol="oversampling">
+		<span class="mod-num-title">Oversampling</span>
+	</div>
+	
+	<span class="mod-title mod-slider-title-filter_x">Filter X</span>
+	<div class="mod-slider mod-slider-filter_x" mod-role="input-control-port" mod-button-type="slider" mod-port-symbol="filter_x">
+		<span class="mod-slider-title">Filter X</span>
+	</div>
+	
+	<span class="mod-title mod-slider-title-resonance">Resonance</span>
+	<div class="mod-slider mod-slider-resonance" mod-role="input-control-port" mod-button-type="slider" mod-port-symbol="resonance">
+		<span class="mod-slider-title">Resonance</span>
+	</div>
+	
+	<span class="mod-title mod-slider-title-bandwidth">Bandwith</span>
+	<div class="mod-slider mod-slider-bandwidth" mod-role="input-control-port" mod-button-type="slider" mod-port-symbol="bandwidth">
+		<span class="mod-slider-title">Bandwith</span>
+	</div>
+	
+	<span class="mod-title mod-slider-title-passes">Passes</span>
+	<div class="mod-slider mod-slider-passes" mod-role="input-control-port" mod-button-type="slider" mod-port-symbol="passes">
+		<span class="mod-slider-title">Passes</span>
+	</div>
+	
+	<span class="mod-title mod-slider-title-velocity">Velocity</span>
+	<div class="mod-slider mod-slider-velocity" mod-role="input-control-port" mod-button-type="slider" mod-port-symbol="velocity">
+		<span class="mod-slider-title">Velocity</span>
+	</div>
+	
+	<span class="mod-title mod-slider-title-inertia">Inertia</span>
+	<div class="mod-slider mod-slider-inertia" mod-role="input-control-port" mod-button-type="slider" mod-port-symbol="inertia">
+		<span class="mod-slider-title">Inertia</span>
+	</div>
+	
+	<span class="mod-title mod-slider-title-filter_freq">Freq</span>
+	<div class="mod-slider mod-slider-filter_freq" mod-role="input-control-port" mod-button-type="slider" mod-port-symbol="filter_freq">
+		<span class="mod-slider-title">Freq</span>
+	</div>
+	
+	<span class="mod-title mod-slider-title-filter_min">Min</span>
+	<div class="mod-slider mod-slider-filter_min" mod-role="input-control-port" mod-button-type="slider" mod-port-symbol="filter_min">
+		<span class="mod-slider-title">Min</span>
+	</div>
+	
+	<span class="mod-title mod-slider-title-filter_max">Max</span>
+	<div class="mod-slider mod-slider-filter_max" mod-role="input-control-port" mod-button-type="slider" mod-port-symbol="filter_max">
+		<span class="mod-slider-title">Max</span>
+	</div>
+	
+	
+	<div class="mod-knob mod-knob-gain" mod-role="input-control-port" mod-port-symbol="gain">
+		<span class="mod-knob-title">Gain</span>
+	</div>
+	<div class="mod-knob mod-knob-clip" mod-role="input-control-port" mod-port-symbol="clip">
+		<span class="mod-knob-title">Clip</span>
+	</div>
+	
+	
+
+	
+   <!-- <div class="mod-control-group mod-presets clearfix">
+        <select mod-role="presets">
+            <option value="">---</option>
+            {{#effect.presets}}
+            <option mod-role="preset-label" value="{{uri}}">{{label}}</option>
+            {{/effect.presets}}
+        </select>
+    </div> -->
+	
+	
+    <div class="mod-pedal-input">
+        {{#effect.ports.audio.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.audio.input}}
+        {{#effect.ports.midi.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.midi.input}}
+        {{#effect.ports.cv.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input}}
+    </div>
+    <div class="mod-pedal-output">
+        {{#effect.ports.audio.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.audio.output}}
+        {{#effect.ports.midi.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.midi.output}}
+        {{#effect.ports.cv.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.cv.output}}
+    </div>
+</div>

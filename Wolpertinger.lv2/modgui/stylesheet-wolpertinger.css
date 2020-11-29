@@ -1,0 +1,345 @@
+/* STYLES FOR THE BOXY PEDAL */
+
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/questrial/stylesheet.css);
+
+
+/* = CONTAINER
+================================================ */
+.mod-wolpertinger{{{cns}}} {
+	background-image:url(/resources/pedals/bg.png{{{ns}}});
+    background-repeat:no-repeat;
+    background-size:600px 728px;
+    position:absolute;
+    height:728px;
+    width:600px;
+    border-radius: 21px;
+}
+
+
+/* PORTS
+================================================ */
+
+.mod-wolpertinger{{{cns}}} .mod-pedal-input,
+.mod-wolpertinger{{{cns}}} .mod-pedal-output {
+    top: 66px;
+}
+
+/* = PLUGIN'S AUTHOR
+================================================ */
+.mod-wolpertinger{{{cns}}} .mod-plugin-brand {
+    position:absolute;
+    text-align:left;
+	left:20px;
+    text-align:left;
+    bottom:60px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-plugin-brand h1 {
+    border-color:#4D4D4D;
+    border-radius:12px;
+    border-style:solid;
+    border-width:4px;
+    display:inline-block;
+    font-family:"Nexa";
+	color:white;
+	text-transform:uppercase;
+    font-size:25px;
+    padding:3px 9px 0;
+}
+
+
+/* = PLUGIN'S NAME
+================================================ */
+.mod-wolpertinger{{{cns}}} .mod-plugin-name {
+    overflow:hidden;
+    position:absolute;
+    left:20px;
+    text-align:left;
+    bottom:10px;
+
+}
+
+.mod-wolpertinger{{{cns}}} .mod-plugin-name h1 {
+    font-family:"Questrial";
+	color:white;
+	text-transform:uppercase;
+    font-size:35px;
+    line-height:1;
+}
+
+/* = LIGHT ON/OFF
+================================================ */
+.mod-wolpertinger{{{cns}}} .mod-light {
+	background-image:url(/resources/pedals/footswitch.png{{{ns}}});
+    background-position:bottom center;
+    background-repeat:no-repeat;
+	background-size:auto 50px;
+    height:50px;
+	width: 50px;
+    position:absolute;
+    right:32px;
+    bottom:70px;
+	
+}
+
+/* = FOOTSWITCH
+================================================ */
+.mod-wolpertinger{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/pedals/footswitch.png{{{ns}}});
+    background-position:bottom center;
+    background-repeat:no-repeat;
+    background-size:auto 132px;
+    bottom: 15px;
+    right: 22px;
+    cursor:pointer;
+    height:66px;
+    width: 66px;
+    margin: auto;
+    position:absolute !important;
+}
+.mod-wolpertinger{{{cns}}} .mod-footswitch.on {
+    background-position-y: top !important
+}
+
+
+/* = KNOBS
+================================================ */
+
+.mod-wolpertinger{{{cns}}} .mod-knob {
+    background-image: url(/resources/knobs/light-knob.png{{{ns}}});
+	background-repeat:no-repeat;
+    background-size:auto 60px;
+    height: 60px;
+    position: absolute;
+    width: 60px;
+    z-index: 48;
+	cursor:pointer;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob > span.mod-knob-title {
+    display:block;
+	color:#fff;
+    font-size:18px;
+    line-height:1;
+    overflow:hidden;
+    position:relative;
+	text-align:center;
+    text-transform:uppercase;
+	top:-20px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-saw {
+    left: 30px;
+	top: 78px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-rect {
+    left: 95px;
+	top: 78px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-tri {
+    left: 160px;
+	top: 78px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-tune {
+    left: 225px;
+	top: 78px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-attack {
+    left: 320px;
+	top: 100px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-decay {
+    left: 385px;
+	top: 100px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-sustain {
+    left: 450px;
+	top: 100px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-release {
+    left: 515px;
+	top: 100px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-gain {
+    right: 200px;
+	bottom: 20px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob.mod-knob-clip {
+    right: 110px;
+	bottom: 20px;
+}
+
+
+/* = NUMS
+================================================ */
+.mod-wolpertinger{{{cns}}} .mod-num {
+    background-image: url(/resources/knobs/nums.png{{{ns}}});
+	background-repeat:no-repeat;
+    background-size:auto 42px;
+	background-color:#3D3D3D;
+	box-shadow: 2px 2px 2px 0px #000 inset, -1px -1px 2px 1px #fff inset;
+    height: 42px;
+    width: 114px;
+    position: absolute;
+    z-index: 52;
+	cursor:pointer;
+}
+
+
+.mod-wolpertinger{{{cns}}} .mod-num > span.mod-num-title {
+    display:block;
+	color:#fff;
+    font-size:16px;
+    line-height:1;
+    overflow:hidden;
+    position:absolute;
+    text-transform:uppercase;
+	top:-16px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-num.mod-num-oversampling {
+    left: 45px;
+	top: 168px;
+}
+/* SLIDER
+================================================ */
+.mod-wolpertinger{{{cns}}} .mod-slider:first-child {
+    margin-left:5px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-slider {
+	background-image:url(/resources/knobs/light-slider.png{{{ns}}});
+    background-repeat:no-repeat; 
+    background-size:auto 192px;
+    height:192px;
+	width:60px;
+    overflow:hidden;
+    position:absolute;
+	z-index: 40;
+	cursor:pointer;
+    text-align:center;
+	top:340px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-slider > span.mod-slider-title {
+    display:block;
+	color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    line-height:1;
+	text-align:center;
+    margin-bottom:7px;
+    overflow:hidden;
+    padding-bottom:7px;
+    position:relative;
+	top:-20px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-slider:hover {
+    cursor:pointer;
+}
+
+
+.mod-wolpertinger{{{cns}}} .mod-slider.mod-slider-filter_x {
+    left: 25px;
+}
+.mod-wolpertinger{{{cns}}} .mod-slider.mod-slider-resonance {
+    left: 86px;
+}
+.mod-wolpertinger{{{cns}}} .mod-slider.mod-slider-bandwidth {
+    left: 147px;
+}
+.mod-wolpertinger{{{cns}}} .mod-slider.mod-slider-passes {
+    left: 208px;
+}
+.mod-wolpertinger{{{cns}}} .mod-slider.mod-slider-velocity {
+    left: 269px;
+}
+.mod-wolpertinger{{{cns}}} .mod-slider.mod-slider-inertia {
+    left: 340px;
+}
+.mod-wolpertinger{{{cns}}} .mod-slider.mod-slider-filter_freq {
+    left: 401px;
+}
+.mod-wolpertinger{{{cns}}} .mod-slider.mod-slider-filter_min {
+    left: 462px;
+}
+.mod-wolpertinger{{{cns}}} .mod-slider.mod-slider-filter_max {
+    left: 523px;
+}
+
+
+/* = TEXTE
+================================================ */
+.mod-wolpertinger{{{cns}}} .mod-title {
+	display:block;
+	color:#fff;
+    font-size:18px;
+	top:270px;
+	position:absolute;
+}
+.mod-wolpertinger{{{cns}}} .mod-title.mod-slider-title-filter_x {
+	top:295px;
+	left: 25px;
+}
+.mod-wolpertinger{{{cns}}} .mod-title.mod-slider-title-resonance {
+	left: 76px;
+}
+.mod-wolpertinger{{{cns}}} .mod-title.mod-slider-title-bandwidth {
+	top:295px;
+	left: 142px;
+}
+.mod-wolpertinger{{{cns}}} .mod-title.mod-slider-title-passes {
+	left: 208px;
+}
+.mod-wolpertinger{{{cns}}} .mod-title.mod-slider-title-velocity {
+	top:295px;
+	left: 265px;
+}
+.mod-wolpertinger{{{cns}}} .mod-title.mod-slider-title-inertia {
+	left: 340px;
+}
+.mod-wolpertinger{{{cns}}} .mod-title.mod-slider-title-filter_freq {
+	top:295px;
+	left: 411px;
+}
+.mod-wolpertinger{{{cns}}} .mod-title.mod-slider-title-filter_min {
+	left: 475px;
+}
+.mod-wolpertinger{{{cns}}} .mod-title.mod-slider-title-filter_max {
+	top:295px;
+	left: 533px;
+}
+
+.mod-wolpertinger{{{cns}}} .mod-knob-wave-title {
+	display:block;
+	color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    line-height:1;
+    overflow:hidden;
+    position:absolute;
+	left:150px;
+	top:30px;
+}
+.mod-wolpertinger{{{cns}}} .mod-knob-env-title {
+	display:block;
+	color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    line-height:1;
+    overflow:hidden;
+    position:absolute;
+	right:150px;
+	top:30px;
+}
