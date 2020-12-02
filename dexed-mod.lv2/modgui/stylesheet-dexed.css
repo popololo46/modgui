@@ -1,0 +1,672 @@
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/nexa/stylesheet.css);
+
+
+/* = CONTAINER
+================================================ */
+.mod-dexed{{{cns}}} {
+	background-image: url(/resources/utils/bg.png{{{ns}}});
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:1045px 700px;
+    height:700px;
+    position:absolute;
+    width:1045px;
+    border-radius: 21px;
+}
+
+
+/* PORTS
+================================================ */
+
+.mod-dexed{{{cns}}} .mod-pedal-input,
+.mod-dexed{{{cns}}} .mod-pedal-output {
+    top: 66px;
+}
+
+
+/* = PLUGIN'S NAME
+================================================ */
+.mod-dexed{{{cns}}} .mod-plugin-name {
+	position: absolute;
+    left: 15px;
+    bottom: 100px;
+    display: inline-block;
+    font-family: "Nexa";
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px;
+    color: black;
+}
+
+
+/* = FOOTSWITCH
+================================================ */
+.mod-dexed{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/utils/switch-1-green.png{{{ns}}});
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:auto 48px;
+    bottom: 80px;
+    left: 28px;
+    cursor:pointer;
+    height:24px;
+    width: 90px;
+    margin: auto;
+    position:absolute !important;
+}
+.mod-dexed{{{cns}}} .mod-footswitch.on {
+    background-position-y: bottom !important
+}
+
+
+/* KNOBS
+================================================ */
+
+.mod-dexed{{{cns}}} .mod-control-group {
+    position:relative;
+    z-index:30;
+}
+
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob {
+    position:absolute;
+}
+
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+	background-image: url(/resources/knobs/knob_70.png{{{ns}}});
+    background-repeat:no-repeat;
+	background-size:auto 32px;
+    width: 32px;
+    height: 52px;
+	position: absolute;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.dexed-knob15 {
+	background-image: url(/resources/knobs/knob_15.png{{{ns}}}) !important;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.dexed-knob13 {
+	background-image: url(/resources/knobs/knob_13.png{{{ns}}}) !important;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.dexed-knob8 {
+	background-image: url(/resources/knobs/knob_8.png{{{ns}}}) !important;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.dexed-knob4 {
+	background-image: url(/resources/knobs/knob_4.png{{{ns}}}) !important;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.dexed-knobred {
+	background-image: url(/resources/knobs/knob_70_red.png{{{ns}}}) !important;
+}
+
+
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_eg_rate_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_eg_rate_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_eg_rate_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_eg_rate_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_eg_rate_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_eg_rate_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_eg_rate_1 {
+    top: 130px;
+    left: 10px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_eg_rate_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_eg_rate_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_eg_rate_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_eg_rate_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_eg_rate_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_eg_rate_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_eg_rate_2 {
+    top: 130px;
+    left: 45px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_eg_rate_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_eg_rate_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_eg_rate_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_eg_rate_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_eg_rate_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_eg_rate_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_eg_rate_3 {
+    top: 130px;
+    left: 80px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_eg_rate_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_eg_rate_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_eg_rate_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_eg_rate_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_eg_rate_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_eg_rate_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_eg_rate_4 {
+    top: 130px;
+    left: 115px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_eg_level_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_eg_level_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_eg_level_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_eg_level_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_eg_level_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_eg_level_1,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_eg_level_1 {
+    top: 195px;
+    left: 10px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_eg_level_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_eg_level_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_eg_level_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_eg_level_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_eg_level_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_eg_level_2,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_eg_level_2 {
+    top: 195px;
+    left: 45px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_eg_level_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_eg_level_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_eg_level_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_eg_level_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_eg_level_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_eg_level_3,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_eg_level_3 {
+    top: 195px;
+    left: 80px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_eg_level_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_eg_level_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_eg_level_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_eg_level_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_eg_level_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_eg_level_4,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_eg_level_4 {
+    top: 195px;
+    left: 115px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_osc_detune,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_osc_detune,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_osc_detune,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_osc_detune,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_osc_detune,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_osc_detune {
+    top: 20px;
+    left: 20px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_osc_freq_coarse,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_osc_freq_coarse,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_osc_freq_coarse,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_osc_freq_coarse,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_osc_freq_coarse,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_osc_freq_coarse {
+    top: 20px;
+    left: 65px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_osc_freq_fine,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_osc_freq_fine,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_osc_freq_fine,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_osc_freq_fine,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_osc_freq_fine,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_osc_freq_fine {
+    top: 20px;
+    left: 110px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_kbd_lev_scl_lft_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_kbd_lev_scl_lft_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_kbd_lev_scl_lft_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_kbd_lev_scl_lft_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_kbd_lev_scl_lft_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_kbd_lev_scl_lft_depth {
+    top: 145px;
+    left: 170px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_kbd_lev_scl_brk_pt,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_kbd_lev_scl_brk_pt,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_kbd_lev_scl_brk_pt,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_kbd_lev_scl_brk_pt,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_kbd_lev_scl_brk_pt,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_kbd_lev_scl_brk_pt {
+    top: 145px;
+    left: 232px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_kbd_lev_scl_rht_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_kbd_lev_scl_rht_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_kbd_lev_scl_rht_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_kbd_lev_scl_rht_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_kbd_lev_scl_rht_depth,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_kbd_lev_scl_rht_depth {
+    top: 145px;
+    left: 295px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_kbd_rate_scaling,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_kbd_rate_scaling,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_kbd_rate_scaling,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_kbd_rate_scaling,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_kbd_rate_scaling,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_kbd_rate_scaling {
+    top: 205px;
+    left: 232px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_amp_mod_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_amp_mod_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_amp_mod_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_amp_mod_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_amp_mod_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_amp_mod_sensitivity {
+    top: 75px;
+    left: 170px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_key_vel_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_key_vel_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_key_vel_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_key_vel_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_key_vel_sensitivity,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_key_vel_sensitivity {
+    top: 75px;
+    left: 250px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op1_operator_output_level,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op2_operator_output_level,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op3_operator_output_level,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op4_operator_output_level,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op5_operator_output_level,
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-op6_operator_output_level {
+    top: 75px;
+    left: 300px;
+}
+
+
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-output {
+	top: 30px;
+	left: 150px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-cutoff {
+	top: 5px;
+	left: 275px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-resonance {
+	top: 5px;
+	left: 335px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-master_tune {
+	top: 62px;
+	left: 275px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-transpose {
+	top: 62px;
+	left: 335px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-algorithm_num {
+	top: 20px;
+	left: 612px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-feedback {
+	top: 90px;
+	left: 612px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-lfo_speed {
+	top: 65px;
+	left: 0px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-lfo_delay {
+	top: 65px;
+	left: 50px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-lfo_pitch_mod_depth {
+	top: 65px;
+	left: 100px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-lfo_amp_mod_depth {
+	top: 65px;
+	left: 150px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_mod_sensitivity {
+	top: 5px;
+	left: 125px;
+}
+
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_bend_range {
+	top: 75px;
+	left: 35px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-pitch_bend_step {
+	top: 75px;
+	left: 130px;
+}
+.mod-dexed{{{cns}}} .mod-control-group .mod-knob.dexed-number_of_voices {
+	top: 5px;
+	left: 130px;
+}
+
+/* = TITLE
+================================================ */
+.mod-dexed{{{cns}}} .mod-group-title {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 150px;
+}
+.mod-dexed{{{cns}}} .mod-group-title.op1-title1,
+.mod-dexed{{{cns}}} .mod-group-title.op2-title1,
+.mod-dexed{{{cns}}} .mod-group-title.op3-title1,
+.mod-dexed{{{cns}}} .mod-group-title.op4-title1,
+.mod-dexed{{{cns}}} .mod-group-title.op5-title1,
+.mod-dexed{{{cns}}} .mod-group-title.op6-title1 {
+    top: 105px;  
+}
+.mod-dexed{{{cns}}} .mod-group-title.op1-title2,
+.mod-dexed{{{cns}}} .mod-group-title.op2-title2,
+.mod-dexed{{{cns}}} .mod-group-title.op3-title2,
+.mod-dexed{{{cns}}} .mod-group-title.op4-title2,
+.mod-dexed{{{cns}}} .mod-group-title.op5-title2,
+.mod-dexed{{{cns}}} .mod-group-title.op6-title2 {
+    top: 215px;
+}
+
+.mod-dexed{{{cns}}} .mod-knob-title {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 62px;
+    margin-left: -15px;
+    top: 40px;
+}
+
+
+
+/* = SWITCH
+================================================ */
+.mod-dexed{{{cns}}} .mod-switch {
+    background-image: url(/resources/utils/switch-2-led.png{{{ns}}});
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 120px auto;
+	position: absolute !important;
+	height: 28px;
+    width: 120px;
+    cursor: pointer;
+	z-index: 40;
+}
+.mod-dexed{{{cns}}} .mod-switch.on {
+    background-position:top center;
+}
+
+.mod-dexed{{{cns}}} .altswitch {
+    background-image: url(/resources/utils/switch-1.png{{{ns}}});
+	background-position:top center;
+    background-size:auto 48px;
+    height:24px;
+    width: 90px;
+    margin: auto;
+}
+.mod-dexed{{{cns}}} .altswitch.on {
+    background-position-y: bottom !important
+}
+
+.mod-dexed{{{cns}}} .mod-switch.dexed-op1_osc_mode,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op2_osc_mode,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op3_osc_mode,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op4_osc_mode,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op5_osc_mode,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op6_osc_mode {
+    left: 155px;
+    top: 25px;
+}
+.mod-dexed{{{cns}}} .mod-switch.dexed-op1_osc_mode .mod-group-title,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op2_osc_mode .mod-group-title,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op3_osc_mode .mod-group-title,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op4_osc_mode .mod-group-title,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op5_osc_mode .mod-group-title,
+.mod-dexed{{{cns}}} .mod-switch.dexed-op6_osc_mode .mod-group-title {
+    top: -17px;
+	margin-left: -15px;
+}
+
+
+.mod-dexed{{{cns}}} .mod-switch-op {
+    background-image: url(/resources/utils/switch.png{{{ns}}});
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    position: absolute !important;
+    height: 49px;
+    width: 20px;
+    cursor: pointer;
+	z-index: 40;
+}
+.mod-dexed{{{cns}}} .mod-switch-op.on {
+    background-position:top center;
+}
+.mod-dexed{{{cns}}} .mod-switch-op.dexed-op1_enable,
+.mod-dexed{{{cns}}} .mod-switch-op.dexed-op2_enable,
+.mod-dexed{{{cns}}} .mod-switch-op.dexed-op3_enable,
+.mod-dexed{{{cns}}} .mod-switch-op.dexed-op4_enable,
+.mod-dexed{{{cns}}} .mod-switch-op.dexed-op5_enable,
+.mod-dexed{{{cns}}} .mod-switch-op.dexed-op6_enable {
+    left: 288px;
+    top: 7px;
+}
+
+.mod-dexed{{{cns}}} .mod-switch.dexed-polymono {
+    top: 120px;
+	left: 260px;
+	margin-left: 0px;
+}
+.mod-dexed{{{cns}}} .mod-switch.dexed-polymono .mod-group-title {
+    top: 27px;
+	color: black;
+}
+.mod-dexed{{{cns}}} .mod-switch.dexed-polymono .mod-group-title.dexed-polymono-mono {
+    left: -60px;
+}
+.mod-dexed{{{cns}}} .mod-switch.dexed-polymono .mod-group-title.dexed-polymono-poly {
+    left: 30px;
+    margin-top: -17px;
+}
+.mod-dexed{{{cns}}} .mod-switch.dexed-lfo_sync {
+    top: 125px;
+    left: -10px;
+	margin-left: 0px;
+}
+.mod-dexed{{{cns}}} .mod-switch.dexed-oscillator_sync {
+    top: 125px;
+	left: 103px;
+	margin-left: 0px;
+}
+.mod-dexed{{{cns}}} .mod-switch.dexed-lfo_sync .mod-group-title {
+    top: 27px;
+    color: black;
+    margin-left: -27px;
+    font-size: 15px;
+}
+.mod-dexed{{{cns}}} .mod-switch.dexed-oscillator_sync .mod-group-title {
+    top: 27px;
+    color: black;
+    margin-left: -27px;
+    font-size: 15px;
+}
+
+/* = ENUMERATED LIST
+================================================ */
+.mod-dexed{{{cns}}} .mod-enumerated {
+	background-image:url(/resources/utils/dropdown-white.png{{{ns}}});
+	background-position: right center;
+    background-repeat: no-repeat;
+    background-color: #262525;
+    position: absolute;
+    width: 58px;
+    height: 25px;
+    color: #ccc;
+    cursor: pointer;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+	z-index: 49;
+}
+
+.mod-dexed{{{cns}}} .mod-enumerated .mod-enumerated-list {
+	bottom: 25px;
+    background-color: #262525;
+    border-radius: 10px;
+    display: none;
+    width: 100px;
+    text-align: left;
+    font-size: 22px;
+    padding-left: 10px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    z-index: 53;
+}
+.mod-dexed{{{cns}}} .mod-enumerated .mod-enumerated-list > div.selected {
+    background-color:#393939;
+}
+
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op1_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op2_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op3_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op4_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op5_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op6_kbd_lev_scl_lft_curve {
+    left: 160px;
+    top: 210px;
+    z-index: 53;
+}
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op1_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op2_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op3_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op4_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op5_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-op6_kbd_lev_scl_rht_curve {
+    left: 276px;
+    top: 210px;
+    z-index: 53;
+}
+.mod-dexed{{{cns}}} .title-op1_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .title-op2_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .title-op3_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .title-op4_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .title-op5_kbd_lev_scl_lft_curve,
+.mod-dexed{{{cns}}} .title-op6_kbd_lev_scl_lft_curve {
+	position: absolute;
+    left: 170px;
+    top: 240px;
+    z-index: 52;
+}
+.mod-dexed{{{cns}}} .title-op1_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .title-op2_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .title-op3_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .title-op4_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .title-op5_kbd_lev_scl_rht_curve,
+.mod-dexed{{{cns}}} .title-op6_kbd_lev_scl_rht_curve {
+	position: absolute;
+    left: 291px;
+    top: 240px;
+    z-index: 52;
+}
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-engine {
+    left: 0px;
+    top: 15px;
+	width: 90px;
+    z-index: 53;
+}
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-engine .mod-enumerated-list {
+	bottom: 25px;
+    width: 150px;
+}
+.mod-dexed{{{cns}}} .title-engine {
+	position: absolute;
+    left: 35px;
+    top: 45px;
+	color: black;
+}
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-lfo_waveform {
+    left: 0px;
+    top: 15px;
+	width: 90px;
+    z-index: 53;
+}
+.mod-dexed{{{cns}}} .mod-enumerated.dexed-lfo_waveform .mod-enumerated-list {
+	bottom: 25px;
+    width: 150px;
+}
+.mod-dexed{{{cns}}} .title-lfo_waveform {
+	position: absolute;
+    left: 30px;
+    top: 45px;
+	color: black;
+}
+/* = GROUP
+================================================ */
+.dexed-group2 {
+    left: 348px;
+	margin-top: -35px;
+}
+.dexed-group3 {
+    left: 695px;
+	margin-top: -36px;
+}
+.dexed-group4 {
+    top: 226px;
+}
+.dexed-group5 {
+    top: 226px;
+	left: 348px;
+	margin-top: -35px;
+}
+.dexed-group6 {
+    top: 226px;
+	left: 695px;
+	margin-top: -36px;
+}
+.dexed-grouppitch {
+	position: absolute !important;
+    top: 435px;
+	left: 887px;
+	margin-top: 0px;
+}
+.dexed-groupmaster {
+    position: absolute !important;
+    top: 529px;
+	left: 0px;
+	margin-top: 0px;
+}
+.dexed-grouplfo {
+    position: absolute !important;
+    top: 529px;
+    left: 685px;
+	margin-top: 0px;
+}
+.dexed-groupparam {
+    position: absolute !important;
+    top: 529px;
+    left: 400px;
+	margin-top: 0px;
+}
+
+
+/* = Presets
+================================================ */
+.mod-dexed{{{cns}}} .mod-presets {
+	position: absolute;
+    bottom: 15px;
+	left: 15px;
+    z-index: 22;
+    font-size: 20px;
+}
+.mod-dexed{{{cns}}} .mod-presets > select {
+    background-color: #636363;
+    width: 140px !important;
+	height: 30px;
+    cursor: pointer;
+	border: solid 2px #636363;
+	font-size: 16px;
+	color:#ccc;
+}
+.mod-dexed{{{cns}}} .mod-presets > select > option {
+	font-size: 20px;
+	font-weight: bold;
+	color:#fff;
+}

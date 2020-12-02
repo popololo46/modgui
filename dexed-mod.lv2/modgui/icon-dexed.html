@@ -1,0 +1,1093 @@
+<div class="mod-pedal mod-dexed{{{cns}}}">
+    <div mod-role="drag-handle" class="mod-drag-handle"></div>
+    <div class="mod-footswitch" mod-role="bypass"></div>
+	
+	<div class="mod-control-group dexed-group1 clearfix">
+		<span class="mod-group-title op1-title1">EG Level</span>
+		{{#controls.36}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">1</span>
+		</div>
+		{{/controls.36}}
+		{{#controls.37}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">2</span>
+		</div>
+        {{/controls.37}}
+        {{#controls.38}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">3</span>
+        </div>
+        {{/controls.38}}
+		{{#controls.39}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">4</span>
+        </div>
+        {{/controls.39}}
+		{{#controls.40}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.40}}
+        {{#controls.41}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.41}}
+        {{#controls.42}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.42}}
+		{{#controls.43}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.43}}
+		<span class="mod-group-title op1-title2">EG Rate</span>	
+	
+		{{#controls.45}}
+		<div class="mod-switch dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-group-title"></div>
+		</div>
+		{{/controls.45}}
+		{{#controls.46}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.46}}
+        {{#controls.47}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.47}}
+		{{#controls.48}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob15" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.48}}
+		{{#controls.50}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.50}}
+		{{#controls.49}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.49}}
+		{{#controls.51}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.51}}
+		{{#controls.52}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.52}}
+		{{#controls.54}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.54}}
+		{{#controls.53}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.53}}
+		{{#controls.55}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob4" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.55}}
+		{{#controls.56}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.56}}
+		{{#controls.44}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.44}}
+		{{#controls.162}}
+		<div class="mod-switch-op dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		</div>
+		{{/controls.162}}
+	</div>
+
+
+	<div class="mod-control-group dexed-group2 clearfix">
+		<span class="mod-group-title op2-title1">EG Level</span>
+        {{#controls.57}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">1</span>
+        </div>
+        {{/controls.57}}
+		{{#controls.58}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">2</span>
+        </div>
+        {{/controls.58}}
+        {{#controls.59}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">3</span>
+        </div>
+        {{/controls.59}}
+		{{#controls.60}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">4</span>
+        </div>
+        {{/controls.60}}
+		{{#controls.61}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.61}}
+        {{#controls.62}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.62}}
+        {{#controls.63}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.63}}
+		{{#controls.64}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.64}}
+		<span class="mod-group-title op2-title2">EG Rate</span>	
+	
+		{{#controls.66}}
+		<div class="mod-switch dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-group-title"></div>
+		</div>
+		{{/controls.66}}
+		{{#controls.67}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.67}}
+        {{#controls.68}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.68}}
+		{{#controls.69}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob15" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.69}}
+		{{#controls.71}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.71}}
+		{{#controls.70}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.70}}
+		{{#controls.72}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.72}}
+		{{#controls.73}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.73}}
+		{{#controls.75}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.75}}
+		{{#controls.74}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.74}}
+		{{#controls.76}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob4" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.76}}
+		{{#controls.77}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.77}}
+		{{#controls.65}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.65}}
+		{{#controls.163}}
+		<div class="mod-switch-op dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		</div>
+		{{/controls.163}}	
+	</div>
+
+	
+	<div class="mod-control-group dexed-group3 clearfix">
+		<span class="mod-group-title op3-title1">EG Level</span>
+        {{#controls.78}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">1</span>
+        </div>
+        {{/controls.78}}
+		{{#controls.79}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">2</span>
+        </div>
+        {{/controls.79}}
+        {{#controls.80}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">3</span>
+        </div>
+        {{/controls.80}}
+		{{#controls.81}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">4</span>
+        </div>
+        {{/controls.81}}
+		{{#controls.82}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.82}}
+        {{#controls.83}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.83}}
+        {{#controls.84}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.84}}
+		{{#controls.85}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.85}}
+		<span class="mod-group-title op3-title2">EG Rate</span>	
+	
+		{{#controls.87}}
+		<div class="mod-switch dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-group-title"></div>
+		</div>
+		{{/controls.87}}
+		{{#controls.88}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.88}}
+        {{#controls.89}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.89}}
+		{{#controls.90}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob15" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.90}}
+		{{#controls.92}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.92}}
+		{{#controls.91}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.91}}
+		{{#controls.93}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.93}}
+		{{#controls.94}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.94}}
+		{{#controls.96}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.96}}
+		{{#controls.95}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.95}}
+		{{#controls.97}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob4" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.97}}
+		{{#controls.98}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.98}}
+		{{#controls.86}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.86}}
+		{{#controls.164}}
+		<div class="mod-switch-op dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		</div>
+		{{/controls.164}}	
+	</div>
+	
+	
+	<div class="mod-control-group dexed-group4 clearfix">
+		<span class="mod-group-title op4-title1">EG Level</span>
+        {{#controls.99}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">1</span>
+        </div>
+        {{/controls.99}}
+		{{#controls.100}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">2</span>
+        </div>
+        {{/controls.100}}
+        {{#controls.101}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">3</span>
+        </div>
+        {{/controls.101}}
+		{{#controls.102}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">4</span>
+        </div>
+        {{/controls.102}}
+		{{#controls.103}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.103}}
+        {{#controls.104}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.104}}
+        {{#controls.105}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.105}}
+		{{#controls.106}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.106}}
+		<span class="mod-group-title op4-title2">EG Rate</span>	
+	
+		{{#controls.108}}
+		<div class="mod-switch dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-group-title"></div>
+		</div>
+		{{/controls.108}}
+		{{#controls.109}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.109}}
+        {{#controls.110}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.110}}
+		{{#controls.111}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob15" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.111}}
+		{{#controls.113}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.113}}
+		{{#controls.112}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.112}}
+		{{#controls.114}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.114}}
+		{{#controls.115}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.115}}
+		{{#controls.117}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.117}}
+		{{#controls.116}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.116}}
+		{{#controls.118}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob4" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.118}}
+		{{#controls.119}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.119}}
+		{{#controls.107}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.107}}
+		{{#controls.165}}
+		<div class="mod-switch-op dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		</div>
+		{{/controls.165}}	
+	</div>
+	
+	
+	<div class="mod-control-group dexed-group5 clearfix">
+		<span class="mod-group-title op5-title1">EG Level</span>
+        {{#controls.120}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">1</span>
+        </div>
+        {{/controls.120}}
+		{{#controls.121}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">2</span>
+        </div>
+        {{/controls.121}}
+        {{#controls.122}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">3</span>
+        </div>
+        {{/controls.122}}
+		{{#controls.123}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">4</span>
+        </div>
+        {{/controls.123}}
+		{{#controls.124}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.124}}
+        {{#controls.125}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.125}}
+        {{#controls.126}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.126}}
+		{{#controls.127}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.127}}
+		<span class="mod-group-title op5-title2">EG Rate</span>	
+	
+		{{#controls.129}}
+		<div class="mod-switch dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-group-title"></div>
+		</div>
+		{{/controls.129}}
+		{{#controls.130}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.130}}
+        {{#controls.131}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.131}}
+		{{#controls.132}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob15" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.132}}
+		{{#controls.134}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.134}}
+		{{#controls.133}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.133}}
+		{{#controls.135}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.135}}
+		{{#controls.136}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.136}}
+		{{#controls.138}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.138}}
+		{{#controls.137}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.137}}
+		{{#controls.139}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob4" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.139}}
+		{{#controls.140}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.140}}
+		{{#controls.128}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.128}}
+		{{#controls.166}}
+		<div class="mod-switch-op dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		</div>
+		{{/controls.166}}	
+	</div>
+	
+	
+	<div class="mod-control-group dexed-group6 clearfix">
+		<span class="mod-group-title op6-title1">EG Level</span>
+        {{#controls.141}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">1</span>
+        </div>
+        {{/controls.141}}
+		{{#controls.142}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">2</span>
+        </div>
+        {{/controls.142}}
+        {{#controls.143}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">3</span>
+        </div>
+        {{/controls.143}}
+		{{#controls.144}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">4</span>
+        </div>
+        {{/controls.144}}
+		{{#controls.145}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.145}}
+        {{#controls.146}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.146}}
+        {{#controls.147}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.147}}
+		{{#controls.148}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.148}}
+		<span class="mod-group-title op6-title2">EG Rate</span>	
+	
+		{{#controls.150}}
+		<div class="mod-switch dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-group-title"></div>
+		</div>
+		{{/controls.150}}
+		{{#controls.151}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.151}}
+        {{#controls.152}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.152}}
+		{{#controls.153}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob15" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.153}}
+		{{#controls.155}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.155}}
+		{{#controls.154}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.154}}
+		{{#controls.156}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.156}}
+		{{#controls.157}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.157}}
+		{{#controls.159}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.159}}
+		{{#controls.158}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.158}}
+		{{#controls.160}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob4" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.160}}
+		{{#controls.161}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.161}}
+		{{#controls.149}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.149}}
+		{{#controls.167}}
+		<div class="mod-switch-op dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		</div>
+		{{/controls.167}}	
+	</div>
+	
+	
+	<div class="mod-control-group dexed-grouppitch clearfix">
+		<span class="mod-group-title op1-title1">Pitch EG Level</span>
+		{{#controls.28}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">1</span>
+		</div>
+		{{/controls.28}}
+		{{#controls.29}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">2</span>
+		</div>
+        {{/controls.29}}
+        {{#controls.30}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">3</span>
+        </div>
+        {{/controls.30}}
+		{{#controls.31}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">4</span>
+        </div>
+        {{/controls.31}}
+		{{#controls.32}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.32}}
+        {{#controls.33}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.33}}
+        {{#controls.34}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.34}}
+		{{#controls.35}}
+        <div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.35}}
+		<span class="mod-group-title op1-title2">Pitch EG Rate</span>	
+	</div>
+	
+	
+	<div class="mod-control-group dexed-groupmaster clearfix">
+		{{#controls.16}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.16}}
+		{{#controls.0}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.0}}
+		{{#controls.1}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.1}}
+		{{#controls.2}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.2}}
+		{{#controls.26}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.26}}
+		{{#controls.5}}
+		<div class="mod-switch dexed-{{symbol}}" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+		<span class="mod-group-title dexed-{{symbol}}-mono">MONO</span>
+		<span class="mod-group-title dexed-{{symbol}}-poly">POLY</span>
+		</div>
+		{{/controls.5}}
+		{{#controls.17}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.17}}
+		{{#controls.18}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob8" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title">{{name}}</span>
+        </div>
+        {{/controls.18}}
+	</div>
+	
+	
+	<div class="mod-control-group dexed-grouplfo clearfix">
+	
+		{{#controls.20}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.20}}
+		{{#controls.21}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.21}}
+		{{#controls.22}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.22}}
+		{{#controls.23}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.23}}
+		{{#controls.27}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.27}}
+		{{#controls.24}}
+		<div class="mod-switch dexed-{{symbol}} altswitch" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-group-title dexed-{{symbol}}">{{name}}</span>
+		</div>
+		{{/controls.24}}
+		{{#controls.19}}
+		<div class="mod-switch dexed-{{symbol}} altswitch" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+			<span class="mod-group-title dexed-{{symbol}}">{{name}}</span>
+		</div>
+		{{/controls.19}}
+		{{#controls.25}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.25}}
+	</div>
+	
+	
+	<div class="mod-control-group dexed-groupparam clearfix">
+	
+		{{#controls.6}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob13" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.6}}
+		{{#controls.7}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knob13" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.7}}
+		{{#controls.3}}
+		<div class="mod-enumerated dexed-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+			<div mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
+			<div class="mod-enumerated-list" >
+			{{#scalePoints}}
+				<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+			{{/scalePoints}}
+			</div>
+		</div>
+		<span class="mod-knob-title title-{{symbol}}">{{name}}</span>
+		{{/controls.3}}
+		{{#controls.4}}
+		<div class="mod-knob dexed-{{symbol}}">
+			<div class="mod-knob-image dexed-knobred" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			<span class="mod-knob-title" style="color: black;">{{name}}</span>
+        </div>
+        {{/controls.4}}
+	</div>
+	
+	<div class="mod-presets clearfix">
+        <select mod-role="presets">
+            <option value="">Presets</option>
+            {{#effect.presets}}
+            <option mod-role="preset-label" value="{{uri}}">{{label}}</option>
+            {{/effect.presets}}
+        </select>
+    </div>
+	
+
+	<div class="mod-plugin-name">{{label}}</div>
+    <div class="mod-pedal-input">
+        {{#effect.ports.audio.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.audio.input}}
+        {{#effect.ports.midi.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.midi.input}}
+        {{#effect.ports.cv.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input}}
+    </div>
+    <div class="mod-pedal-output">
+        {{#effect.ports.audio.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.audio.output}}
+        {{#effect.ports.midi.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.midi.output}}
+        {{#effect.ports.cv.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.cv.output}}
+    </div>
+</div>

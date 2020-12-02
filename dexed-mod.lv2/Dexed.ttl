@@ -1,0 +1,2221 @@
+@prefix atom:  <http://lv2plug.in/ns/ext/atom#> .
+@prefix doap: <http://usefulinc.com/ns/doap#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ll:   <http://ll-plugins.nongnu.org/lv2/namespace#>.
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#>.
+@prefix pg:   <http://ll-plugins.nongnu.org/lv2/ext/portgroups#>.
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix ui:    <http://lv2plug.in/ns/extensions/ui#>.
+@prefix urid:  <http://lv2plug.in/ns/ext/urid#>.
+@prefix epp: <http://lv2plug.in/ns/dev/extportinfo#>.
+@prefix pprops: <http://lv2plug.in/ns/ext/port-props#>.
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+
+<https://github.com/dcoredump/dexed.lv2#me>
+        a foaf:Person ;
+        foaf:name "dcoredump" ;
+        foaf:homepage <https://github.com/dcoredump/dexed/tree/native-lv2> ;
+        foaf:mbox <mailto:dcoredump@googlemail.com> .
+
+<https://github.com/dcoredump/dexed.lv2>
+    a lv2:InstrumentPlugin, lv2:Plugin ;
+    doap:name "Dexed" ;
+    doap:description "Synth" ;
+    doap:shortdesc "Dexed" ;
+    rdfs:comment "Dexed.lv2 is a native LV2 port of the famous DX-7 emulator Dexed.";
+    lv2:microVersion 2 ;lv2:minorVersion 0 ;
+    doap:developer [
+        a foaf:Person ;
+        foaf:name "Pascal Gauthier" ;
+        foaf:mbox <mailto:asb2m10@gmail.com> ;
+    ] ;
+    doap:maintainer <https://github.com/dcoredump/dexed.lv2#me> ;
+    doap:license <http://usefulinc.com/doap/licenses/asl20> ;
+    doap:license <http://usefulinc.com/doap/licenses/gpl> ;
+    lv2:binary <dexed.so> ;
+    ll:pegName "p";
+
+rdfs:comment """
+Dexed.lv2 is a native LV2 port of the famous DX-7 emulator Dexed. It is based on the FM-synthesis and tries to emulate the original as good as possible. With external scripts you can convert original SYSEX files to use them within Dexed.
+
+The original engine comes from MSFA (music synthesizer for android) which is based on the Apache 2.0 license. Additional sources for Dexed were done by Pascal Gauthier (asb2m10). The port to LV2 and some smaller modification were done by Holger Wirtz and also reside under GPL license.
+""";
+
+    lv2:port [
+        a lv2:InputPort, atom:AtomPort ;
+        atom:bufferType atom:Sequence ;
+        atom:supports <http://lv2plug.in/ns/ext/midi#MidiEvent>,
+                      <http://lv2plug.in/ns/ext/patch#Message> ;
+        lv2:index 0 ;
+        lv2:symbol "midi_in" ;
+        lv2:name "MIDI Input" ;
+    ] ,
+    [
+        a lv2:OutputPort, lv2:AudioPort ;
+        lv2:index 1 ;
+        lv2:symbol "audio_out" ;
+        lv2:name "Audio Output" ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 2 ;
+        lv2:symbol "cutoff" ;
+        lv2:name "Cutoff" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 3 ;
+        lv2:symbol "resonance" ;
+        lv2:name "Resonance" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 4 ;
+        lv2:symbol "output" ;
+        lv2:name "Gain" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 2.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 5 ;
+        lv2:symbol "engine" ;
+        lv2:name "ENGINE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 2 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "MSFA" ;
+            rdfs:comment "MSFA" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Mark I" ;
+            rdfs:comment "Mark I" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "OPL" ;
+            rdfs:comment "OPL" ;
+	];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 6 ;
+        lv2:symbol "number_of_voices" ;
+        lv2:name "NUMBER OF VOICES" ;
+        lv2:default 16 ;
+        lv2:minimum 1 ;
+        lv2:maximum 32 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 7 ;
+        lv2:symbol "polymono" ;
+        lv2:name "POLY-MONO" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+	lv2:portProperty lv2:toggled, lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 8 ;
+        lv2:symbol "pitch_bend_range" ;
+        lv2:name "PB RANGE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 12 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 9 ;
+        lv2:symbol "pitch_bend_step" ;
+        lv2:name "PB STEP" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 12 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 10 ;
+        lv2:symbol "mod_wheel_range" ;
+        lv2:name "MW RANGE" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 11 ;
+        lv2:symbol "mod_wheel_assign" ;
+        lv2:name "MW ASSIGN" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Pitch" ;
+            rdfs:comment "Pitch" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "Amp" ;
+            rdfs:comment "Amp" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "Amp+Pitch" ;
+            rdfs:comment "Amp+Pitch" ;
+        ], [
+            rdf:value 4 ;
+            rdfs:label "EG" ;
+            rdfs:comment "EG" ;
+        ], [
+            rdf:value 5 ;
+            rdfs:label "EG+Pitch" ;
+            rdfs:comment "EG+Pitch" ;
+        ], [
+            rdf:value 6 ;
+            rdfs:label "EG+Amp" ;
+            rdfs:comment "EG+Amp" ;
+        ], [
+            rdf:value 7 ;
+            rdfs:label "EG+Pitch+Amp" ;
+            rdfs:comment "EG+Pitch+Amp" ;
+	];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 12 ;
+        lv2:symbol "foot_ctrl_range" ;
+        lv2:name "FC RANGE" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 13 ;
+        lv2:symbol "foot_ctrl_assign" ;
+        lv2:name "FC ASSIGN" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Pitch" ;
+            rdfs:comment "Pitch" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "Amp" ;
+            rdfs:comment "Amp" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "Amp+Pitch" ;
+            rdfs:comment "Amp+Pitch" ;
+        ], [
+            rdf:value 4 ;
+            rdfs:label "EG" ;
+            rdfs:comment "EG" ;
+        ], [
+            rdf:value 5 ;
+            rdfs:label "EG+Pitch" ;
+            rdfs:comment "EG+Pitch" ;
+        ], [
+            rdf:value 6 ;
+            rdfs:label "EG+Amp" ;
+            rdfs:comment "EG+Amp" ;
+        ], [
+            rdf:value 7 ;
+            rdfs:label "EG+Pitch+Amp" ;
+            rdfs:comment "EG+Pitch+Amp" ;
+	];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 14 ;
+        lv2:symbol "breath_ctrl_range" ;
+        lv2:name "BC RANGE" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 15 ;
+        lv2:symbol "breath_ctrl_assign" ;
+        lv2:name "BC ASSIGN" ;
+        lv2:default 0;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Pitch" ;
+            rdfs:comment "Pitch" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "Amp" ;
+            rdfs:comment "Amp" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "Amp+Pitch" ;
+            rdfs:comment "Amp+Pitch" ;
+        ], [
+            rdf:value 4 ;
+            rdfs:label "EG" ;
+            rdfs:comment "EG" ;
+        ], [
+            rdf:value 5 ;
+            rdfs:label "EG+Pitch" ;
+            rdfs:comment "EG+Pitch" ;
+        ], [
+            rdf:value 6 ;
+            rdfs:label "EG+Amp" ;
+            rdfs:comment "EG+Amp" ;
+        ], [
+            rdf:value 7 ;
+            rdfs:label "EG+Pitch+Amp" ;
+            rdfs:comment "EG+Pitch+Amp" ;
+	];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 16 ;
+        lv2:symbol "aftertouch_range" ;
+        lv2:name "AT RANGE" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 17 ;
+        lv2:symbol "aftertouch_assign" ;
+        lv2:name "AT ASSIGN" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Pitch" ;
+            rdfs:comment "Pitch" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "Amp" ;
+            rdfs:comment "Amp" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "Amp+Pitch" ;
+            rdfs:comment "Amp+Pitch" ;
+        ], [
+            rdf:value 4 ;
+            rdfs:label "EG" ;
+            rdfs:comment "EG" ;
+        ], [
+            rdf:value 5 ;
+            rdfs:label "EG+Pitch" ;
+            rdfs:comment "EG+Pitch" ;
+        ], [
+            rdf:value 6 ;
+            rdfs:label "EG+Amp" ;
+            rdfs:comment "EG+Amp" ;
+        ], [
+            rdf:value 7 ;
+            rdfs:label "EG+Pitch+Amp" ;
+            rdfs:comment "EG+Pitch+Amp" ;
+	];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 18 ;
+        lv2:symbol "master_tune" ;
+        lv2:name "MASTER TUNE" ;
+        lv2:default 0.0 ;
+        lv2:minimum -1.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 19 ;
+        lv2:symbol "algorithm_num" ;
+        lv2:name "ALGORITHM" ;
+        lv2:default 5 ;
+        lv2:minimum 1 ;
+        lv2:maximum 32 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 20 ;
+        lv2:symbol "feedback" ;
+        lv2:name "FEEDBACK" ;
+        lv2:default 6 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 21 ;
+        lv2:symbol "oscillator_sync" ;
+        lv2:name "OSC KEY SYNC" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+	lv2:portProperty lv2:toggled, lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 22 ;
+        lv2:symbol "lfo_speed" ;
+        lv2:name "LFO SPEED" ;
+        lv2:default 34 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 23 ;
+        lv2:symbol "lfo_delay" ;
+        lv2:name "LFO DELAY" ;
+        lv2:default 33 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 24 ;
+        lv2:symbol "lfo_pitch_mod_depth" ;
+        lv2:name "LFO PM DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 25 ;
+        lv2:symbol "lfo_amp_mod_depth" ;
+        lv2:name "LFO AM DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 26 ;
+        lv2:symbol "lfo_sync" ;
+        lv2:name "LFO KEY SYNC" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+	lv2:portProperty lv2:toggled, lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 27 ;
+        lv2:symbol "lfo_waveform" ;
+        lv2:name "LFO WAVE" ;
+        lv2:default 4 ;
+        lv2:minimum 0 ;
+        lv2:maximum 5 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Triangle" ;
+            rdfs:comment "Triangle" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Saw-Down" ;
+            rdfs:comment "Saw-Down" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "Saw-Up" ;
+            rdfs:comment "Saw-Up" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "Square" ;
+            rdfs:comment "Square" ;
+        ], [
+            rdf:value 4 ;
+            rdfs:label "Sine" ;
+            rdfs:comment "Sine" ;
+        ], [
+            rdf:value 5 ;
+            rdfs:label "Sample & Hold" ;
+            rdfs:comment "Sample & Hold" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 28 ;
+        lv2:symbol "transpose" ;
+        lv2:name "MIDDLE C" ;
+        lv2:default 12 ;
+        lv2:minimum 0 ;
+        lv2:maximum 48 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 29 ;
+        lv2:symbol "pitch_mod_sensitivity" ;
+        lv2:name "P MODE SENS." ;
+        lv2:default 3 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 30 ;
+        lv2:symbol "pitch_eg_rate_1" ;
+        lv2:name "PITCH EG RATE 1" ;
+        lv2:default 94 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 31 ;
+        lv2:symbol "pitch_eg_rate_2" ;
+        lv2:name "PITCH EG RATE 2" ;
+        lv2:default 67 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 32 ;
+        lv2:symbol "pitch_eg_rate_3" ;
+        lv2:name "PITCH EG RATE 3" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 33 ;
+        lv2:symbol "pitch_eg_rate_4" ;
+        lv2:name "PITCH EG RATE 4" ;
+        lv2:default 60 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 34 ;
+        lv2:symbol "pitch_eg_level_1" ;
+        lv2:name "PITCH EG LEVEL 1" ;
+        lv2:default 50 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 35 ;
+        lv2:symbol "pitch_eg_level_2" ;
+        lv2:name "PITCH EG LEVEL 2" ;
+        lv2:default 50 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 36 ;
+        lv2:symbol "pitch_eg_level_3" ;
+        lv2:name "PITCH EG LEVEL 3" ;
+        lv2:default 50 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 37 ;
+        lv2:symbol "pitch_eg_level_4" ;
+        lv2:name "PITCH EG LEVEL 4" ;
+        lv2:default 50 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 38 ;
+        lv2:symbol "op1_eg_rate_1" ;
+        lv2:name "OP1 EG RATE 1" ;
+        lv2:default 96 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 39 ;
+        lv2:symbol "op1_eg_rate_2" ;
+        lv2:name "OP1 EG RATE 2" ;
+        lv2:default 25 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 40 ;
+        lv2:symbol "op1_eg_rate_3" ;
+        lv2:name "OP1 EG RATE 3" ;
+        lv2:default 25 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 41 ;
+        lv2:symbol "op1_eg_rate_4" ;
+        lv2:name "OP1 EG RATE 4" ;
+        lv2:default 67 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 42 ;
+        lv2:symbol "op1_eg_level_1" ;
+        lv2:name "OP1 EG LEVEL 1" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 43 ;
+        lv2:symbol "op1_eg_level_2" ;
+        lv2:name "OP1 EG LEVEL 2" ;
+        lv2:default 75 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 44 ;
+        lv2:symbol "op1_eg_level_3" ;
+        lv2:name "OP1 EG LEVEL 3" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 45 ;
+        lv2:symbol "op1_eg_level_4" ;
+        lv2:name "OP1 EG LEVEL 4" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 46 ;
+        lv2:symbol "op1_operator_output_level" ;
+        lv2:name "OP1 OUTPUT LEVEL" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 47 ;
+        lv2:symbol "op1_osc_mode" ;
+        lv2:name "OP1 MODE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Ratio" ;
+            rdfs:comment "Ratio" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Fixed" ;
+            rdfs:comment "Fixed" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 48 ;
+        lv2:symbol "op1_osc_freq_coarse" ;
+        lv2:name "OP1 F COARSE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 31 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 49 ;
+        lv2:symbol "op1_osc_freq_fine" ;
+        lv2:name "OP1 F FINE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 50 ;
+        lv2:symbol "op1_osc_detune" ;
+        lv2:name "OP1 OSC DETUNE" ;
+        lv2:default 3 ;
+        lv2:minimum -7 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 51 ;
+        lv2:symbol "op1_kbd_lev_scl_brk_pt" ;
+        lv2:name "OP1 BREAK POINT" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 52 ;
+        lv2:symbol "op1_kbd_lev_scl_lft_depth" ;
+        lv2:name "OP1 L SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 53 ;
+        lv2:symbol "op1_kbd_lev_scl_rht_depth" ;
+        lv2:name "OP1 R SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 54 ;
+        lv2:symbol "op1_kbd_lev_scl_lft_curve" ;
+        lv2:name "OP1 L KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 55 ;
+        lv2:symbol "op1_kbd_lev_scl_rht_curve" ;
+        lv2:name "OP1 R KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 56 ;
+        lv2:symbol "op1_kbd_rate_scaling" ;
+        lv2:name "OP1 RATE SCALING" ;
+        lv2:default 3 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 57 ;
+        lv2:symbol "op1_amp_mod_sensitivity" ;
+        lv2:name "OP1 A MOD SENS." ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 58 ;
+        lv2:symbol "op1_key_vel_sensitivity" ;
+        lv2:name "OP1 KEY VELOCITY" ;
+        lv2:default 2 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 59 ;
+        lv2:symbol "op2_eg_rate_1" ;
+        lv2:name "OP2 EG RATE 1" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 60 ;
+        lv2:symbol "op2_eg_rate_2" ;
+        lv2:name "OP2 EG RATE 2" ;
+        lv2:default 50 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 61 ;
+        lv2:symbol "op2_eg_rate_3" ;
+        lv2:name "OP2 EG RATE 3" ;
+        lv2:default 35 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 62 ;
+        lv2:symbol "op2_eg_rate_4" ;
+        lv2:name "OP2 EG RATE 4" ;
+        lv2:default 78 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 63 ;
+        lv2:symbol "op2_eg_level_1" ;
+        lv2:name "OP2 EG LEVEL 1" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 64 ;
+        lv2:symbol "op2_eg_level_2" ;
+        lv2:name "OP2 EG LEVEL 2" ;
+        lv2:default 75 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 65 ;
+        lv2:symbol "op2_eg_level_3" ;
+        lv2:name "OP2 EG LEVEL 3" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 66 ;
+        lv2:symbol "op2_eg_level_4" ;
+        lv2:name "OP2 EG LEVEL 4" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 67 ;
+        lv2:symbol "op2_operator_output_level" ;
+        lv2:name "OP2 OUTPUT LEVEL" ;
+        lv2:default 58 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 68 ;
+        lv2:symbol "op2_osc_mode" ;
+        lv2:name "OP2 MODE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Ratio" ;
+            rdfs:comment "Ratio" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Fixed" ;
+            rdfs:comment "Fixed" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 69 ;
+        lv2:symbol "op2_osc_freq_coarse" ;
+        lv2:name "OP2 F COARSE" ;
+        lv2:default 14 ;
+        lv2:minimum 0 ;
+        lv2:maximum 31 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 70 ;
+        lv2:symbol "op2_osc_freq_fine" ;
+        lv2:name "OP2 F FINE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 100 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 71 ;
+        lv2:symbol "op2_osc_detune" ;
+        lv2:name "OP2 OSC DETUNE" ;
+        lv2:default 0 ;
+        lv2:minimum -7 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 72 ;
+        lv2:symbol "op2_kbd_lev_scl_brk_pt" ;
+        lv2:name "OP2 BREAK POINT" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 100 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 73 ;
+        lv2:symbol "op2_kbd_lev_scl_lft_depth" ;
+        lv2:name "OP2 L SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 100 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 74 ;
+        lv2:symbol "op2_kbd_lev_scl_rht_depth" ;
+        lv2:name "OP2 R SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 100 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 75 ;
+        lv2:symbol "op2_kbd_lev_scl_lft_curve" ;
+        lv2:name "OP2 L KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+	lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 76 ;
+        lv2:symbol "op2_kbd_lev_scl_rht_curve" ;
+        lv2:name "OP2 R KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 77 ;
+        lv2:symbol "op2_kbd_rate_scaling" ;
+        lv2:name "OP2 RATE SCALING" ;
+        lv2:default 3 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 78 ;
+        lv2:symbol "op2_amp_mod_sensitivity" ;
+        lv2:name "OP2 A MOD SENS." ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 79 ;
+        lv2:symbol "op2_key_vel_sensitivity" ;
+        lv2:name "OP2 KEY VELOCITY" ;
+        lv2:default 7 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 80 ;
+        lv2:symbol "op3_eg_rate_1" ;
+        lv2:name "OP3 EG RATE 1" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 81 ;
+        lv2:symbol "op3_eg_rate_2" ;
+        lv2:name "OP3 EG RATE 2" ;
+        lv2:default 20 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 82 ;
+        lv2:symbol "op3_eg_rate_3" ;
+        lv2:name "OP3 EG RATE 3" ;
+        lv2:default 20 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 83 ;
+        lv2:symbol "op3_eg_rate_4" ;
+        lv2:name "OP3 EG RATE 4" ;
+        lv2:default 50 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 84 ;
+        lv2:symbol "op3_eg_level_1" ;
+        lv2:name "OP3 EG LEVEL 1" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 85 ;
+        lv2:symbol "op3_eg_level_2" ;
+        lv2:name "OP3 EG LEVEL 2" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 86 ;
+        lv2:symbol "op3_eg_level_3" ;
+        lv2:name "OP3 EG LEVEL 3" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 87 ;
+        lv2:symbol "op3_eg_level_4" ;
+        lv2:name "OP3 EG LEVEL 4" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 88 ;
+        lv2:symbol "op3_operator_output_level" ;
+        lv2:name "OP3 OUTPUT LEVEL" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 89 ;
+        lv2:symbol "op3_osc_mode" ;
+        lv2:name "OP3 MODE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Ratio" ;
+            rdfs:comment "Ratio" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Fixed" ;
+            rdfs:comment "Fixed" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 90 ;
+        lv2:symbol "op3_osc_freq_coarse" ;
+        lv2:name "OP3 F COARSE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 31 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 91 ;
+        lv2:symbol "op3_osc_freq_fine" ;
+        lv2:name "OP3 F FINE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 92 ;
+        lv2:symbol "op3_osc_detune" ;
+        lv2:name "OP3 OSC DETUNE" ;
+        lv2:default 0 ;
+        lv2:minimum -7 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 93 ;
+        lv2:symbol "op3_kbd_lev_scl_brk_pt" ;
+        lv2:name "OP3 BREAK POINT" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 94 ;
+        lv2:symbol "op3_kbd_lev_scl_lft_depth" ;
+        lv2:name "OP3 L SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 95 ;
+        lv2:symbol "op3_kbd_lev_scl_rht_depth" ;
+        lv2:name "OP3 R SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 96 ;
+        lv2:symbol "op3_kbd_lev_scl_lft_curve" ;
+        lv2:name "OP3 L KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 97 ;
+        lv2:symbol "op3_kbd_lev_scl_rht_curve" ;
+        lv2:name "OP3 R KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 98 ;
+        lv2:symbol "op3_kbd_rate_scaling" ;
+        lv2:name "OP3 RATE SCALING" ;
+        lv2:default 3 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 99 ;
+        lv2:symbol "op3_amp_mod_sensitivity" ;
+        lv2:name "OP3 A MOD SENS." ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 100 ;
+        lv2:symbol "op3_key_vel_sensitivity" ;
+        lv2:name "OP3 KEY VELOCITY" ;
+        lv2:default 2 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 101 ;
+        lv2:symbol "op4_eg_rate_1" ;
+        lv2:name "OP4 EG RATE 1" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 102 ;
+        lv2:symbol "op4_eg_rate_2" ;
+        lv2:name "OP4 EG RATE 2" ;
+        lv2:default 29 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 103 ;
+        lv2:symbol "op4_eg_rate_3" ;
+        lv2:name "OP4 EG RATE 3" ;
+        lv2:default 20 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 104 ;
+        lv2:symbol "op4_eg_rate_4" ;
+        lv2:name "OP4 EG RATE 4" ;
+        lv2:default 50 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 105 ;
+        lv2:symbol "op4_eg_level_1" ;
+        lv2:name "OP4 EG LEVEL 1" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 106 ;
+        lv2:symbol "op4_eg_level_2" ;
+        lv2:name "OP4 EG LEVEL 2" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 107 ;
+        lv2:symbol "op4_eg_level_3" ;
+        lv2:name "OP4 EG LEVEL 3" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 108 ;
+        lv2:symbol "op4_eg_level_4" ;
+        lv2:name "OP4 EG LEVEL 4" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 109 ;
+        lv2:symbol "op4_operator_output_level" ;
+        lv2:name "OP4 OUTPUT LEVEL" ;
+        lv2:default 89 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 110 ;
+        lv2:symbol "op4_osc_mode" ;
+        lv2:name "OP4 MODE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Ratio" ;
+            rdfs:comment "Ratio" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Fixed" ;
+            rdfs:comment "Fixed" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 111 ;
+        lv2:symbol "op4_osc_freq_coarse" ;
+        lv2:name "OP4 F COARSE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 31 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 112 ;
+        lv2:symbol "op4_osc_freq_fine" ;
+        lv2:name "OP4 F FINE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 113 ;
+        lv2:symbol "op4_osc_detune" ;
+        lv2:name "OP4 OSC DETUNE" ;
+        lv2:default 0 ;
+        lv2:minimum -7 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 114 ;
+        lv2:symbol "op4_kbd_lev_scl_brk_pt" ;
+        lv2:name "OP4 BREAK POINT" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 115 ;
+        lv2:symbol "op4_kbd_lev_scl_lft_depth" ;
+        lv2:name "OP4 L SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 116 ;
+        lv2:symbol "op4_kbd_lev_scl_rht_depth" ;
+        lv2:name "OP4 R SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 117 ;
+        lv2:symbol "op4_kbd_lev_scl_lft_curve" ;
+        lv2:name "OP4 L KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 118 ;
+        lv2:symbol "op4_kbd_lev_scl_rht_curve" ;
+        lv2:name "OP4 R KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 119 ;
+        lv2:symbol "op4_kbd_rate_scaling" ;
+        lv2:name "OP4 RATE SCALING" ;
+        lv2:default 3 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 120 ;
+        lv2:symbol "op4_amp_mod_sensitivity" ;
+        lv2:name "OP4 A MOD SENS." ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 121 ;
+        lv2:symbol "op4_key_vel_sensitivity" ;
+        lv2:name "OP4 KEY VELOCITY" ;
+        lv2:default 6 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 122 ;
+        lv2:symbol "op5_eg_rate_1" ;
+        lv2:name "OP5 EG RATE 1" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 123 ;
+        lv2:symbol "op5_eg_rate_2" ;
+        lv2:name "OP5 EG RATE 2" ;
+        lv2:default 20 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 124 ;
+        lv2:symbol "op5_eg_rate_3" ;
+        lv2:name "OP5 EG RATE 3" ;
+        lv2:default 20 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 125 ;
+        lv2:symbol "op5_eg_rate_4" ;
+        lv2:name "OP5 EG RATE 4" ;
+        lv2:default 50 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 126 ;
+        lv2:symbol "op5_eg_level_1" ;
+        lv2:name "OP5 EG LEVEL 1" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 127 ;
+        lv2:symbol "op5_eg_level_2" ;
+        lv2:name "OP5 EG LEVEL 2" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 128 ;
+        lv2:symbol "op5_eg_level_3" ;
+        lv2:name "OP5 EG LEVEL 3" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 129 ;
+        lv2:symbol "op5_eg_level_4" ;
+        lv2:name "OP5 EG LEVEL 4" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 130 ;
+        lv2:symbol "op5_operator_output_level" ;
+        lv2:name "OP5 OUTPUT LEVEL" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 131 ;
+        lv2:symbol "op5_osc_mode" ;
+        lv2:name "OP5 MODE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Ratio" ;
+            rdfs:comment "Ratio" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Fixed" ;
+            rdfs:comment "Fixed" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 132 ;
+        lv2:symbol "op5_osc_freq_coarse" ;
+        lv2:name "OP5 F COARSE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 31 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 133 ;
+        lv2:symbol "op5_osc_freq_fine" ;
+        lv2:name "OP5 F FINE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 134 ;
+        lv2:symbol "op5_osc_detune" ;
+        lv2:name "OP5 OSC DETUNE" ;
+        lv2:default -7 ;
+        lv2:minimum -7 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 135 ;
+        lv2:symbol "op5_kbd_lev_scl_brk_pt" ;
+        lv2:name "OP5 BREAK POINT" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 136 ;
+        lv2:symbol "op5_kbd_lev_scl_lft_depth" ;
+        lv2:name "OP5 L SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 137 ;
+        lv2:symbol "op5_kbd_lev_scl_rht_depth" ;
+        lv2:name "OP5 R SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 138 ;
+        lv2:symbol "op5_kbd_lev_scl_lft_curve" ;
+        lv2:name "OP5 L KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 139 ;
+        lv2:symbol "op5_kbd_lev_scl_rht_curve" ;
+        lv2:name "OP5 R KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 140 ;
+        lv2:symbol "op5_kbd_rate_scaling" ;
+        lv2:name "OP5 RATE SCALING" ;
+        lv2:default 3 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 141 ;
+        lv2:symbol "op5_amp_mod_sensitivity" ;
+        lv2:name "OP5 A MOD SENS." ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 142 ;
+        lv2:symbol "op5_key_vel_sensitivity" ;
+        lv2:name "OP5 KEY VELOCITY" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 143 ;
+        lv2:symbol "op6_eg_rate_1" ;
+        lv2:name "OP6 EG RATE 1" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 144 ;
+        lv2:symbol "op6_eg_rate_2" ;
+        lv2:name "OP6 EG RATE 2" ;
+        lv2:default 29 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 145 ;
+        lv2:symbol "op6_eg_rate_3" ;
+        lv2:name "OP6 EG RATE 3" ;
+        lv2:default 20 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 146 ;
+        lv2:symbol "op6_eg_rate_4" ;
+        lv2:name "OP6 EG RATE 4" ;
+        lv2:default 50 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 147 ;
+        lv2:symbol "op6_eg_level_1" ;
+        lv2:name "OP6 EG LEVEL 1" ;
+        lv2:default 99 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 148 ;
+        lv2:symbol "op6_eg_level_2" ;
+        lv2:name "OP6 EG LEVEL 2" ;
+        lv2:default 95 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 149 ;
+        lv2:symbol "op6_eg_level_3" ;
+        lv2:name "OP6 EG LEVEL 3" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 150 ;
+        lv2:symbol "op6_eg_level_4" ;
+        lv2:name "OP6 EG LEVEL 4" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 151 ;
+        lv2:symbol "op6_operator_output_level" ;
+        lv2:name "OP6 OUTPUT LEVEL" ;
+        lv2:default 79 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 152 ;
+        lv2:symbol "op6_osc_mode" ;
+        lv2:name "OP6 MODE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Ratio" ;
+            rdfs:comment "Ratio" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "Fixed" ;
+            rdfs:comment "Fixed" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 153 ;
+        lv2:symbol "op6_osc_freq_coarse" ;
+        lv2:name "OP6 F COARSE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 31 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 154 ;
+        lv2:symbol "op6_osc_freq_fine" ;
+        lv2:name "OP6 F FINE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 155 ;
+        lv2:symbol "op6_osc_detune" ;
+        lv2:name "OP6 OSC DETUNE" ;
+        lv2:default 7 ;
+        lv2:minimum -7  ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 156 ;
+        lv2:symbol "op6_kbd_lev_scl_brk_pt" ;
+        lv2:name "OP6 BREAK POINT" ;
+        lv2:default 41 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 157 ;
+        lv2:symbol "op6_kbd_lev_scl_lft_depth" ;
+        lv2:name "OP6 L SCALE DEPTH" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 158 ;
+        lv2:symbol "op6_kbd_lev_scl_rht_depth" ;
+        lv2:name "OP6 R SCALE DEPTH" ;
+        lv2:default 19 ;
+        lv2:minimum 0 ;
+        lv2:maximum 99 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 159 ;
+        lv2:symbol "op6_kbd_lev_scl_lft_curve" ;
+        lv2:name "OP6 L KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 160 ;
+        lv2:symbol "op6_kbd_lev_scl_rht_curve" ;
+        lv2:name "OP6 R KEY CURVE" ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "-LIN" ;
+            rdfs:comment "-LIN" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "-EXP" ;
+            rdfs:comment "-EXP" ;
+        ], [
+            rdf:value 2 ;
+            rdfs:label "+EXP" ;
+            rdfs:comment "+EXP" ;
+        ], [
+            rdf:value 3 ;
+            rdfs:label "+LIN" ;
+            rdfs:comment "+LIN" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 161 ;
+        lv2:symbol "op6_kbd_rate_scaling" ;
+        lv2:name "OP6 RATE SCALING" ;
+        lv2:default 3 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 162 ;
+        lv2:symbol "op6_amp_mod_sensitivity" ;
+        lv2:name "OP6 A MOD SENS." ;
+        lv2:default 0 ;
+        lv2:minimum 0 ;
+        lv2:maximum 3 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 163 ;
+        lv2:symbol "op6_key_vel_sensitivity" ;
+        lv2:name "OP6 KEY VELOCITY" ;
+        lv2:default 6 ;
+        lv2:minimum 0 ;
+        lv2:maximum 7 ;
+	lv2:portProperty lv2:integer ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 164 ;
+        lv2:symbol "op1_enable" ;
+        lv2:name "OP1 ENABLE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "On" ;
+            rdfs:comment "On" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 165 ;
+        lv2:symbol "op2_enable" ;
+        lv2:name "OP2 ENABLE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "On" ;
+            rdfs:comment "On" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 166 ;
+        lv2:symbol "op3_enable" ;
+        lv2:name "OP3 ENABLE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "On" ;
+            rdfs:comment "On" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 167 ;
+        lv2:symbol "op4_enable" ;
+        lv2:name "OP4 ENABLE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "On" ;
+            rdfs:comment "On" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 168 ;
+        lv2:symbol "op5_enable" ;
+        lv2:name "OP5 ENABLE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "On" ;
+            rdfs:comment "On" ;
+        ];
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 169 ;
+        lv2:symbol "op6_enable" ;
+        lv2:name "OP6 ENABLE" ;
+        lv2:default 1 ;
+        lv2:minimum 0 ;
+        lv2:maximum 1 ;
+        lv2:portProperty lv2:enumeration, lv2:integer ;
+        lv2:scalePoint [
+            rdf:value 0 ;
+            rdfs:label "Off" ;
+            rdfs:comment "Off" ;
+        ], [
+            rdf:value 1 ;
+            rdfs:label "On" ;
+            rdfs:comment "On" ;
+        ];
+    ] ;
+
+    doap:name "Dexed" ;
+    doap:maintainer [ foaf:name "dcoredump" ] .
+
