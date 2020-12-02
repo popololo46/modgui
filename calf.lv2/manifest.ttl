@@ -4,27 +4,27 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 
-#<http://calf.sourceforge.net/factory_presets#monosynth_SynthBrass> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_OctavedSquare> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_Moveit> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_FatBass> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_CutThroughBass> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_FatCats> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_Twinkle> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_SynthBrass> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_OctavedSquare> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_Moveit> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_FatBass> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_CutThroughBass> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_FatCats> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_Twinkle> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
 #<http://calf.sourceforge.net/factory_presets#filter_Totallymuted> a lv2p:Preset ;
 #    lv2:appliesTo <http://calf.sourceforge.net/plugins/Filter> ;
 #    rdfs:seeAlso <presets-Filter.ttl>, <modguis.ttl> .
@@ -58,24 +58,24 @@
 #<http://calf.sourceforge.net/factory_presets#reverb_LargeOccupiedHall> a lv2p:Preset ;
 #    lv2:appliesTo <http://calf.sourceforge.net/plugins/Reverb> ;
 #    rdfs:seeAlso <presets-Reverb.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_Claribone> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_DigiString> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_Barkline> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_KillDatSub> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_BoomBass> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
-#<http://calf.sourceforge.net/factory_presets#monosynth_CrystalHarp> a lv2p:Preset ;
-#    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
-#    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_Claribone> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_DigiString> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_Barkline> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_KillDatSub> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_BoomBass> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
+<http://calf.sourceforge.net/factory_presets#monosynth_CrystalHarp> a lv2p:Preset ;
+    lv2:appliesTo <http://calf.sourceforge.net/plugins/Monosynth> ;
+    rdfs:seeAlso <presets-Monosynth.ttl>, <modguis.ttl> .
 #<http://calf.sourceforge.net/factory_presets#flanger_ChorusLite> a lv2p:Preset ;
 #    lv2:appliesTo <http://calf.sourceforge.net/plugins/Flanger> ;
 #    rdfs:seeAlso <presets-Flanger.ttl>, <modguis.ttl> .
