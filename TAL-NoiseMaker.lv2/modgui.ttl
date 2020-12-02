@@ -4,8 +4,8 @@
 <http://kunz.corrupt.ch/products/tal-noisemaker>
     modgui:gui [
         modgui:resourcesDirectory <modgui> ;
-        modgui:iconTemplate <modgui/icon-noise-maker-me.html> ;
-        modgui:stylesheet <modgui/stylesheet-noise-maker-me.css> ;
+        modgui:iconTemplate <modgui/icon-noise-maker.html> ;
+        modgui:stylesheet <modgui/stylesheet-noise-maker.css> ;
         modgui:screenshot <modgui/tal_noise_maker_ss.png> ;
         modgui:thumbnail <modgui/tal_noise_maker_tn.png> ;
         modgui:brand "TAL" ;

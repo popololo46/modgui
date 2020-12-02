@@ -353,9 +353,9 @@
         lv2:index 37 ;
         lv2:symbol "lfo1destination" ;
         lv2:name "lfo1destination" ;
-        lv2:default 0.000000 ;
-        lv2:minimum 0.0 ;
-        lv2:maximum 1.0 ;
+		lv2:default 0.000000;
+		lv2:maximum 1.0;
+		lv2:minimum 0.0;
     ] ,
     [
         a lv2:InputPort, lv2:ControlPort ;
