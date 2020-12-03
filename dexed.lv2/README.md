@@ -14,7 +14,7 @@ git clone https://github.com/popololo46/modgui.git
 
 cd modgui
 
-sudo cp -r  dexed-mod.lv2 /your-lv2-folder
+sudo cp -r  dexed.lv2 /your-lv2-folder
 
 for all:
 
