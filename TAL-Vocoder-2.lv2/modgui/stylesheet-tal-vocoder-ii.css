@@ -1,0 +1,324 @@
+/* STYLES FOR THE BOXY PEDAL */
+
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/questrial/stylesheet.css);
+
+
+/* = CONTAINER
+================================================ */
+.mod-tal-vocoder{{{cns}}} {
+	background-image: url(/resources/utils/bg.png{{{ns}}});
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:720px 238px;
+    height:238px;
+    position:absolute;
+    width:720px;
+    border-radius: 21px;
+}
+
+
+/* PORTS
+================================================ */
+
+.mod-tal-vocoder{{{cns}}} .mod-pedal-input,
+.mod-tal-vocoder{{{cns}}} .mod-pedal-output {
+    top: 20px;
+}
+
+
+/* = PLUGIN'S NAME
+================================================ */
+.mod-tal-vocoder{{{cns}}} .mod-plugin-name {
+	position: absolute;
+    left: 15px;
+    bottom: 100px;
+    display: inline-block;
+    font-family: "Nexa";
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px;
+    color: black;
+}
+
+
+/* = FOOTSWITCH
+================================================ */
+.mod-tal-vocoder{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/utils/switch-led.png{{{ns}}});
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:auto 146px;
+    bottom: 80px;
+    left: 45px;
+    cursor:pointer;
+    height:73px;
+    width: 30px;
+    margin: auto;
+    position:absolute !important;
+}
+.mod-tal-vocoder{{{cns}}} .mod-footswitch.on {
+    background-position-y: bottom !important
+}
+
+/* SLIDER
+================================================ */
+.mod-tal-vocoder{{{cns}}} .mod-control-group {
+    position: absolute !important;
+    z-index:30;
+	text-align:center;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider {
+    position: absolute;
+	top: 30px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-slider .mod-slider-title {
+    top: -10px;
+    display: block;
+    width: 40px;
+    font-size: 10px;
+    line-height: 1;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider .mod-slider-image {
+	background-image: url(/resources/knobs/slider.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 100px;
+    width: 40px;
+    height: 100px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-pulsevolume {
+	left: 85px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-sawvolume {
+	left: 110px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-suboscvolume {
+	left: 135px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-noisevolume {
+	left: 160px;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband00 {
+	left: 300px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband01 {
+	left: 325px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband02 {
+	left: 350px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband03 {
+	left: 375px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband04 {
+	left: 400px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband05 {
+	left: 425px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband06 {
+	left: 450px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband07 {
+	left: 475px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband08 {
+	left: 500px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband09 {
+	left: 525px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-slider.tal-vocoderband10 {
+	left: 550px;
+}
+
+
+/* KNOBS
+================================================ */
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob {
+    position:absolute;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+    background-image:url(/resources/knobs/gray.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+    height: 50px;
+    width: 50px;
+	cursor: pointer;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob > span.mod-knob-title {
+    display: block;
+    /* width: 50px; */
+    /* margin-left: -5px; */
+    font-size: 10px;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.littleknob .mod-knob-image {
+    background-image:url(/resources/knobs/gray.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 40px;
+    height: 40px;
+    width: 40px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.littleknob > span.mod-knob-title {
+    display: block;
+    width: 40px;
+    margin-left: -2px;
+    color: #fff;
+    font-size: 9px;
+	bottom: 3px;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.littleknob.knob-4 .mod-knob-image {
+    background-image:url(/resources/knobs/gray_4.png{{{ns}}});
+}
+
+
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-tal_volume {
+	top: 160px;
+    left: 540px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-harmonics {
+	top: 160px;
+    left: 480px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-enveloperelease {
+	top: 160px;
+    left: 420px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-esserintensity {
+	top: 160px;
+    left: 360px;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-pulsetune {
+	top: 180px;
+    left: 95px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-sawtune {
+	top: 180px;
+    left: 135px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-portamento {
+	top: 180px;
+    left: 175px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-tal_tune {
+	top: 180px;
+    left: 215px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-pulsefinetune {
+	top: 135px;
+    left: 95px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-sawfinetune {
+	top: 135px;
+    left: 135px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-osctranspose {
+	top: 135px;
+    left: 175px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-control-group .mod-knob.tal-suboscoctave {
+	top: 135px;
+    left: 215px;
+}
+
+
+
+
+/* = SWITCH
+================================================ */
+.mod-tal-vocoder{{{cns}}} .mod-switch {
+    position:absolute;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-switch .mod-switch-image {
+    background-image: url(/resources/utils/switch.png{{{ns}}});
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.mod-tal-vocoder{{{cns}}} .mod-switch .mod-switch-image.on {
+    background-position:top center;
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-switch > span.mod-switch-title {
+    display: block;
+    width: 50px;
+    font-size: 10px;
+    margin-left: -10px;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+}
+
+.mod-tal-vocoder{{{cns}}} .mod-switch.tal-oscsync {
+    left: 210px;
+    top: 30px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-switch.tal-polymode {
+    left: 210px;
+    top: 80px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-switch.tal-inputmode {
+    left: 620px;
+    top: 40px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-switch.tal-chorus {
+    left: 620px;
+    top: 130px;
+}
+
+
+/* = PRESET LIST
+================================================ */
+.mod-tal-vocoder{{{cns}}} .mod-presets {
+	position: absolute;
+	width: 250px !important;
+    top: -20px;
+	left: 20px;
+    z-index: 58;
+    font-size: 20px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-presets > select {
+    color: #f5f5f5;
+    background-color: #252525;
+    width: 250px;
+    height: 35px;
+    cursor: pointer;
+    border: solid 2px #959595;
+    font-size: 20px;
+}
+.mod-tal-vocoder{{{cns}}} .mod-presets > select > option {
+	font-size: 25px;
+	font-weight: bold;
+	color:#f5f5f5;
+}
