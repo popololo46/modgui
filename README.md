@@ -9,15 +9,17 @@ Ex:
 git clone https://github.com/popololo46/modgui.git
 
 
+cd modgui
 
 
-for amsynth:
+for amsynth
 
-sudo cp -r  /home/patch/modgui/amsynth.lv2 /usr/modep/lv2/amsynth.lv2
+sudo cp -r  amsynth.lv2 /your-lv2-folder
+
 
 for all:
 
-sudo cp -r  /home/patch/modgui/* /usr/modep/lv2/
+sudo cp -r  * /your-lv2-folder
 
 
 
