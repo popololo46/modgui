@@ -1,0 +1,270 @@
+/* = CONTAINER
+================================================ */
+.mod-tal-dub{{{cns}}} {
+	background-image: url(/resources/utils/bg.png{{{ns}}});
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:566px 160px;
+    height:160px;
+    position:absolute;
+    width:566px;
+    border-radius: 21px;
+}
+
+
+/* PORTS
+================================================ */
+
+.mod-tal-dub{{{cns}}} .mod-pedal-input,
+.mod-tal-dub{{{cns}}} .mod-pedal-output {
+    top: 20px;
+}
+
+
+/* = FOOTSWITCH
+================================================ */
+.mod-tal-dub{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/utils/switch-led.png{{{ns}}});
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:auto 146px;
+    bottom: 80px;
+    left: 45px;
+    cursor:pointer;
+    height:73px;
+    width: 30px;
+    margin: auto;
+    position:absolute !important;
+}
+.mod-tal-dub{{{cns}}} .mod-footswitch.on {
+    background-position-y: bottom !important
+}
+
+/* GROUP
+================================================ */
+.mod-tal-dub{{{cns}}} .mod-control-group {
+    position: absolute !important;
+    z-index:30;
+	text-align:center;
+}
+
+
+
+/* KNOBS
+================================================ */
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob {
+    position:absolute;
+}
+
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+    background-image:url(/resources/knobs/dj.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+    height: 50px;
+    width: 50px;
+	cursor: pointer;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob > span.mod-knob-title {
+    display: block;
+    /* width: 50px; */
+    /* margin-left: -5px; */
+    font-size: 10px;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.tal-inputdrive {
+	top: 55px;
+    left: 15px;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.tal-delaytime {
+	top: 55px;
+    left: 75px;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.tal-feedback {
+	top: 55px;
+    left: 370px;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.tal-highcut {
+	top: 55px;
+    left: 190px;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.tal-cutoff {
+	top: 55px;
+    left: 250px;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.tal-resonance {
+	top: 55px;
+    left: 310px;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.tal-dry {
+	top: 55px;
+    left: 440px;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.tal-wet {
+	top: 55px;
+    left: 500px;
+}
+
+
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.altknob .mod-knob-image {
+    background-image: url(/resources/knobs/timesync.png{{{ns}}});
+	background-color: rgba(0, 0, 0, 0.4);
+    background-size: auto 24px;
+    width: 60px;
+    height: 24px;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.altknob > span.mod-knob-title {
+    top: -20px;
+    left: -65px;
+    font-size: 12px;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-knob.tal-delaytimesync {
+    left: 80px;
+    top: 135px;
+	z-index: 53;
+}
+
+/* SLIDER
+================================================ */
+
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-slider {
+    position: absolute;
+}
+
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-slider .mod-slider-image {
+	background-image: url(/resources/knobs/timesync.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 32px;
+    width: 80px;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+}
+.mod-tal-dub{{{cns}}} .mod-slider .mod-slider-title {
+    top: 8px;
+    left: -50px;
+    display: block;
+    width: 50px;
+    font-size: 15px;
+    line-height: 1;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mod-tal-dub{{{cns}}} .mod-control-group .mod-slider.tal-delaytimesync {
+    left: 80px;
+    top: 131px;
+	z-index: 53;
+}
+
+
+/* = SWITCH
+================================================ */
+.mod-tal-dub{{{cns}}} .mod-switch {
+    position:absolute;
+}
+
+.mod-tal-dub{{{cns}}} .mod-switch .mod-switch-image {
+    background-image: url(/resources/utils/switch_x2.png{{{ns}}});
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+.mod-tal-dub{{{cns}}} .mod-switch .mod-switch-image.on {
+    background-position:top center;
+}
+
+.mod-tal-dub{{{cns}}} .mod-switch > span.mod-switch-title {
+    display: block;
+    width: 40px;
+    font-size: 9px;
+    margin-left: -10px;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
+}
+
+.mod-tal-dub{{{cns}}} .mod-switch.tal-delaytwice_l {
+    left: 145px;
+    top: 50px;
+}
+.mod-tal-dub{{{cns}}} .mod-switch.tal-delaytwice_r {
+    left: 145px;
+    top: 90px;
+}
+
+
+/* = ENUMERATED LIST
+================================================ */
+.mod-tal-dub{{{cns}}} .mod-enumerated {
+	background-image:url(/resources/utils/dropdown-white.png{{{ns}}});
+	background-position:right center;
+    background-repeat:no-repeat;
+	background-color:#262525;
+    position: absolute;
+	width: 90px;
+	height: 23px;
+    color: #ccc;
+    cursor: pointer;
+	/* text-align: center;
+	font-weight: bold; */
+    font-size: 18px;
+	text-transform:uppercase;
+	z-index: 49;
+}
+
+.mod-tal-dub{{{cns}}} .mod-enumerated .mod-enumerated-list {
+	/* bottom:25px;
+    width: 300px;
+	text-align: left; */
+    background-color:#262525;
+    display: none;
+    font-size: 22px;
+	text-transform:uppercase;
+	z-index: 55;
+}
+.mod-tal-dub{{{cns}}} .mod-enumerated .mod-enumerated-list > div.selected {
+    background-color:#393939;
+}
+
+
+
+/* = PRESET LIST
+================================================ */
+.mod-tal-dub{{{cns}}} .mod-presets {
+	position: absolute;
+	width: 200px !important;
+    top: -30px;
+	left: 10px;
+    z-index: 58;
+    font-size: 20px;
+}
+.mod-tal-dub{{{cns}}} .mod-presets > select {
+    color: #f5f5f5;
+    background-color: #252525;
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+    border: solid 2px #959595;
+    font-size: 20px;
+}
+.mod-tal-dub{{{cns}}} .mod-presets > select > option {
+	font-size: 20px;
+	font-weight: bold;
+	color:#f5f5f5;
+}

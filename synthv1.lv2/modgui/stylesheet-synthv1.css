@@ -1,0 +1,365 @@
+.mod-synthv1 {
+	background-color: rgb(45,45,55,1);
+    position: relative;
+	height: 478px;
+    width: 1146px;
+    color: #FFF;
+}
+
+
+
+/* BAR TOP */
+.mod-synthv1 .bar-top {
+	background-color: rgba(25,25,25,1) !important;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.mod-synthv1 .bar-top .title-synthv1 {
+    color: #FFF;
+    background-color: rgb(25,25,25,1);
+    display: block;
+    left: 5px;
+    position: absolute;
+    border: solid 1px #ccc;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    top: -29px;
+    padding: 7px 25px;
+    font-size: 30px;
+}
+
+
+
+/* ON/OFF */
+.mod-synthv1 .bar-top .off-or-on-synthv1 {
+    background-image: url(/resources/utils/switch_green.png{{{ns}}});
+    background-size: auto 48px;
+    cursor: pointer;
+    height: 24px;
+    z-index: 100;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 90px;
+}
+.mod-synthv1 .bar-top .on {
+    background-position: bottom center;
+}
+.mod-synthv1 .bar-top .off {
+    background-position: top center;
+}
+
+
+
+/* TAB */
+.mod-synthv1 .tab_select {
+    position: absolute;
+    left: 20em;
+    top: 1em;
+    z-index: 40
+}
+.mod-synthv1 label {
+	font-size: 19px;
+    display: block;
+    width: 160px;
+    top: -76px;
+    left: 400px;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(25,25,25,1);
+    height: 50px;
+    border: solid 1px #ccc;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    background-image: url(/resources/utils/led_inactive.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-position: 140px 10px;
+    padding-top: 0.5em;
+}
+#label2 {
+    left: 565px;
+}
+#label3 {
+    left: 730px;
+}
+.tab_content{
+    display: none;
+}
+input {
+    display: none;
+}
+[id^="tab"]:checked + label { 
+    background-image: url(/resources/utils/led_active.png{{{ns}}});
+}
+[id^="tab"]:checked ~ .tab_content{
+    display: block;
+}
+.mod-synthv1 .tabs {
+    position: absolute;
+    left: 14px;
+    top: 55px;
+    width: 1120px;
+    margin-bottom: 15px;
+    z-index: 30;
+    height: 413px;
+}
+
+.mod-synthv1 .tabs .title-bloc {
+    background: rgba(25,25,25,1) !important;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 6px;
+    padding: 0px 6px;
+    margin-top: 5px;
+    position: absolute;
+}
+.mod-synthv1 .tabs .title-bloc.bloc {
+    font-size: 18px;
+    margin-left: 0px;
+    margin-top: -22px;
+}
+
+
+
+/* BLOC */
+.mod-synthv1 .border-solid-and-radius {
+    border: solid 1px #555;
+    border-radius: 7px;
+	background: rgba(25,25,25,1) !important;
+}
+.mod-synthv1 .title-bloc {
+    background: #384454;
+    color: #FFF;
+    font-size: 13px;
+    margin-left: 6px;
+    padding: 0 5px;
+    margin-top: -11px;
+    position: absolute;
+}
+.mod-synthv1 .tabs .dco1{
+	width: 100%;
+    height: 93px;
+    margin-bottom: 27px;
+    float: left;
+}
+.mod-synthv1 .tabs .dco1 .knob-group{
+    margin: 5px 10px 5px 10px;
+}
+.mod-synthv1 .tabs .dcf1 {
+    width: 440px;
+    height: 172px;
+    float: left;
+	margin-bottom: 27px;
+}
+.mod-synthv1 .tabs .lfo {
+	width: 670px;
+    height: 172px;
+    float: right;
+	margin-bottom: 27px;
+}
+.mod-synthv1 .tabs .dca1 {
+    width: 858px;
+    float: left;
+    height: 94px;
+}
+.mod-synthv1 .tabs .dca1 .knob-group{
+    margin-top: 5px;
+}
+.mod-synthv1 .tabs .out1 {
+	width: 252px;
+    height: 94px;
+    float: right;
+}
+
+.mod-synthv1 #effects .left {
+    float: left;
+	width: 33%;
+    height: 190px;
+    margin: 10px 10px 0px 0;
+}
+.mod-synthv1 #effects .right {
+    float: right;
+    width: 32%;
+    height: 190px;
+    margin: 10px 10px 0px 0;
+}
+
+
+
+/* KNOB */
+.mod-synthv1 .knob-group {
+    margin: 0 10px;
+    float: left;
+    text-align: center
+}
+.mod-synthv1 .knob {
+	background-repeat:no-repeat;
+    background-size:auto 45px;
+    height: 45px;
+    width: 45px;
+    z-index: 98;
+    cursor: pointer !important;
+    margin: auto !important;
+    position: relative !important;
+}
+.mod-synthv1 .knob.knob_big {
+    height: 60px;
+    width: 60px;
+}
+.mod-synthv1 .knob.knob1 {
+    background: url(/resources/knobs/knob_yellow.png{{{ns}}});
+}
+.mod-synthv1 .knob.knob2 {
+    background: url(/resources/knobs/knob_blue.png{{{ns}}});
+}
+
+
+
+/* SLIDER */
+.mod-synthv1 .slider {
+    float: left;
+    width: 20%;
+    text-align: center;
+    margin-top: 2em;
+}
+.mod-synthv1 .slider-image {
+    background: url(/resources/utils/slider.png{{{ns}}});
+	background-size:auto 95px;
+	background-repeat:no-repeat;
+    height: 95px;
+    left: 0;
+    cursor: pointer;
+    z-index: 100;
+    left: -18px;
+    width: 20px;
+    margin: auto;
+}
+.mod-synthv1 .slider-image .title-cols {
+    font-size: 11px;
+    position: absolute;
+    top: -23px;
+    margin-left: -20px;
+    width: 56px;
+}
+
+
+
+/* SWITCH */
+.mod-synthv1 .switch {
+/*    background: url(/resources/utils/toggle1_silver.png{{{ns}}}) 0 20px;
+	background-position:top center;
+    margin: 10px 0px 0px 20px;
+    height: 20px;
+    width: 30px;  */
+	background: url(/resources/utils/switch.png{{{ns}}}) 0 20px;
+	background-position:top center;
+    margin: 10px 0px 0px 20px;
+    height: 10px;
+    width: 40px;
+    cursor: pointer;
+    white-space: nowrap;
+	position: relative;
+	float: left;
+}
+.mod-synthv1 .switch.on {
+    background-position:bottom center;
+}
+.mod-synthv1 .switch .title-switch {
+    top: 17px;
+}
+
+
+
+/* TITLE */
+.mod-synthv1 .title-thing{
+    color: #FFF;
+    font-size: 10px;
+    position: relative !important
+}
+.mod-synthv1 .knob1 .title-knob1-top, .mod-synthv1 .knob2 .title-knob2-top,
+.mod-synthv1 .knob1 .title-knob1-bottom, .mod-synthv1 .knob2 .title-knob2-bottom {
+    color: #FFFFFF;
+    font-size: 11px;
+    position: absolute;
+    text-align: center;
+}
+
+
+
+/*    LIST    */
+.mod-synthv1 .mod-enumerated {
+    background: rgba(35,35,35,1) !important;
+    height: 61px;
+    z-index: 100000 !important;
+    width: 61px;
+    cursor: pointer;
+	border-radius: 7px;
+}
+.mod-synthv1 .mod-enumerated:hover, .mod-synthv1 .mod-enumerated:active {
+    background: #333;
+}
+.mod-synthv1  .mod-enumerated-selected:before {
+    content: '\25BE \a0';
+}
+.mod-synthv1  .mod-enumerated-selected {
+    display: block;
+    padding: 0;
+    position: relative;
+    margin: 0 0 0 5px;
+    top: 7px;
+    width: 60px;
+	font-size: 16px;
+    z-index: 100;
+}
+.mod-synthv1 .mod-enumerated-list {
+    background-color: rgba(45,45,45,1) !important;;
+    display: none;
+    width: 100px;
+    font-size: 20px;
+    padding: 0 10px;
+    margin-top: 10px;
+    z-index: 1000;
+    color: white !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+}
+.mod-synthv1  .mod-enumerated-list div:hover{
+    background: #ccc;
+    color: black;
+}
+
+
+
+/* PRESETS */
+.mod-synthv1 .mod-presets {
+	position: absolute;
+    width: 160px !important;
+    height: 50px;
+    top: -21px;
+    left: 170px;
+    z-index: 22;
+    text-align: center;
+}
+.mod-synthv1 .mod-presets > select {
+    background-color: rgb(25,25,25,1);
+    width: 160px !important;
+    height: 50px;
+    border: solid 1px #ccc;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    cursor: pointer;
+	padding: 0 10px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+.mod-synthv1 .mod-presets > select > option {
+	font-size: 20px;
+    color: #eee;
+    background-color: rgb(25,25,25,1);
+}
+

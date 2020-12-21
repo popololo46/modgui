@@ -10,9 +10,6 @@
         modgui:thumbnail <modgui/thumbnail-tal-vocoder-ii.png> ;
         modgui:brand "TAL" ;
         modgui:label "Vocoder" ;
-        modgui:model "boxy-small" ;
-        modgui:panel "1-footswitch-presets" ;
-        modgui:color "black" ;
         modgui:port [
             lv2:index 0 ;
             lv2:symbol "unused" ;
