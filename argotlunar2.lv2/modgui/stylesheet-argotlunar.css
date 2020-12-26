@@ -1,0 +1,389 @@
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/nexa/stylesheet.css);
+
+
+/* = CONTAINER
+================================================ */
+.argoTlunar{{{cns}}} {
+	background-color: #04102D;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:800px 300px;
+    height:300px;
+    position:absolute;
+    width:800px;
+    border-radius: 21px;
+}
+
+
+/* PORTS
+================================================ */
+
+.argoTlunar{{{cns}}} .mod-pedal-input,
+.argoTlunar{{{cns}}} .mod-pedal-output {
+    top: 100px;
+}
+
+
+/* = PLUGIN'S NAME
+================================================ */
+.argoTlunar{{{cns}}} .mod-plugin-name {
+	position: absolute;
+    right: 10px;
+    bottom: 0px;
+    display: inline-block;
+    font-family: "Nexa";
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 3px;
+    color: white;
+}
+
+
+/* = FOOTSWITCH
+================================================ */
+.argoTlunar{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/utils/switch-1-green.png{{{ns}}});
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 48px;
+    top: 230px;
+    left: 700px;
+    cursor: pointer;
+    height: 24px;
+    width: 90px;
+    margin: auto;
+    position: absolute !important;
+}
+.argoTlunar{{{cns}}} .mod-footswitch.on {
+    background-position-y: bottom !important
+}
+
+
+/* KNOBS
+================================================ */
+
+.argoTlunar{{{cns}}} .mod-control-group {
+    position:relative;
+    z-index:30;
+}
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob {
+    position:absolute;
+}
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+	background-image: url(/resources/knobs/knob.png{{{ns}}});
+    background-repeat:no-repeat;
+	background-size:auto 45px;
+    width: 45px;
+    height: 55px;
+	position: absolute;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knob12 {
+	background-image: url(/resources/knobs/knob_12.png{{{ns}}}) !important;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knob21 {
+	background-image: url(/resources/knobs/knob_21.png{{{ns}}}) !important;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knobyellow {
+	background-image: url(/resources/knobs/knob_yellow.png{{{ns}}}) !important;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knobbig {
+	background-size:auto 55px;
+    width: 55px;
+    height: 65px;
+}
+
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-feedback {
+	top: 220px;
+	left: 120px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-grains {
+	top: 220px;
+	left: 50px;
+}
+
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-mix {
+	top: 20px;
+	left: 30px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-input_gain {
+	top: 100px;
+	left: 30px;
+}
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-amp {
+	top: 20px;
+	left: 110px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-ampv {
+	top: 100px;
+	left: 110px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-pan {
+	top: 20px;
+	left: 170px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-panv {
+	top: 100px;
+	left: 170px;
+}
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-delay {
+	top: 20px;
+	left: 250px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-delayv {
+	top: 100px;
+	left: 250px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-iot {
+	top: 20px;
+	left: 310px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-iotv {
+	top: 100px;
+	left: 310px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-dur {
+	top: 20px;
+	left: 370px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-durv {
+	top: 100px;
+	left: 370px;
+}
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-trans {
+	top: 20px;
+	left: 450px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-transv {
+	top: 100px;
+	left: 450px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-gliss {
+	top: 20px;
+	left: 510px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-glissv {
+	top: 100px;
+	left: 510px;
+}
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-ffreq {
+	top: 20px;
+	left: 590px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-ffreqv {
+	top: 100px;
+	left: 590px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-fq {
+	top: 20px;
+	left: 650px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-fqv {
+	top: 100px;
+	left: 650px;
+}
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-env_sustain {
+	top: 20px;
+	left: 730px;
+}
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-env_skew {
+	top: 100px;
+	left: 730px;
+}
+
+.argoTlunar{{{cns}}} .mod-control-group .mod-knob.argoTlunar-scale_key {
+	top: 220px;
+    left: 350px;
+}
+
+
+/* = TITLE
+================================================ */
+.argoTlunar{{{cns}}} .mod-group-title {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 50px;
+}
+.argoTlunar{{{cns}}} .mod-group-title.AAA {
+    top: 105px;  
+}
+.argoTlunar{{{cns}}} .mod-group-title.AAA {
+    top: 215px;
+}
+
+.argoTlunar{{{cns}}} .mod-knob-title {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 55px;
+    margin-left: -5px;
+    top: 45px;
+}
+.argoTlunar{{{cns}}} .mod-knob-title.scalenote {
+    font-size: 20px;
+    position: absolute;
+    width: 80px;
+    top: 235px;
+    left: 410px;
+}
+
+
+
+/* = SWITCH
+================================================ */
+.argoTlunar{{{cns}}} .mod-switch {
+    background-image: url(/resources/utils/switch.png{{{ns}}});
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 30px auto;
+	position: absolute !important;
+	height: 73px;
+    width: 30px;
+    cursor: pointer;
+	z-index: 40;
+}
+.argoTlunar{{{cns}}} .mod-switch.on {
+    background-position:top center;
+}
+
+.argoTlunar{{{cns}}} .mod-switch.altswitch {
+    background-image: url(/resources/utils/led.png{{{ns}}});
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 24px auto;
+	position: absolute !important;
+	height: 24px;
+    width: 24px;
+    cursor: pointer;
+	z-index: 40;
+}
+.argoTlunar{{{cns}}} .mod-switch.altswitch.on {
+    background-position-y: bottom !important
+}
+
+.argoTlunar{{{cns}}} .mod-switch.argoTlunar-trans_toggle {
+    left: 462px;
+    top: 170px;
+}
+.argoTlunar{{{cns}}} .mod-switch.argoTlunar-gliss_toggle {
+    left: 522px;
+    top: 170px;
+}
+
+.argoTlunar{{{cns}}} .mod-switch.argoTlunar-freeze_toggle {
+    left: 200px;
+    top: 230px;
+}
+
+
+/* = ENUMERATED LIST
+================================================ */
+.argoTlunar{{{cns}}} .mod-enumerated {
+	background-image:url(/resources/utils/dropdown-white.png{{{ns}}});
+	background-position: right center;
+    background-repeat: no-repeat;
+    background-color: #243139;
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    color: #ccc;
+    cursor: pointer;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+	z-index: 49;
+}
+
+.argoTlunar{{{cns}}} .mod-enumerated .mod-enumerated-list {
+	bottom: 25px;
+    background-color: #243139;
+    border-radius: 10px;
+    display: none;
+    width: 120px;
+    text-align: left;
+    font-size: 22px;
+    padding: 10px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    z-index: 53;
+}
+.argoTlunar{{{cns}}} .mod-enumerated .mod-enumerated-list > div.selected {
+    background-color: #fff;
+    color: #000;
+        border: 3px solid #FE862C;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.argoTlunar{{{cns}}} .mod-enumerated.argoTlunar-filter_type {
+    left: 595px;
+    top: 170px;
+    width: 90px;
+    z-index: 53;
+}
+.argoTlunar{{{cns}}} .mod-enumerated.argoTlunar-env_type {
+    left: 730px;
+    top: 170px;
+    z-index: 53;
+}
+.argoTlunar{{{cns}}} .mod-enumerated.argoTlunar-delay_quantize {
+    left: 250px;
+    top: 170px;
+    z-index: 53;
+}
+.argoTlunar{{{cns}}} .mod-enumerated.argoTlunar-iot_quantize {
+    left: 310px;
+    top: 170px;
+    z-index: 53;
+}
+.argoTlunar{{{cns}}} .mod-enumerated.argoTlunar-dur_quantize {
+    left: 370px;
+    top: 170px;
+    z-index: 53;
+}
+
+
+
+/* = Presets
+================================================ */
+.argoTlunar{{{cns}}} .mod-presets {
+	position: absolute;
+    top: -35px;
+    left: 15px;
+    z-index: 22;
+    font-size: 20px;
+}
+.argoTlunar{{{cns}}} .mod-presets > select {
+    background-color: #04102D;
+    width: 180px !important;
+	height: 30px;
+    cursor: pointer;
+	border: solid 2px #04102D;
+	font-size: 20px;
+	color:#ccc;
+}
+.argoTlunar{{{cns}}} .mod-presets > select > option {
+	font-size: 20px;
+	font-weight: bold;
+	color:#fff;
+}

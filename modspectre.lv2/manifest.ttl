@@ -1,0 +1,21 @@
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://gareus.org/oss/lv2/modspectre>
+	a lv2:Plugin ;
+	lv2:binary <modspectre.so>  ;
+	rdfs:seeAlso <modspectre.ttl> .
+
+<http://gareus.org/oss/lv2/modspectre>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-modspectre.html> ;
+        modgui:stylesheet <modgui/stylesheet-modspectre.css> ;
+        modgui:screenshot <modgui/screenshot-modspectre.png> ;
+        modgui:thumbnail <modgui/thumbnail-modspectre.png> ;
+        modgui:javascript <modgui/script-modspectre.js> ;
+        modgui:brand "x42" ;
+        modgui:label "Spectrum Analyzer" ;
+        modgui:monitoredOutputs [ lv2:symbol "notify" ];
+    ] .

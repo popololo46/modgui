@@ -1,0 +1,199 @@
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix lv2:   <http://lv2plug.in/ns/lv2core#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix pprops: <http://lv2plug.in/ns/ext/port-props#>.
+@prefix units: <http://lv2plug.in/ns/extensions/units#> .
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix time: <http://lv2plug.in/ns/ext/time#> .
+@prefix urid: <http://lv2plug.in/ns/ext/urid#> .
+@prefix midi: <http://lv2plug.in/ns/ext/midi#> .
+
+<http://devcurmudgeon.com/alo>
+a lv2:Plugin, lv2:UtilityPlugin;
+lv2:project <http://lv2plug.in/ns/lv2>;
+doap:name "ALO";
+doap:license <http://opensource.org/licenses/isc>;
+
+
+lv2:minorVersion 0;
+lv2:microVersion 6;
+
+rdfs:comment """
+
+ALO is a looper designed for live audio looping with sync.
+
+There are six loops.
+Each loop is [BARS] bars long.
+Recording starts when input audio hits [THRESHOLD].
+
+Press any loop button to:
+
+- arm for recording
+- stop playing, when the loop finishes
+- re-start playing, in sync
+
+Wipe the loop by pressing its button twice within one second.
+
+Optionally connect a midi device and control the loops by sending MIDI note on/off messages ([MIDI Base]..[MIDI Base + 5]).
+
+NEW:
+- PER-BEAT LOOPS setting changes the behaviour so some or all of the loops
+  can be stopped and resumed on the next beat
+- CLICK setting provides a click when no loop is playing
+- ALO is now stereo
+- Loop6 is set to permanent overdub mode
+""";
+
+lv2:port
+[
+	a lv2:AudioPort, lv2:InputPort;
+	lv2:index 0;
+	lv2:symbol "in_left";
+	lv2:name "In_left"
+],
+[
+	a lv2:AudioPort, lv2:InputPort;
+	lv2:index 1;
+	lv2:symbol "in_right";
+	lv2:name "In_right"
+],
+[
+    a lv2:AudioPort, lv2:OutputPort;
+    lv2:index 2;
+    lv2:symbol "out_left";
+    lv2:name "Out_left"
+],
+[
+    a lv2:AudioPort, lv2:OutputPort;
+    lv2:index 3;
+    lv2:symbol "out_right";
+    lv2:name "Out_right"
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 4;
+	lv2:symbol "loop1";
+	lv2:name "Loop1";
+	lv2:default 0;
+	lv2:minimum 0;
+	lv2:maximum 1;
+	lv2:portProperty lv2:integer, lv2:toggled;
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 5;
+	lv2:symbol "loop2";
+	lv2:name "Loop2";
+	lv2:default 0;
+	lv2:minimum 0;
+	lv2:maximum 1;
+	lv2:portProperty lv2:integer, lv2:toggled;
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 6;
+	lv2:symbol "loop3";
+	lv2:name "Loop3";
+	lv2:default 0;
+	lv2:minimum 0;
+	lv2:maximum 1;
+	lv2:portProperty lv2:integer, lv2:toggled;
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 7;
+	lv2:symbol "loop4";
+	lv2:name "Loop4";
+	lv2:default 0;
+	lv2:minimum 0;
+	lv2:maximum 1;
+	lv2:portProperty lv2:integer, lv2:toggled;
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 8;
+	lv2:symbol "loop5";
+	lv2:name "Loop5";
+	lv2:default 0;
+	lv2:minimum 0;
+	lv2:maximum 1;
+	lv2:portProperty lv2:integer, lv2:toggled;
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 9;
+	lv2:symbol "loop6";
+	lv2:name "Loop6";
+	lv2:default 0;
+	lv2:minimum 0;
+	lv2:maximum 1;
+	lv2:portProperty lv2:integer, lv2:toggled;
+],
+[
+	a lv2:InputPort, lv2:ControlPort;
+	lv2:index 10;
+	lv2:symbol "threshold";
+	lv2:name "Threshold";
+	lv2:default -40;
+	lv2:minimum -90;
+	lv2:maximum 24;
+	lv2:portProperty lv2:integer;
+],
+[
+	a atom:AtomPort, lv2:InputPort;
+	atom:bufferType atom:Sequence;
+	atom:supports midi:MidiEvent;
+	lv2:index 11;
+	lv2:symbol "midiin";
+	lv2:name "MIDI In";
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 12;
+	lv2:symbol "midi_base";
+	lv2:name "MIDI Base";
+	lv2:default 60;
+	lv2:minimum 1;
+	lv2:maximum 120;
+	lv2:portProperty lv2:integer;
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 13;
+	lv2:symbol "per_beat_loops";
+	lv2:name "per-beat Loops";
+	lv2:default 0;
+	lv2:minimum 0;
+	lv2:maximum 6;
+	lv2:portProperty lv2:integer;
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 14;
+	lv2:symbol "click";
+	lv2:name "Click";
+	lv2:default 1;
+	lv2:minimum 0;
+	lv2:maximum 10;
+	lv2:portProperty lv2:integer;
+],
+[
+	a lv2:ControlPort, lv2:InputPort;
+	lv2:index 15;
+	lv2:symbol "bars";
+	lv2:name "Bars";
+	lv2:default 2;
+	lv2:minimum 1;
+	lv2:maximum 32;
+	lv2:portProperty lv2:integer;
+],
+[
+	a lv2:InputPort, atom:AtomPort ;
+	atom:bufferType atom:Sequence ;
+	atom:supports time:Position ;
+	lv2:index 16;
+	lv2:symbol "control" ;
+	lv2:name "Control" ;
+].
+

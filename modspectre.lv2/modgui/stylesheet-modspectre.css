@@ -1,0 +1,137 @@
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/questrial/stylesheet.css);
+
+/* = CONTAINER
+================================================ */
+.x42-spectre{{{cns}}} {
+    background-image:url(/resources/box.png{{{ns}}});
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:330px 330px;
+    height:330px;
+    position:absolute;
+    width:330px;
+    border-radius: 21px;
+
+    line-height:1.429;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    border-color:white;
+    color:white;
+}
+
+/* = Labels
+================================================ */
+.x42-spectre{{{cns}}} .x42-brand {
+    position:absolute;
+    left:40px;
+    text-align:center;
+    bottom:40px;
+    cursor:default;
+}
+
+.x42-spectre{{{cns}}} .x42-plugin-name {
+    overflow:hidden;
+    position:absolute;
+    right:40px;
+    text-align:center;
+    bottom:40px;
+}
+
+.x42-spectre{{{cns}}} .x42-plugin-name h1,
+.x42-spectre{{{cns}}} .x42-brand h1 {
+    border: none;
+    display:inline-block;
+    padding:0;
+    margin:0;
+    color:#ccc;
+    text-shadow: 0px -1px 1px #111;
+}
+
+.x42-spectre{{{cns}}} .x42-brand h1 {
+    font-family:"Nexa";
+    font-size:28px;
+}
+
+.x42-spectre{{{cns}}} .x42-plugin-name h1 {
+    font-family:"Questrial";
+    font-size:21px;
+}
+
+
+
+/* = LIGHT ON/OFF
+================================================ */
+.x42-spectre{{{cns}}} .mod-light {
+    background-position:center center;
+    background-repeat:no-repeat;
+    height:32px;
+    left:10px;
+    position:absolute;
+    right:10px;
+    bottom:105px;
+}
+
+/* = FOOTSWITCH
+================================================ */
+.x42-spectre{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/footswitch.png{{{ns}}});
+    background-position:bottom center;
+    background-repeat:no-repeat;
+    background-size:auto 132px;
+    bottom: 32px;
+    cursor:pointer;
+    height:66px;
+    left: 20px;
+    margin: auto;
+    position:absolute;
+    right: 20px;
+    width: 66px;
+}
+
+.x42-spectre{{{cns}}} .mod-footswitch.on {
+    background-position:top center;
+}
+
+/* = Layout
+================================================ */
+
+.x42-spectre{{{cns}}} .x42-spectrum {
+    position:relative;
+    margin:10px;
+    border-radius: 7px;
+    width:256px;
+    height:205px;
+    background-color:#111;
+    margin:20px auto;
+    box-shadow: 2px 2px 2px 0px #555 inset, -1px -1px 1px 1px #999 inset;
+}
+
+.x42-spectre{{{cns}}} .x42-spectrum-svg {
+    position:relative;
+}
+
+.x42-spectre{{{cns}}} .x42-spectrum-svg svg {
+    position:relative;
+    top:1px;
+}
+
+/* = Push Buttons
+================================================ */
+.x42-spectre{{{cns}}} .mod-pushbutton {
+    background-image:url(/resources/footswitch.png{{{ns}}});
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:auto 88px;
+    cursor:pointer;
+    height:44px;
+    margin: 4px auto 0 auto;
+    width: 44px;
+}
+
+.x42-spectre{{{cns}}} .mod-pushbutton.on {
+    background-position: bottom center !important;
+}

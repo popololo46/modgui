@@ -1,0 +1,478 @@
+/* STYLES FOR THE BOXY PEDAL */
+
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/questrial/stylesheet.css);
+
+/* = CONTAINER
+================================================ */
+#mod-pedal-{{{cns}}} {
+    background-image:url(/resources/pedals/small-box.png{{{ns}}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 460px 215px;
+    position:absolute;
+    border-radius: 21px;
+    width: 460px;
+    height: 215px;
+}
+
+/* = PLUGIN'S AUTHOR
+================================================ */
+#mod-pedal-{{{cns}}} .mod-plugin-brand {
+    display: none;
+	left:0;
+    position:absolute;
+    right:0;
+    text-align:center;
+    text-transform:uppercase;
+    top:160px;
+}
+
+#mod-pedal-{{{cns}}} .mod-plugin-brand h1 {
+    border-color:#000;
+    border-radius:12px;
+    border-style:solid;
+    border-width:4px;
+    display:inline-block;
+    font-family:"Nexa";
+    font-size:32px;
+    padding:3px 9px 0;
+}
+
+#mod-pedal-{{{cns}}}.mod-one-footswitch-presets .mod-plugin-brand {
+  top:12px;
+}
+
+
+/* = PLUGIN'S NAME
+================================================ */
+#mod-pedal-{{{cns}}} .mod-plugin-name {
+	display: none;
+    left:30px;
+    overflow:hidden;
+    position:absolute;
+    right:30px;
+    text-align:center;
+    top:340px;
+}
+
+#mod-pedal-{{{cns}}} .mod-plugin-name h1 {
+    font-family:"Questrial";
+    font-size:21px;
+    line-height:1;
+}
+
+/* = LIGHT ON/OFF
+================================================ */
+#mod-pedal-{{{cns}}} .mod-light {
+	background-image: url(/resources/pedals/red-light-off.png{{{ns}}}) !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 5px;
+}
+
+#mod-pedal-{{{cns}}} .light-upper { top: 31px; }
+#mod-pedal-{{{cns}}} .light-lower { top: 74px; }
+#mod-pedal-{{{cns}}} .light-pedal { top: 117px; }
+
+#mod-pedal-{{{cns}}}.upper-mode .light-upper.on,
+#mod-pedal-{{{cns}}}.lower-mode .light-lower.on,
+#mod-pedal-{{{cns}}}.pedal-mode .light-pedal.on
+{
+	background-image: url(/resources/pedals/red-light-on.png{{{ns}}}) !important;
+}
+
+/* = FOOTSWITCH
+================================================ */
+#mod-pedal-{{{cns}}} .mod-footswitch {
+	display: none;
+    background-image:url(/resources/pedals/footswitch.png{{{ns}}});
+    background-position:bottom center;
+    background-repeat:no-repeat;
+    background-size:auto 132px;
+    bottom: 25px;
+    right: 30px;
+    cursor:pointer;
+    height:66px;
+    width: 66px;
+    margin: auto;
+    position:absolute !important;
+}
+#mod-pedal-{{{cns}}} .mod-footswitch.on {
+    background-position-y: top !important
+}
+
+#mod-pedal-{{{cns}}} .mod-control-group {
+    margin:20px !important;
+    position:relative;
+    text-align:center;
+    z-index:30;
+}
+#mod-pedal-{{{cns}}} .top {
+    margin-top:0px !important;
+}
+
+#mod-pedal-{{{cns}}}.mod-one-footswitch-presets .mod-control-group {
+    margin:10px !important;
+    top:75px;
+}
+
+#mod-pedal-{{{cns}}}.mod-one-footswitch-presets .mod-control-group > select {
+    width:100%;
+}
+
+/* = KNOBS
+================================================ */
+
+#mod-pedal-{{{cns}}} .mod-control-group .mod-knob {
+    overflow: hidden;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+}
+
+#mod-pedal-{{{cns}}} .mod-control-group .mod-knob > span.mod-knob-title {
+    position: absolute;
+    top: 64px;
+    left: -10px;
+	width: 100px;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-transform: uppercase;
+	color: #909090;
+}
+
+#mod-pedal-{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+    background-image: url(/resources/pedals/gold.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 60px;
+    height: 80px;
+    width: 60px;
+    margin: 0 auto;
+}
+
+#mod-pedal-{{{cns}}} .mod-control-group .mod-knob.rotary_speed_preset .mod-knob-image {
+    background-image: url(/resources/pedals/h-toggle-3-states.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 44px;
+    height: 44px;
+    width: 64px;
+    margin: 12px auto 0;
+}
+
+#mod-pedal-{{{cns}}} .knob-scalepoints {
+    overflow: visible;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+}
+#mod-pedal-{{{cns}}} .knob-scalepoints .knob-value {
+    position: absolute;
+    display: block;
+    font-size: 8px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-transform: uppercase;
+	color: #909090;
+}
+
+/* = ENUMERATED LIST
+================================================ */
+#mod-pedal-{{{cns}}} .mod-enumerated-group {
+    height:31px;
+    margin: 20px auto 0 !important;
+    position: relative;
+    width: 190px;
+    z-index: 35;
+}
+
+#mod-pedal-{{{cns}}} .mod-enumerated {
+    background-position: right center;
+    background-repeat: no-repeat;
+    font-size: 11px;
+    font-weight: bold;
+    left: 0;
+    line-height: 2;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: left;
+}
+
+#mod-pedal-{{{cns}}} .mod-enumerated .mod-enumerated-selected {
+    background-color:rgba(0,0,0,.3);
+    box-shadow: inset 0 0 4px rgba(0,0,0,.3);
+    border-radius: 4px;
+    padding: 3px 9px;
+}
+
+#mod-pedal-{{{cns}}} .mod-enumerated .mod-enumerated-selected {
+    border-radius:4px 4px 0 0;
+}
+
+#mod-pedal-{{{cns}}} .mod-enumerated .mod-enumerated-list {
+    display:none;
+    color:#fff;
+}
+
+#mod-pedal-{{{cns}}} .mod-enumerated .mod-enumerated-list {
+    background-color:rgba(0,0,0,.9);
+    display:none;
+    height:115px;
+    overflow:auto;
+    position:relative;
+}
+
+#mod-pedal-{{{cns}}} .mod-enumerated .mod-enumerated-list > div {
+    padding:3px 9px;
+}
+
+#mod-pedal-{{{cns}}} .mod-enumerated .mod-enumerated-list > div:hover {
+    background-color:rgba(255,255,255,.2);
+    cursor:pointer;
+}
+
+/* = BACKGROUND IMAGES - Color of the pedal
+================================================ */
+
+/* = COLORS - Color of the pedals labels
+================================================ */
+#mod-pedal-{{{cns}}}.mod-wood3 .mod-enumerated,
+{
+    background-image:url(/resources/utils/dropdown-arrow-white.png{{{ns}}});
+}
+#mod-pedal-{{{cns}}}.mod-wood3 h1,
+#mod-pedal-{{{cns}}}.mod-wood3 .mod-enumerated,
+#mod-pedal-{{{cns}}}.mod-wood3 .mod-control-group .mod-knob > span.mod-knob-title,
+{
+    color:white;
+}
+#mod-pedal-{{{cns}}}.mod-wood3 h1,
+{
+    border-color:white;
+}
+
+/* = Toggle
+================================================ */
+#mod-pedal-{{{cns}}} .mod-toggle {
+    position: absolute;
+	background-image: url(/resources/pedals/h-toggle.png{{{ns}}});
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: auto 88px;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    height: 44px;
+    width: 64px;
+    margin: 4px auto 0 auto;
+}
+
+#mod-pedal-{{{cns}}} .mod-toggle.on {
+    background-position: top center !important;
+}
+
+/* = CUSTOM THING
+================================================ */
+
+@font-face {
+	font-family: "FourteenSegments-{{{cns}}}";
+	font-style: normal;
+	font-weight: normal;
+	src: url(/resources/pedals/fourteen-segments.woff{{{ns}}}) format('woff');
+}
+
+#mod-pedal-{{{cns}}} .digit-box {
+	position: absolute;
+	font-family: "FourteenSegments-{{{cns}}}" !important;
+	font-size: 47px;
+	margin-bottom: 1px;
+	word-spacing: 0.78ex;
+	line-height: 1em;
+	background-color:#222;
+	box-shadow: 2px 2px 2px 0px #000 inset, -1px -1px 2px 1px #fff inset;
+	height:56px;
+	width:96px;
+}
+
+#mod-pedal-{{{cns}}} .digit-box .digits {
+	font-family: "FourteenSegments-{{{cns}}}" !important;
+	position: absolute;
+	white-space: pre;
+	font-weight: 500;
+	top: 0.06em;
+	left: 0.17em;
+	color: #ff9933;
+}
+
+#mod-pedal-{{{cns}}} .digit-box .digits.empty {
+	/*color: #5f5b6c;*/
+	font-weight: normal;
+	color: #4c4c4c;
+}
+
+#mod-pedal-{{{cns}}} .digit-box.midi_msg_1 { left: 30px; top: 90px; width: 1.8em; }
+#mod-pedal-{{{cns}}} .digit-box.midi_msg_2 { left: 120px; top: 90px; width: 2.5em; }
+#mod-pedal-{{{cns}}} .digit-box.midi_msg_3 { left: 243px; top: 90px; width: 3.92em; }
+
+#mod-pedal-{{{cns}}} .midi-type       { position: absolute; left: 100px; top: 10px; }
+#mod-pedal-{{{cns}}} .midi-data-type1 {	position: absolute; left: 20px; top: 142px; }
+#mod-pedal-{{{cns}}} .midi-data-type2 {	position: absolute; left: 110px; top: 142px; }
+#mod-pedal-{{{cns}}} .midi-data-type3 {	position: absolute; left: 243px; top: 142px; }
+
+#mod-pedal-{{{cns}}} .midi-type > div,
+#mod-pedal-{{{cns}}} .midi-data-type1 > div,
+#mod-pedal-{{{cns}}} .midi-data-type2 > div,
+#mod-pedal-{{{cns}}} .midi-data-type3 > div {
+	position: absolute;
+	width: 300px;
+	height: 40px;
+}
+
+#mod-pedal-{{{cns}}} .midi-type .note-on  { left: 0px; top: 20px; }
+#mod-pedal-{{{cns}}} .midi-type .note-off { left: 0px; top: 40px; }
+#mod-pedal-{{{cns}}} .midi-type .poly-aftertouch { left: 60px; top: 20px; }
+#mod-pedal-{{{cns}}} .midi-type .channel-aftertouch { left: 60px; top: 40px; }
+#mod-pedal-{{{cns}}} .midi-type .control-change { left: 155px; top: 20px; }
+#mod-pedal-{{{cns}}} .midi-type .program-change { left: 155px; top: 40px; }
+#mod-pedal-{{{cns}}} .midi-type .pitch-bend { left: 238px; top: 20px; }
+#mod-pedal-{{{cns}}} .midi-type .system { left: 238px; top: 40px; }
+
+#mod-pedal-{{{cns}}} .midi-data-type1 .channel { left: 0px; top: 0px; }
+#mod-pedal-{{{cns}}} .midi-data-type1 .system { left: 0px; top: 20px; }
+
+#mod-pedal-{{{cns}}} .midi-data-type2 .note { left: 0px; top: 0px; }
+#mod-pedal-{{{cns}}} .midi-data-type2 .controller { left: 0px; top: 20px; }
+#mod-pedal-{{{cns}}} .midi-data-type2 .program { left: 55px; top: 0px; }
+
+#mod-pedal-{{{cns}}} .midi-data-type3 .pressure { left: 0px; top: 0px; }
+#mod-pedal-{{{cns}}} .midi-data-type3 .velocity { left: 0px; top: 20px; }
+#mod-pedal-{{{cns}}} .midi-data-type3 .pitch { left: 78px; top: 0px; }
+#mod-pedal-{{{cns}}} .midi-data-type3 .data { left: 78px; top: 20px; }
+
+#mod-pedal-{{{cns}}} .midi-type h2 {
+	margin: 0;
+	position: absolute;
+	font-weight: 900;
+	font-size: 10px;
+	top: 8px;
+	line-height: 1em;
+	color: black;
+	text-transform: uppercase;
+	margin-left: 34px;
+	border-bottom: 2px solid black;
+}
+
+#mod-pedal-{{{cns}}} .midi-type h2.note { left: 0px; }
+#mod-pedal-{{{cns}}} .midi-type h2.aftertouch { left: 60px; }
+#mod-pedal-{{{cns}}} .midi-type h2.change { left: 155px; }
+#mod-pedal-{{{cns}}} .midi-type h2.other { left: 238px; }
+
+#mod-pedal-{{{cns}}} .midi-type span,
+#mod-pedal-{{{cns}}} .midi-data-type1 span,
+#mod-pedal-{{{cns}}} .midi-data-type2 span,
+#mod-pedal-{{{cns}}} .midi-data-type3 span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 10px;
+	left: 35px;
+	top: 11px;
+	line-height: 1em;
+	color: #202020;
+	text-transform: uppercase;
+}
+
+#mod-pedal-{{{cns}}} .midi-type .image,
+#mod-pedal-{{{cns}}} .midi-data-type1 .image,
+#mod-pedal-{{{cns}}} .midi-data-type2 .image,
+#mod-pedal-{{{cns}}} .midi-data-type3 .image {
+	background-image: url(/resources/pedals/red-light-off.png{{{ns}}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 5px;
+}
+
+#mod-pedal-{{{cns}}} .midi-type.note-off .note-off .image,
+#mod-pedal-{{{cns}}} .midi-type.note-on .note-on .image,
+#mod-pedal-{{{cns}}} .midi-type.poly-aftertouch .poly-aftertouch .image,
+#mod-pedal-{{{cns}}} .midi-type.channel-aftertouch .channel-aftertouch .image,
+#mod-pedal-{{{cns}}} .midi-type.control-change .control-change .image,
+#mod-pedal-{{{cns}}} .midi-type.program-change .program-change .image,
+#mod-pedal-{{{cns}}} .midi-type.pitch-bend .pitch-bend .image,
+#mod-pedal-{{{cns}}} .midi-type.system .system .image,
+#mod-pedal-{{{cns}}} .midi-data-type1.channel .channel .image,
+#mod-pedal-{{{cns}}} .midi-data-type1.system .system .image,
+#mod-pedal-{{{cns}}} .midi-data-type2.note .note .image,
+#mod-pedal-{{{cns}}} .midi-data-type2.controller .controller .image,
+#mod-pedal-{{{cns}}} .midi-data-type2.program .program .image,
+#mod-pedal-{{{cns}}} .midi-data-type3.pressure .pressure .image,
+#mod-pedal-{{{cns}}} .midi-data-type3.velocity .velocity .image,
+#mod-pedal-{{{cns}}} .midi-data-type3.data .data .image,
+#mod-pedal-{{{cns}}} .midi-data-type3.pitch .pitch .image {
+	background-image: url(/resources/pedals/red-light-on.png{{{ns}}});
+}
+
+/* = MIDI RECEIVED
+================================================ */
+
+#mod-pedal-{{{cns}}} .midi-received {
+	position: absolute;
+	left: 35px;
+	top: 22px;
+	width: 45px;
+	height: 50px;
+}
+
+#mod-pedal-{{{cns}}} .midi-received span {
+	position: absolute;
+	font-weight: bold;
+	font-size: 10px;
+	top: 0px;
+	line-height: 1em;
+	color: black;
+	text-transform: uppercase;
+	width: 45px;
+	text-align: center;
+	margin: 0 auto;
+	border-bottom: 2px solid black;
+}
+
+#mod-pedal-{{{cns}}} .midi-received .image {
+	background-image: url(/resources/pedals/red-light-off.png{{{ns}}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+	top: 18px;
+	left: 6.5px;
+    position: absolute;
+    margin: 0 auto;
+}
+
+#mod-pedal-{{{cns}}} .midi-received .image.highlighted {
+	background-image: url(/resources/pedals/red-light-on.png{{{ns}}});
+	opacity: 0.0;
+}
+
+#mod-pedal-{{{cns}}} .midi-received.received .image.highlighted {
+	animation: 0.1s linear 0s 1 blink-{{{cns}}};
+}
+
+@keyframes blink-{{{cns}}} {
+	from { opacity: 1.0; }
+	to { opacity: 0.0; }
+}

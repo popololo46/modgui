@@ -1,0 +1,460 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<dexed-DCDCollection>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Bank ;
+	rdfs:label "DCDCollection" .
+
+<dexed-01_FM-Rhodes.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "01_FM-Rhodes" ;
+	rdfs:seeAlso <dexed-01_FM-Rhodes.ttl> .
+
+<dexed-02_FM-Rhodes2.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "02_FM-Rhodes2" ;
+	rdfs:seeAlso <dexed-02_FM-Rhodes2.ttl> .
+
+<dexed-03_Meinecke.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "03_Meinecke" ;
+	rdfs:seeAlso <dexed-03_Meinecke.ttl> .
+
+<dexed-04_CCCP-70.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "04_CCCP-70" ;
+	rdfs:seeAlso <dexed-04_CCCP-70.ttl> .
+
+<dexed-05_Steinway.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "05_Steinway" ;
+	rdfs:seeAlso <dexed-05_Steinway.ttl> .
+
+<dexed-06_Korg_CX3.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "06_Korg_CX3" ;
+	rdfs:seeAlso <dexed-06_Korg_CX3.ttl> .
+
+<dexed-07_Leadharp.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "07_Leadharp" ;
+	rdfs:seeAlso <dexed-07_Leadharp.ttl> .
+
+<dexed-08_Synclavier.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "08_Synclavier" ;
+	rdfs:seeAlso <dexed-08_Synclavier.ttl> .
+
+<dexed-09_ELEC_VANG.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "09_ELEC_VANG" ;
+	rdfs:seeAlso <dexed-09_ELEC_VANG.ttl> .
+
+<dexed-10_FATSO._RT..ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "10_FATSO._RT." ;
+	rdfs:seeAlso <dexed-10_FATSO._RT..ttl> .
+
+<dexed-11_FATSYNTH_A.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "11_FATSYNTH_A" ;
+	rdfs:seeAlso <dexed-11_FATSYNTH_A.ttl> .
+
+<dexed-12_JUPITER_1.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "12_JUPITER_1" ;
+	rdfs:seeAlso <dexed-12_JUPITER_1.ttl> .
+
+<dexed-13_JUPITER_8.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "13_JUPITER_8" ;
+	rdfs:seeAlso <dexed-13_JUPITER_8.ttl> .
+
+<dexed-14_Jupiter.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "14_Jupiter" ;
+	rdfs:seeAlso <dexed-14_Jupiter.ttl> .
+
+<dexed-15_ANALOG_2.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "15_ANALOG_2" ;
+	rdfs:seeAlso <dexed-15_ANALOG_2.ttl> .
+
+<dexed-16_JUNO_106_6.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "16_JUNO_106_6" ;
+	rdfs:seeAlso <dexed-16_JUNO_106_6.ttl> .
+
+<dexed-17_ALG.2._RT..ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "17_ALG.2._RT." ;
+	rdfs:seeAlso <dexed-17_ALG.2._RT..ttl> .
+
+<dexed-18_Mooger_Low.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "18_Mooger_Low" ;
+	rdfs:seeAlso <dexed-18_Mooger_Low.ttl> .
+
+<dexed-19_Soft-Moog.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "19_Soft-Moog" ;
+	rdfs:seeAlso <dexed-19_Soft-Moog.ttl> .
+
+<dexed-20_Mooger.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "20_Mooger" ;
+	rdfs:seeAlso <dexed-20_Mooger.ttl> .
+
+<dexed-21_Mini-Moog.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "21_Mini-Moog" ;
+	rdfs:seeAlso <dexed-21_Mini-Moog.ttl> .
+
+<dexed-22_Mini-Moog2.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "22_Mini-Moog2" ;
+	rdfs:seeAlso <dexed-22_Mini-Moog2.ttl> .
+
+<dexed-23_Moog_Strng.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "23_Moog_Strng" ;
+	rdfs:seeAlso <dexed-23_Moog_Strng.ttl> .
+
+<dexed-24_ANASTRINGS.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "24_ANASTRINGS" ;
+	rdfs:seeAlso <dexed-24_ANASTRINGS.ttl> .
+
+<dexed-25_ANALOG_1.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "25__ANALOG__1" ;
+	rdfs:seeAlso <dexed-25_ANALOG__1.ttl> .
+
+<dexed-26_ANALOG.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "26_ANALOG" ;
+	rdfs:seeAlso <dexed-26_ANALOG.ttl> .
+
+<dexed-27_Horn_Str..ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "27_Horn_Str." ;
+	rdfs:seeAlso <dexed-27_Horn_Str..ttl> .
+
+<dexed-28_St_Pad_4c.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "28__St_Pad__4c" ;
+	rdfs:seeAlso <dexed-28_St_Pad__4c.ttl> .
+
+<dexed-29_St_Pad_5c.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "29__St_Pad__5c" ;
+	rdfs:seeAlso <dexed-29_St_Pad__5c.ttl> .
+
+<dexed-30_STRINGS_M2.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "30_STRINGS_M2" ;
+	rdfs:seeAlso <dexed-30_STRINGS_M2.ttl> .
+
+<dexed-31_SAMPLESTRG.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "31_SAMPLESTRG" ;
+	rdfs:seeAlso <dexed-31_SAMPLESTRG.ttl> .
+
+<dexed-32_MID.STRG_B.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "32_MID.STRG_B" ;
+	rdfs:seeAlso <dexed-32_MID.STRG_B.ttl> .
+
+<dexed-33_HORNS_5A_W.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "33_HORNS_5A_W" ;
+	rdfs:seeAlso <dexed-33_HORNS_5A_W.ttl> .
+
+<dexed-34_80_F.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "34_80_F" ;
+	rdfs:seeAlso <dexed-34_80_F.ttl> .
+
+<dexed-35_8RASS__3.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "35__8RASS___3" ;
+	rdfs:seeAlso <dexed-35_8RASS___3.ttl> .
+
+<dexed-36_JUMP.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "36_JUMP" ;
+	rdfs:seeAlso <dexed-36_JUMP.ttl> .
+
+<dexed-37_JUMP_2SENS.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "37_JUMP_2SENS" ;
+	rdfs:seeAlso <dexed-37_JUMP_2SENS.ttl> .
+
+<dexed-38_FLUTE__1.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "38__FLUTE___1" ;
+	rdfs:seeAlso <dexed-38_FLUTE___1.ttl> .
+
+<dexed-39_CORNET_HS.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "39_CORNET_HS" ;
+	rdfs:seeAlso <dexed-39_CORNET_HS.ttl> .
+
+<dexed-40_CP_9O.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "40_CP_9O" ;
+	rdfs:seeAlso <dexed-40_CP_9O.ttl> .
+
+<dexed-41_B-R-ASS_1.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "41_B-R-ASS_1" ;
+	rdfs:seeAlso <dexed-41_B-R-ASS_1.ttl> .
+
+<dexed-42_BASS___1.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "42__BASS____1" ;
+	rdfs:seeAlso <dexed-42_BASS____1.ttl> .
+
+<dexed-43_SCHMIDT_2.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "43_SCHMIDT_2" ;
+	rdfs:seeAlso <dexed-43_SCHMIDT_2.ttl> .
+
+<dexed-44_FUNK-RHYT..ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "44_FUNK-RHYT." ;
+	rdfs:seeAlso <dexed-44_FUNK-RHYT..ttl> .
+
+<dexed-45_KLA5_HS.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "45_KLA5_HS" ;
+	rdfs:seeAlso <dexed-45_KLA5_HS.ttl> .
+
+<dexed-46_D_5-6......ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "46_D_5-6....." ;
+	rdfs:seeAlso <dexed-46_D_5-6......ttl> .
+
+<dexed-47_CLIC_HS.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "47_CLIC_HS" ;
+	rdfs:seeAlso <dexed-47_CLIC_HS.ttl> .
+
+<dexed-48_JUMP_3.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "48_JUMP_3" ;
+	rdfs:seeAlso <dexed-48_JUMP_3.ttl> .
+
+<dexed-49_ORGEL_1.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "49_ORGEL_1" ;
+	rdfs:seeAlso <dexed-49_ORGEL_1.ttl> .
+
+<dexed-50_B_3_ORGAN.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "50_B_3_ORGAN" ;
+	rdfs:seeAlso <dexed-50_B_3_ORGAN.ttl> .
+
+<dexed-51_PIANO__2.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "51__PIANO___2" ;
+	rdfs:seeAlso <dexed-51_PIANO___2.ttl> .
+
+<dexed-52_BREAK_FREE.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "52_BREAK_FREE" ;
+	rdfs:seeAlso <dexed-52_BREAK_FREE.ttl> .
+
+<dexed-53_BASCHMIDT.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "53_BASCHMIDT" ;
+	rdfs:seeAlso <dexed-53_BASCHMIDT.ttl> .
+
+<dexed-54_RHODES1_RH.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "54_RHODES1_RH" ;
+	rdfs:seeAlso <dexed-54_RHODES1_RH.ttl> .
+
+<dexed-55_RHODES_2.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "55_RHODES_2" ;
+	rdfs:seeAlso <dexed-55_RHODES_2.ttl> .
+
+<dexed-56_HOHNER_D_6.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "56_HOHNER_D_6" ;
+	rdfs:seeAlso <dexed-56_HOHNER_D_6.ttl> .
+
+<dexed-57_SYNTH_R.T..ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "57_SYNTH_R.T." ;
+	rdfs:seeAlso <dexed-57_SYNTH_R.T..ttl> .
+
+<dexed-58_STRING_SYN.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "58_STRING_SYN" ;
+	rdfs:seeAlso <dexed-58_STRING_SYN.ttl> .
+
+<dexed-59_FANFARE_H1.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "59_FANFARE_H1" ;
+	rdfs:seeAlso <dexed-59_FANFARE_H1.ttl> .
+
+<dexed-60_JUNK.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "60_JUNK" ;
+	rdfs:seeAlso <dexed-60_JUNK.ttl> .
+
+<dexed-61_--OBERHEIM.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "61_--OBERHEIM" ;
+	rdfs:seeAlso <dexed-61_--OBERHEIM.ttl> .
+
+<dexed-62_CHOIR..ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "62_CHOIR." ;
+	rdfs:seeAlso <dexed-62_CHOIR..ttl> .
+
+<dexed-63_BRS.STRS..ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "63_BRS.STRS." ;
+	rdfs:seeAlso <dexed-63_BRS.STRS..ttl> .
+
+<dexed-64_LAAZCHRD1.ttl>
+	lv2:appliesTo <https://github.com/dcoredump/dexed.lv2> ;
+	a pset:Preset ;
+	pset:bank <dexed-DCDCollection> ;
+	rdfs:label "64_LAAZCHRD1" ;
+	rdfs:seeAlso <dexed-64_LAAZCHRD1.ttl> .

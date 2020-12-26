@@ -1,0 +1,1667 @@
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ui:   <http://lv2plug.in/ns/extensions/ui#> .
+
+<http://tytel.org/helm>
+    a lv2:Plugin ;
+    lv2:binary <helm.so> ;
+    rdfs:seeAlso <helm.ttl> , <modgui.ttl> .
+
+<http://tytel.org/helm#ExternalUI>
+    a <http://kxstudio.sf.net/ns/lv2ext/external-ui#Widget> ;
+    ui:binary <helm.so> ;
+    lv2:requiredFeature <http://lv2plug.in/ns/ext/instance-access> ;
+    lv2:extensionData <http://kxstudio.sf.net/ns/lv2ext/programs#UIInterface> .
+
+<http://tytel.org/helm#ParentUI>
+    a ui:X11UI ;
+    ui:binary <helm.so> ;
+    lv2:requiredFeature <http://lv2plug.in/ns/ext/instance-access> ;
+    lv2:optionalFeature ui:noUserResize ;
+    lv2:extensionData <http://kxstudio.sf.net/ns/lv2ext/programs#UIInterface> .
+
+<http://tytel.org/helm#preset001>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Kleer Arp" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset002>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Tremolo" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset003>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Running Toy" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset004>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT On the Run" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset005>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Prarie Arp" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset006>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Arp 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset007>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Arp 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset008>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Diddly" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset009>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Electro Bass" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset010>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Grit Bass" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset011>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Subsine" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset012>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset013>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 10" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset014>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 11" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset015>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset016>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset017>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 4" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset018>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 5" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset019>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 6" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset020>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 7" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset021>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 8" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset022>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Bass 9" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset023>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Killer Chipsound Pluck 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset024>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Killer Chipsound Pluck 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset025>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Scary Rotten DNB" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset026>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Stab Bass Vocal Sound" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset027>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Stab Bass" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset028>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sub-Layer for Trap Kick 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset029>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sub-Layer for Trap Kick 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset030>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sub-Layer for Trap Kick 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset031>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sub-Layer for Trap Kick 4" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset032>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sub-Layer for Trap Kick 5" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset033>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Terror Bass 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset034>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Terror Bass 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset035>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Terror Bass 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset036>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Terror Bass 4" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset037>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Timpani Digital Bass" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset038>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trap Bass 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset039>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trap Bass 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset040>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trap Bass 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset041>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trap Bass 4" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset042>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trap Bass 5" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset043>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trap Bass 6" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset044>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trap Bass 7" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset045>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trap Bass 8" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset046>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trap Bass 9" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset047>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Cracklette" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset048>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Filtered Bass 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset049>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Filtered Bass 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset050>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Spectrum" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset051>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Stinky Bass 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset052>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Stinky Bass 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset053>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Stinky Bass 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset054>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Bass Formant" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset055>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Bass Picked" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset056>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Bass" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset057>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Contrabass" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset058>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Double Bass" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset059>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Insane Gamer" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset060>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Random Chip Bass" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset061>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Bounce" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset062>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Chip Waltz" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset063>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Easy Vibrato" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset064>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Octaves" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset065>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Punch" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset066>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Wind Up" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset067>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Hard (Style)" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset068>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Skreech Bass" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset069>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Ugly Mess" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset070>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Bells" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset071>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Pluck Time" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset072>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Xylo" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset073>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA 90 Videogame Pluck" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset074>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Alien Ocarina 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset075>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Alien Ocarina 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset076>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Broken Digital Organ" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset077>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Pluck Digital String 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset078>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Pluck Digital String 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset079>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Pluck Digital String 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset080>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Plucked Digital String" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset081>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Post Funk Keys 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset082>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Post Funk Keys 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset083>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Steampunk Phantom of the Opera" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset084>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Duper Saw" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset085>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Eighties Science Movie" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset086>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Organ 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset087>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Organ 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset088>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Striking Discovery" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset089>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Stuttering Organ" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset090>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Toy Piano" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset091>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Drifter 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset092>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Drifter 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset093>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Drifter 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset094>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Homebase" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset095>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Natures Best" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset096>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Portamento One" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset097>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Prarie" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset098>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Skewd with Noise" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset099>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Skewd" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset100>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Brass CC2 A" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset101>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Brass CC2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset102>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Brass Soft Stutter" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset103>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Brass Soft" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset104>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Celesta" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset105>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Formant 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset106>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Formant 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset107>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Piano 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset108>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Piano 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset109>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Piano 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset110>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Piano 4" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset111>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Piano Tremolo 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset112>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Piano Tremolo 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset113>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Hoboe" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset114>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Monstah Lead" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset115>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Super(er) Saw" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset116>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Supersaw Gate" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset117>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Supersaw" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset118>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Acid Distorted Lead" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset119>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Alien Lead Guitar" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset120>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Arabian Android Flute" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset121>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Convolution" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset122>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Digital Reflected Glass 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset123>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Digital Reflected Glass 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset124>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Digital Reflected Glass 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset125>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Bell" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset126>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Lead 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset127>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Lead 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset128>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Lead 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset129>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Terror Lead" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset130>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Leadgun" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset131>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Tension 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset132>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Tension 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset133>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Tension 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset134>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Tension 4" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset135>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Trumpet" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset136>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Witchy Lead 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset137>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Witchy Lead 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset138>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Witchy Lead 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset139>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Zap Hard" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset140>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Formantish" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset141>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Freedom" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset142>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Gold" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset143>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Platinum Poly" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset144>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Platinum" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset145>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Silverrr" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset146>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Brass_Portamento" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset147>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Clarinet" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset148>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Nasty" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset149>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Pizz" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset150>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Epic" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset151>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Soothing" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset152>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Stars" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset153>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Ambient Metallic" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset154>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Broken Old Analog" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset155>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Crispy Pad Organ" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset156>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Digital Enigma" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset157>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Digital Wind Ensemble 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset158>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Digital Wind Ensemble 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset159>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Hard Brass Synth Ensemble" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset160>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Lofi Soft Pad 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset161>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Lofi Soft Pad 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset162>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Lofi Soft Pad 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset163>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Pulsating Pad" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset164>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Resonant Pad" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset165>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sad Scifi Strings 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset166>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sad Scifi Strings 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset167>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sad Scifi Strings 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset168>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Scifi Interference" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset169>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Soft Neo Church Organ" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset170>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Soft Scifi Pad 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset171>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Soft Scifi Pad 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset172>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Soft Scifi Pad 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset173>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Soft Scifi Pad 4" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset174>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Soft Scifi Pad 5" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset175>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Soft Scifi Pad 6" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset176>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Chamber Chatter" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset177>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Electrobike Cruise" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset178>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Fluffy Landscape" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset179>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Hypnotizing Pulse" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset180>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Pulsing Daisies" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset181>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Stuck in the Basement" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset182>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Talk Radio" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset183>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Waiting for Takeoff" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset184>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Wandering Lost" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset185>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Watching the Clock" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset186>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Mandolin" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset187>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF OSC 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset188>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Soft Pulse 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset189>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Soft Pulse 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset190>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM House Pluck" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset191>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Lo-Fi Pluck" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset192>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Broken Digital Snare" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset193>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Cinematic Hit" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset194>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Closed Hat" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset195>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Dark Perc 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset196>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Dark Perc 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset197>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Clsd HH" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset198>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Crash Ride" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset199>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Kick 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset200>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Kick 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset201>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Kick 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset202>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Kick 4" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset203>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Metal Perc 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset204>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Metal Perc 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset205>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Open HH" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset206>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Semiopen HH" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset207>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Tom 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset208>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Electro Tom 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset209>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Fat HH Clsd" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset210>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Kung Fu Crash" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset211>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Kung Fu Fight Crash" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset212>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Pluck Tom" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset213>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Toy Snare 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset214>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Toy Snare 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset215>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Bass 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset216>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Hat 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset217>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Hat 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset218>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Kick 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset219>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Kick 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset220>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Snare 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset221>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Some Kind of Percussion" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset222>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Some Kinda Dubby Cycle" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset223>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "OZ Some Kinda Stab" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset224>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF AD2 4 Toms" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset225>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Cowbell 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset226>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Cowbell 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset227>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF HH High" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset228>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF HH Low Eco 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset229>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF HH Low Eco 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset230>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF HH Low" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset231>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF HH Silver" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset232>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Horse 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset233>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Horse 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset234>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Kick 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset235>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Kick 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset236>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Kick 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset237>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Nocky" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset238>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Snare 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset239>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Snare 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset240>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Snare 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset241>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Snare 4" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset242>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Snare Brush" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset243>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Tom 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset244>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Tom 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset245>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Tom 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset246>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Toms Nock 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset247>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Toms Nock 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset248>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Downfall" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset249>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "CM Riser" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset250>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Alien Creature Crying" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset251>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Alien Radio Interferences" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset252>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Another Angry Robot" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset253>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Chiptune Automatic Gun 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset254>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Chiptune Automatic Gun 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset255>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Digital Cello Arp" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset256>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Digital Waterdrops" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset257>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Lasersword" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset258>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Satan in Your Headphones 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset259>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Satan in Your Headphones 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset260>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Scifi Gunshot" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset261>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sinister Ambient 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset262>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "COA Sinister Ambient 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset263>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Elven Door Stop" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset264>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Game Show Clock" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset265>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Glitch Power" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset266>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Powering On 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset267>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Powering On 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset268>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Pulse Alarm" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset269>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "MT Rotary Slingshot" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset270>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Stutter Teeth" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset271>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Whistle 1" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset272>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Whistle 2" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset273>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Whistle 3" ;
+    rdfs:seeAlso <presets.ttl> .
+
+<http://tytel.org/helm#preset274>
+    a pset:Preset ;
+    lv2:appliesTo <http://tytel.org/helm> ;
+    rdfs:label "SF Wind" ;
+    rdfs:seeAlso <presets.ttl> .
+

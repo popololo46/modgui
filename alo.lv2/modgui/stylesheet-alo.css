@@ -1,0 +1,248 @@
+/* SKINS */
+.alo{{{cns}}} {
+    border-radius: 10px;
+}
+
+.alo-0600{{{cns}}} {
+    background-image: url(/resources/background.png{{{ns}}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 205px;
+    position: relative;
+    width: 560px;
+}
+
+
+/* THE AUTHOR */
+.alo{{{cns}}} .mod-plugin-brand h1 {
+    color: #3c3;
+    font-size: 18px;
+    font-weight: bold;
+    left: 80px;
+    line-height: 1;
+    margin: 0;
+    position: absolute;
+    top: 23px;
+}
+
+/* PLUGIN'S NAME */
+.alo{{{cns}}} .mod-plugin-name h1 {
+    color: #3c3;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    position: absolute;
+    right: 80px;
+    top: 23px;
+}
+
+/* CONTROLS */
+.alo{{{cns}}} .mod-control-group {
+    padding: 5px;
+    border-color: #000;
+    border-style: solid;
+	border-radius: 12px;
+    border-width: 1px 1px 1px 1px;
+    bottom: 149px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    height: 80px;
+    left: 40px;
+    position: absolute;
+    right: 40px;
+    top: 47px;
+}
+
+.alo{{{cns}}} .mod-control-group > div {
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.alo{{{cns}}} .mod-pedal-input,
+.alo{{{cns}}} .mod-pedal-output {
+    top: 4px;
+}
+
+/* SWITCH ON/OFF GENERAL */
+.alo{{{cns}}} .mod-switch {
+    cursor: pointer;
+    float: right;
+    height: 71px;
+    position: relative;
+}
+
+.alo{{{cns}}} .mod-switch-image {
+    background-image: url(/resources/switch-001.png{{{ns}}});
+    background-position: -9px 0px;
+    background-repeat: no-repeat;
+    background-size: auto 71px;
+    height: 71px;
+    width: 61px;
+}
+
+.alo{{{cns}}} .mod-switch-image.on {
+    background-position: -80px 0px;
+}
+
+.alo{{{cns}}} .mod-switch-image.off {
+    background-position: -9px 0px;
+}
+
+/* GREEN LIGHT */
+.alo{{{cns}}} .mod-green-light {
+    float: left;
+    height: 71px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 74px;
+}
+
+.alo{{{cns}}} .mod-green-light .mod-green-light-image {
+    background-image: url(/resources/greenlight.png{{{ns}}});
+    background-position: left 0px;
+    background-repeat: no-repeat;
+    background-size: auto 71px;
+    height: 71px;
+    margin-top: 3px;
+    position: relative;
+    width: 71px;
+    z-index: 2;
+}
+
+.alo{{{cns}}} .mod-green-light .mod-black-light-image {
+    background-image: url(/resources/blacklight.png{{{ns}}});
+    background-position: left 0px;
+    background-repeat: no-repeat;
+    background-size: auto 71px;
+    height: 71px;
+    margin-top: 3px;
+    position: relative;
+    width: 71px;
+    z-index: 2;
+}
+
+.alo{{{cns}}} .mod-green-light .mod-green-light-title {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    height:18px;
+    left: 0;
+    overflow:hidden;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+    z-index: 1;
+}
+
+/* KNOBS */
+.alo{{{cns}}} .mod-control-group .mod-knob {
+    display:inline-block;
+    float: left;
+    height:50px;
+    margin-top: 10px;
+    position:relative;
+}
+.alo{{{cns}}} .mod-control-group .mod-knob .mod-knob-image-wrapper {
+    padding: 1px;
+}
+.alo{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+    background-image: url(/resources/knob.png{{{ns}}});
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 44px;
+    height: 44px;
+    position: relative;
+    overflow: hidden;
+    width: 44px;
+}
+.alo{{{cns}}} .mod-control-group .mod-knob .mod-knob-value {
+    border-radius: 0 0 8px 8px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alo{{{cns}}} .mod-control-group .mod-knob .mod-knob-title {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    height:18px;
+    text-align: center;
+}
+
+/* ENUMERATED LIST */
+.alo{{{cns}}} .mod-enumerated {
+    color:#fff;
+    display:inline-block;
+    left:132px;
+    overflow:hidden;
+    position:absolute;
+    top:-27px;
+    width:240px;
+}
+
+.alo{{{cns}}} .mod-enumerated .mod-enumerated-selected {
+    background-color:rgba(0,0,0,.8);
+    background-image:url(/resources/utils/dropdown-arrow-white.png{{{ns}}});
+    background-position:right center;
+    background-repeat:no-repeat;
+    border-radius:4px;
+    box-shadow:inset 1px 1px 5px #000;
+    color:#fff;
+    font-size:12px;
+    height:24px;
+    line-height:2;
+    margin-right:8px;
+    overflow:hidden;
+    padding:0 9px;
+}
+
+/* WHEN IS HOVER */
+.alo{{{cns}}} .mod-enumerated:hover .mod-enumerated-selected {
+    border-radius:4px 4px 0 0;
+}
+
+/* THE LIST OF OPTIONS */
+.alo{{{cns}}} .mod-enumerated .mod-enumerated-list {
+    display:none;
+    font-weight:bold;
+}
+
+.alo{{{cns}}} .mod-enumerated .mod-enumerated-list > div {
+    padding:3px 9px;
+}
+
+.alo{{{cns}}} .mod-enumerated .mod-enumerated-list > div:hover {
+    background:rgba(255,255,255,.2);
+    cursor:pointer;
+}
+
+/* WHEN THE LIST IS SHOWING */
+.alo{{{cns}}} .mod-enumerated .mod-enumerated-list {
+    background:rgba(0,0,0,.9);
+    display:none;
+    height:85px;
+    overflow:auto;
+    position:relative;
+    width:232px;
+    z-index:3;
+}
+
+
+/* SEPARATOR */
+.alo{{{cns}}} .mod-separator {
+    background: #000;
+    display: inline-block;
+    float: left;
+    height: 69px;
+    margin-top: 2px;
+	margin-right: 10px;
+	margin-left: 10px;
+    width: 1px;
+}

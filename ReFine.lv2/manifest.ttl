@@ -1,0 +1,24 @@
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ui:   <http://lv2plug.in/ns/extensions/ui#> .
+
+<https://github.com/lkjbdsp/lkjb-plugins#ReFine>
+    a lv2:Plugin ;
+    lv2:binary <ReFine.so> ;
+    rdfs:seeAlso <ReFine.ttl> , <modgui.ttl> .
+
+<https://github.com/lkjbdsp/lkjb-plugins#ReFine#ExternalUI>
+    a <http://kxstudio.sf.net/ns/lv2ext/external-ui#Widget> ;
+    ui:binary <ReFine.so> ;
+    lv2:requiredFeature <http://lv2plug.in/ns/ext/instance-access> ;
+    lv2:optionalFeature ui:touch .
+
+<https://github.com/lkjbdsp/lkjb-plugins#ReFine#ParentUI>
+    a ui:X11UI ;
+    ui:binary <ReFine.so> ;
+    lv2:requiredFeature <http://lv2plug.in/ns/ext/instance-access> ;
+    lv2:optionalFeature ui:idleInterface, ui:noUserResize, ui:touch ;
+    lv2:extensionData ui:idleInterface .
+
+

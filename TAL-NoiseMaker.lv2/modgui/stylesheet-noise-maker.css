@@ -1,11 +1,5 @@
 @import url(/fonts/epf/stylesheet.css);
-@font-face {
-    font-family: 'lets_go_digital';
-    src: url('/resources/font/lets_go_digital_regular-webfont.woff2{{{ns}}}') format('woff2'),
-         url('/resources/font/lets_go_digital_regular-webfont.woff{{{ns}}}') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 /* = CONTAINER
 ================================================ */
 .tal-noise-maker{{{cns}}} {
@@ -573,12 +567,3 @@
 	color:#606060;
 }
 
-.tal-noise-maker{{{cns}}} .value {
-    font-family: 'lets_go_digital' !important;
-    font-variant-numeric: tabular-nums !important;
-	position: absolute;
-    color: RGB(200, 60, 60);
-    font-size: 82px;
-	top: -90px;
-    left: 610px;
-}

@@ -66,11 +66,12 @@
 
 .mod-dexed{{{cns}}} .mod-control-group {
     position:relative;
-    z-index:30;
+	z-index: 20;
 }
 
 .mod-dexed{{{cns}}} .mod-control-group .mod-knob {
     position:absolute;
+	z-index: 40;
 }
 
 .mod-dexed{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
@@ -80,6 +81,7 @@
     width: 32px;
     height: 52px;
 	position: absolute;
+	z-index: 40;
 }
 .mod-dexed{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.dexed-knob15 {
 	background-image: url(/resources/knobs/knob_15.png{{{ns}}}) !important;
@@ -504,7 +506,7 @@
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
-	z-index: 49;
+	z-index: 40;
 }
 
 .mod-dexed{{{cns}}} .mod-enumerated .mod-enumerated-list {
@@ -518,7 +520,7 @@
     padding-left: 10px;
     line-height: 1.6;
     text-transform: uppercase;
-    z-index: 53;
+    z-index: 1000;
 }
 .mod-dexed{{{cns}}} .mod-enumerated .mod-enumerated-list > div.selected {
     background-color:#393939;
@@ -532,7 +534,6 @@
 .mod-dexed{{{cns}}} .mod-enumerated.dexed-op6_kbd_lev_scl_lft_curve {
     left: 160px;
     top: 210px;
-    z-index: 53;
 }
 .mod-dexed{{{cns}}} .mod-enumerated.dexed-op1_kbd_lev_scl_rht_curve,
 .mod-dexed{{{cns}}} .mod-enumerated.dexed-op2_kbd_lev_scl_rht_curve,
@@ -542,7 +543,6 @@
 .mod-dexed{{{cns}}} .mod-enumerated.dexed-op6_kbd_lev_scl_rht_curve {
     left: 276px;
     top: 210px;
-    z-index: 53;
 }
 .mod-dexed{{{cns}}} .title-op1_kbd_lev_scl_lft_curve,
 .mod-dexed{{{cns}}} .title-op2_kbd_lev_scl_lft_curve,
@@ -553,7 +553,6 @@
 	position: absolute;
     left: 170px;
     top: 240px;
-    z-index: 52;
 }
 .mod-dexed{{{cns}}} .title-op1_kbd_lev_scl_rht_curve,
 .mod-dexed{{{cns}}} .title-op2_kbd_lev_scl_rht_curve,
@@ -564,13 +563,11 @@
 	position: absolute;
     left: 291px;
     top: 240px;
-    z-index: 52;
 }
 .mod-dexed{{{cns}}} .mod-enumerated.dexed-engine {
     left: 0px;
     top: 15px;
 	width: 90px;
-    z-index: 53;
 }
 .mod-dexed{{{cns}}} .mod-enumerated.dexed-engine .mod-enumerated-list {
 	bottom: 25px;
@@ -586,7 +583,6 @@
     left: 0px;
     top: 15px;
 	width: 90px;
-    z-index: 53;
 }
 .mod-dexed{{{cns}}} .mod-enumerated.dexed-lfo_waveform .mod-enumerated-list {
 	bottom: 25px;
@@ -600,50 +596,63 @@
 }
 /* = GROUP
 ================================================ */
+.dexed-group1 {
+	z-index: 998 !important;
+}
 .dexed-group2 {
     left: 348px;
 	margin-top: -35px;
+	z-index: 997 !important;
 }
 .dexed-group3 {
     left: 695px;
 	margin-top: -36px;
+	z-index: 996 !important;
 }
 .dexed-group4 {
     top: 226px;
+	z-index: 995 !important;
 }
 .dexed-group5 {
     top: 226px;
 	left: 348px;
 	margin-top: -35px;
+	z-index: 994 !important;
 }
 .dexed-group6 {
     top: 226px;
 	left: 695px;
 	margin-top: -36px;
+	z-index: 993 !important;
 }
-.dexed-grouppitch {
-	position: absolute !important;
-    top: 435px;
-	left: 887px;
-	margin-top: 0px;
-}
+
 .dexed-groupmaster {
     position: absolute !important;
     top: 529px;
 	left: 0px;
 	margin-top: 0px;
-}
-.dexed-grouplfo {
-    position: absolute !important;
-    top: 529px;
-    left: 685px;
-	margin-top: 0px;
+	z-index: 992 !important;
 }
 .dexed-groupparam {
     position: absolute !important;
     top: 529px;
     left: 400px;
 	margin-top: 0px;
+	z-index: 991 !important;
+}
+.dexed-grouplfo {
+    position: absolute !important;
+    top: 529px;
+    left: 685px;
+	margin-top: 0px;
+	z-index: 990 !important;
+}
+.dexed-grouppitch {
+	position: absolute !important;
+    top: 435px;
+	left: 887px;
+	margin-top: 0px;
+	z-index: 989 !important;
 }
 
 

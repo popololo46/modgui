@@ -1,0 +1,148 @@
+<div id="mod-pedal-{{{cns}}}" class="mod-pedal upper-mode mod-boxy100 mod-{{color}} {{color}}">
+    <div mod-role="drag-handle" class="mod-drag-handle"></div>
+    <div class="mod-plugin-brand"><h1>{{brand}}</h1></div>
+    <div class="mod-plugin-name"><h1>{{label}}</h1></div>
+
+	<div class="midi-received" mod-role="midi-received">
+		<div class="image"></div>
+		<div class="image highlighted"></div>
+		<span>Event Received</span>
+	</div>
+
+	<div class="midi-type" mod-role="midi-type">
+		<h2 class="note">Note</h2>
+		<div class="note-on">
+            <div class="image"></div>
+			<span>On</span>
+		</div>
+		<div class="note-off">
+            <div class="image"></div>
+			<span>Off</span>
+		</div>
+		<h2 class="aftertouch">Aftertouch</h2>
+		<div class="poly-aftertouch">
+            <div class="image"></div>
+			<span>Polyphonic</span>
+		</div>
+		<div class="channel-aftertouch">
+            <div class="image"></div>
+			<span>Channel</span>
+		</div>
+		<h2 class="change">Change</h2>
+		<div class="control-change">
+            <div class="image"></div>
+			<span>Control</span>
+		</div>
+		<div class="program-change">
+            <div class="image"></div>
+			<span>Program</span>
+		</div>
+		<h2 class="other">Other</h2>
+		<div class="pitch-bend">
+            <div class="image"></div>
+			<span>Pitch</span>
+		</div>
+		<div class="system">
+            <div class="image"></div>
+			<span>System</span>
+		</div>
+	</div>
+
+	<div class="midi-data-type1" mod-role="midi-data-type1">
+		<div class="system">
+            <div class="image"></div>
+			<span>System</span>
+		</div>
+		<div class="channel">
+            <div class="image"></div>
+			<span>Channel</span>
+		</div>
+	</div>
+
+	<div class="midi-data-type2" mod-role="midi-data-type2">
+		<div class="note">
+            <div class="image"></div>
+			<span>Note</span>
+		</div>
+		<div class="controller">
+            <div class="image"></div>
+			<span>Controller</span>
+		</div>
+		<div class="program">
+            <div class="image"></div>
+			<span>Program</span>
+		</div>
+	</div>
+
+	<div class="midi-data-type3" mod-role="midi-data-type3">
+		<div class="velocity">
+            <div class="image"></div>
+			<span>Velocity</span>
+		</div>
+		<div class="pressure">
+            <div class="image"></div>
+			<span>Pressure</span>
+		</div>
+		<div class="pitch">
+            <div class="image"></div>
+			<span>Pitch</span>
+		</div>
+		<div class="data">
+            <div class="image"></div>
+			<span>Data</span>
+		</div>
+	</div>
+
+	<div class="mod-display-group" mod-role="text">
+		<div class="midi_messages" title="MIDI message">
+			<div class="digit-box midi_msg_1">
+				<span class="digits empty">##</span>
+				<span class="digits" mod-role="midi-data1"></span>
+			</div>
+			<div class="digit-box midi_msg_2">
+				<span class="digits empty">###</span>
+				<span class="digits" mod-role="midi-data2"></span>
+			</div>
+			<div class="digit-box midi_msg_3">
+				<span class="digits empty">#####</span>
+				<span class="digits" mod-role="midi-data3"></span>
+			</div>
+		</div>
+	</div>
+
+    <div class="mod-footswitch" mod-role="bypass"></div>
+    <div class="mod-pedal-input">
+        {{#effect.ports.audio.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.audio.input}}
+        {{#effect.ports.midi.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.midi.input}}
+        {{#effect.ports.cv.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input}}
+    </div>
+    <div class="mod-pedal-output">
+        {{#effect.ports.audio.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.audio.output}}
+        {{#effect.ports.midi.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.midi.output}}
+        {{#effect.ports.cv.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.cv.output}}
+    </div>
+</div>

@@ -1,0 +1,22 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<https://github.com/vallsv/midi-display.lv2>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/gui.html> ;
+        modgui:stylesheet <modgui/style.css> ;
+        modgui:screenshot <modgui/screenshot.png> ;
+        modgui:thumbnail <modgui/thumbnail.png> ;
+        modgui:javascript <modgui/script.js> ;
+        modgui:brand "" ;
+        modgui:label "MIDI display" ;
+        modgui:model "boxy" ;
+        modgui:color "wood3" ;
+        modgui:knob "gold" ;
+        modgui:monitoredOutputs
+            [ lv2:symbol "midi_received" ] ,
+            [ lv2:symbol "midi_msg_1" ] ,
+            [ lv2:symbol "midi_msg_2" ] ,
+            [ lv2:symbol "midi_msg_3" ] ;
+    ] .

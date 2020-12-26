@@ -1,0 +1,21 @@
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://gareus.org/oss/lv2/modmeter>
+	a lv2:Plugin ;
+	lv2:binary <modmeter.so>  ;
+	rdfs:seeAlso <modmeter.ttl> .
+
+<http://gareus.org/oss/lv2/modmeter>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-modmeter.html> ;
+        modgui:stylesheet <modgui/stylesheet-modmeter.css> ;
+        modgui:screenshot <modgui/screenshot-modmeter.png> ;
+        modgui:thumbnail <modgui/thumbnail-modmeter.png> ;
+        modgui:javascript <modgui/script-modmeter.js> ;
+        modgui:brand "x42" ;
+        modgui:label "Level Meter" ;
+        modgui:monitoredOutputs [ lv2:symbol "level" ] , [ lv2:symbol "peak" ] , [ lv2:symbol "rms" ] ;
+    ] .

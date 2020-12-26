@@ -1,0 +1,162 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://argotlunar.info/>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-argotlunar.html> ;
+        modgui:stylesheet <modgui/stylesheet-argotlunar.css> ;
+        modgui:screenshot <modgui/screenshot-argotlunar.png> ;
+        modgui:thumbnail <modgui/thumbnail-argotlunar.png> ;
+        modgui:brand "Michael Ourednik" ;
+        modgui:label "ArgoTLunar 2" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "grains" ;
+            lv2:name "Grains" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "mix" ;
+            lv2:name "Mix" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "input_gain" ;
+            lv2:name "InGain" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "feedback" ;
+            lv2:name "Feedback" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "amp" ;
+            lv2:name "Amp" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "ampv" ;
+            lv2:name "Vol" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "pan" ;
+            lv2:name "Pan" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "panv" ;
+            lv2:name "Vol" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "delay" ;
+            lv2:name "Delay" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "delayv" ;
+            lv2:name "Vol" ;
+        ] , [
+            lv2:index 10 ;
+            lv2:symbol "iot" ;
+            lv2:name "IOT" ;
+        ] , [
+            lv2:index 11 ;
+            lv2:symbol "iotv" ;
+            lv2:name "Vol" ;
+        ] , [
+            lv2:index 12 ;
+            lv2:symbol "dur" ;
+            lv2:name "Dur" ;
+        ] , [
+            lv2:index 13 ;
+            lv2:symbol "durv" ;
+            lv2:name "Vol" ;
+        ] , [
+            lv2:index 14 ;
+            lv2:symbol "trans" ;
+            lv2:name "Trans" ;
+        ] , [
+            lv2:index 15 ;
+            lv2:symbol "transv" ;
+            lv2:name "Vol" ;
+        ] , [
+            lv2:index 16 ;
+            lv2:symbol "gliss" ;
+            lv2:name "Gliss" ;
+        ] , [
+            lv2:index 17 ;
+            lv2:symbol "glissv" ;
+            lv2:name "Vol" ;
+        ] , [
+            lv2:index 18 ;
+            lv2:symbol "filter_type" ;
+            lv2:name "Filter Type" ;
+        ] , [
+            lv2:index 19 ;
+            lv2:symbol "ffreq" ;
+            lv2:name "FFreq" ;
+        ] , [
+            lv2:index 20 ;
+            lv2:symbol "ffreqv" ;
+            lv2:name "Vol" ;
+        ] , [
+            lv2:index 21 ;
+            lv2:symbol "fq" ;
+            lv2:name "FQ" ;
+        ] , [
+            lv2:index 22 ;
+            lv2:symbol "fqv" ;
+            lv2:name "Vol" ;
+        ] , [
+            lv2:index 23 ;
+            lv2:symbol "env_type" ;
+            lv2:name "Env Type" ;
+        ] , [
+            lv2:index 24 ;
+            lv2:symbol "env_sustain" ;
+            lv2:name "Sustain" ;
+        ] , [
+            lv2:index 25 ;
+            lv2:symbol "env_skew" ;
+            lv2:name "Skew" ;
+        ] , [
+            lv2:index 26 ;
+            lv2:symbol "delay_quantize" ;
+            lv2:name "Quantize" ;
+        ] , [
+            lv2:index 27 ;
+            lv2:symbol "dur_quantize" ;
+            lv2:name "Quantize" ;
+        ] , [
+            lv2:index 28 ;
+            lv2:symbol "iot_quantize" ;
+            lv2:name "Quantize" ;
+        ] , [
+            lv2:index 29 ;
+            lv2:symbol "trans_toggle" ;
+            lv2:name "On" ;
+        ] , [
+            lv2:index 30;
+            lv2:symbol "gliss_toggle" ;
+            lv2:name "On" ;
+        ] , [
+            lv2:index 31;
+            lv2:symbol "freeze_toggle" ;
+            lv2:name "On" ;
+        ] , [
+            lv2:index 32;
+            lv2:symbol "scale_key" ;
+            lv2:name "Scale Key" ;
+        ] , [
+            lv2:index 33;
+            lv2:symbol "matrix_mod_1" ;
+            lv2:name "MOD1" ;
+        ] , [
+            lv2:index 34;
+            lv2:symbol "matrix_mod_2" ;
+            lv2:name "MOD2" ;
+        ] , [
+            lv2:index 35;
+            lv2:symbol "matrix_mod_3" ;
+            lv2:name "MOD3" ;
+        ] , [
+            lv2:index 36 ;
+            lv2:symbol "program" ;
+            lv2:name "Program" ;
+        ] ;
+    ] .
