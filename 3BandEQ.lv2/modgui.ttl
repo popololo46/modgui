@@ -1,0 +1,40 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://distrho.sf.net/plugins/3BandEQ>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-3-band-eq.html> ;
+        modgui:stylesheet <modgui/stylesheet-3-band-eq.css> ;
+        modgui:screenshot <modgui/screenshot-3-band-eq.png> ;
+        modgui:thumbnail <modgui/thumbnail-3-band-eq.png> ;
+        modgui:brand "DISTRHO" ;
+        modgui:label "3 Band EQ" ;
+        modgui:model "combo-model-001" ;
+        modgui:panel "0778" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "low" ;
+            lv2:name "Low" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "mid" ;
+            lv2:name "Mid" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "high" ;
+            lv2:name "High" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "master" ;
+            lv2:name "Master" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "low_mid" ;
+            lv2:name "Low-Mid Freq" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "mid_high" ;
+            lv2:name "Mid-High Freq" ;
+        ] ;
+    ] .
