@@ -1,0 +1,202 @@
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/questrial/stylesheet.css);
+
+/* = CONTAINER
+================================================ */
+.x42-mdbg{{{cns}}} {
+    background-image:url(/resources/box.png{{{ns}}});
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:230px 431px;
+    height:431px;
+    position:absolute;
+    width:230px;
+    border-radius: 21px;
+
+    line-height:1.429;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    border-color:white;
+    color:white;
+}
+
+/* = Labels
+================================================ */
+.x42-mdbg{{{cns}}} .x42-brand {
+    left:0;
+    position:absolute;
+    right:0;
+    text-align:center;
+    bottom: 50px;
+}
+
+.x42-mdbg{{{cns}}} .x42-brand h1 {
+    border-radius:12px;
+    border-style:solid;
+    border-width:4px;
+    display:inline-block;
+    font-family:"Nexa";
+    font-size:32px;
+    padding:3px 9px 0;
+}
+
+.x42-mdbg{{{cns}}} .x42-plugin-name {
+    left:30px;
+    overflow:hidden;
+    position:absolute;
+    right:30px;
+    text-align:center;
+    bottom:20px;
+}
+
+.x42-mdbg{{{cns}}} .x42-plugin-name h1 {
+    font-family:"Questrial";
+    font-size:21px;
+    line-height:1;
+}
+
+/* = LIGHT ON/OFF
+================================================ */
+.x42-mdbg{{{cns}}} .mod-light {
+    background-position:center center;
+    background-repeat:no-repeat;
+    height:32px;
+    left:10px;
+    position:absolute;
+    right:10px;
+    top:235px;
+}
+
+/* = KNOBS
+================================================ */
+.x42-mdbg{{{cns}}} .mod-control-group {
+    margin:10px !important;
+    position:relative;
+    text-align:center;
+    z-index:30;
+}
+
+.x42-mdbg{{{cns}}} .mod-control-group .mod-knob {
+    overflow:hidden;
+    position:relative;
+    display:inline-block;
+    height:64px;
+    margin: 0 14px;
+}
+
+.x42-mdbg{{{cns}}} .mod-control-group .mod-knob > span.mod-knob-title {
+    bottom:0px;
+    display:block;
+    font-size:11px;
+    font-weight:bold;
+    height:12px;
+    left:0;
+    line-height:1;
+    margin:0;
+    overflow:hidden;
+    padding:0;
+    position:absolute;
+    right:0;
+    text-transform:uppercase;
+}
+
+.x42-mdbg{{{cns}}} .mod-control-group .mod-knob .mod-knob-ff-image {
+    background-image:url(/resources/midi_ff.png{{{ns}}});
+    background-repeat:no-repeat;
+    background-size:auto 42px;
+    background-color:#222;
+    box-shadow: 2px 2px 2px 0px #000 inset, -1px -1px 2px 1px #fff inset;
+    height:42px;
+    width:48px;
+    margin:0 auto;
+}
+
+.x42-mdbg{{{cns}}} .mod-control-group .mod-knob .mod-knob-7f-image {
+    background-image:url(/resources/midi_7f.png{{{ns}}});
+    background-repeat:no-repeat;
+    background-size:auto 42px;
+    background-color:#222;
+    box-shadow: 2px 2px 2px 0px #000 inset, -1px -1px 2px 1px #fff inset;
+    height:42px;
+    width:48px;
+    margin:0 auto;
+}
+
+.x42-mdbg{{{cns}}} .bottom-group {
+    margin:10px auto 0 auto;
+    left:10px;
+    right:10px;
+    position:absolute;
+    bottom:100px;
+}
+
+/* = Push Buttons
+================================================ */
+.x42-mdbg{{{cns}}} .mod-pushbutton {
+    background-image:url(/resources/footswitch.png{{{ns}}});
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:auto 88px;
+    cursor:pointer;
+    height:44px;
+    margin: 4px auto 0 auto;
+    width: 44px;
+}
+
+.x42-mdbg{{{cns}}} .mod-pushbutton.on {
+    background-position: bottom center !important;
+}
+
+
+/* = ENUMERATED LIST
+================================================ */
+.x42-mdbg{{{cns}}} .mod-enumerated-group {
+    height:31px;
+    margin:20px auto 0 !important;
+    position:relative;
+    width:190px;
+    z-index:35;
+}
+
+.x42-mdbg{{{cns}}} .mod-enumerated {
+    background-image:url(/resources/dropdown-arrow-white.png{{{ns}}});
+    background-position:right center;
+    background-repeat:no-repeat;
+    font-size:11px;
+    font-weight:bold;
+    left:0;
+    line-height:2;
+    overflow:hidden;
+    position:absolute;
+    right:0;
+    text-align:center;
+}
+
+.x42-mdbg{{{cns}}} .mod-enumerated .mod-enumerated-selected {
+    background-color:rgba(0,0,0,.3);
+    box-shadow:inset 0 0 4px rgba(0,0,0,.3);
+    border-radius:4px;
+    padding:3px 9px;
+    border-radius:4px 4px 0 0;
+}
+
+.x42-mdbg{{{cns}}} .mod-enumerated .mod-enumerated-list {
+    background-color:rgba(0,0,0,.9);
+    color:#fff;
+    display:none;
+    height:115px;
+    overflow:auto;
+    position:relative;
+}
+
+.x42-mdbg{{{cns}}} .mod-enumerated .mod-enumerated-list > div {
+    padding:3px 9px;
+}
+
+.x42-mdbg{{{cns}}} .mod-enumerated .mod-enumerated-list > div:hover {
+    background-color:rgba(255,255,255,.2);
+    cursor:pointer;
+}

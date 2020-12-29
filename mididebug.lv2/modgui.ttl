@@ -1,0 +1,35 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://gareus.org/oss/lv2/mididebug>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-mididebug.html> ;
+        modgui:stylesheet <modgui/stylesheet-mididebug.css> ;
+        modgui:screenshot <modgui/screenshot-mididebug.png> ;
+        modgui:thumbnail <modgui/thumbnail-mididebug.png> ;
+        modgui:brand "Robin Gare" ;
+        modgui:label "MIDI Debug" ;
+
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "bytes" ;
+            lv2:name "Bytes to Send" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "b1" ;
+            lv2:name "Byte 1" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "b2" ;
+            lv2:name "Byte 2" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "b3" ;
+            lv2:name "Byte 3" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "trigger" ;
+            lv2:name "Send" ;
+        ] ;
+    ] .
