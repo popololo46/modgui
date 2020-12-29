@@ -1,0 +1,344 @@
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/nexa/stylesheet.css);
+
+
+/* = CONTAINER
+================================================ */
+.vocproc{{{cns}}} {
+	background-color: #212121;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size: 495px 450px;
+    height: 450px;
+    position: absolute;
+    width: 495px;
+    border-color: #424242;
+    border-radius: 3em;
+    border-style: solid;
+    border-width: 4px;
+}
+
+
+/* PORTS
+================================================ */
+
+.vocproc{{{cns}}} .mod-pedal-input,
+.vocproc{{{cns}}} .mod-pedal-output {
+    top: 100px;
+}
+
+
+/* = PLUGIN'S BRAND
+================================================ */
+.vocproc{{{cns}}} .mod-plugin-brand {
+	position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 0 5px 5px 5px;
+    border: 2px solid #fff;
+    border-radius: 2em;
+}
+.vocproc{{{cns}}} .mod-plugin-brand h1 {
+    display: inline-block;
+    font-family: "Nexa";
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* = PLUGIN'S NAME
+================================================ */
+.vocproc{{{cns}}} .mod-plugin-name {
+	position: absolute;
+    right: 15px;
+    bottom: 0px;
+    display: inline-block;
+    padding: 3px;
+}
+.vocproc{{{cns}}} .mod-plugin-name h1 {
+    display: inline-block;
+    font-family: "Nexa";
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+/* = FOOTSWITCH
+================================================ */
+.vocproc{{{cns}}} .mod-footswitch {
+    background-image:url(/resources/utils/switch-1-green.png{{{ns}}});
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 48px;
+    top: 230px;
+    left: 700px;
+    cursor: pointer;
+    height: 24px;
+    width: 90px;
+    margin: auto;
+    position: absolute !important;
+}
+.vocproc{{{cns}}} .mod-footswitch.on {
+    background-position-y: bottom !important
+}
+
+
+/* KNOBS
+================================================ */
+
+.vocproc{{{cns}}} .mod-control-group {
+    position:relative;
+    z-index:30;
+	cursor: pointer;
+}
+
+.vocproc{{{cns}}} .mod-control-group .mod-knob {
+    position:absolute;
+}
+
+.vocproc{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+	background-image: url(/resources/knobs/knob.png{{{ns}}});
+    background-repeat:no-repeat;
+	background-size:auto 60px;
+    width: 60px;
+    height: 60px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.vocproc{{{cns}}} .mod-knob.knob-pitch_factor {
+	top: 30px;
+    left: 86px;
+
+}
+.vocproc{{{cns}}} .mod-knob.knob-effect {
+	top: 30px;
+    left: 164px;
+
+}
+
+.vocproc{{{cns}}} .mod-knob.knob-threshold {
+	top:140px;
+	left:50px;
+}
+.vocproc{{{cns}}} .mod-knob.knob-attack {
+	top:140px;
+	left:125px;
+}
+.vocproc{{{cns}}} .mod-knob.knob-transpose {
+	top: 140px;
+    left: 200px;
+}
+
+
+.vocproc{{{cns}}} .mod-knob-title {
+    display: block;
+    color: #fff;
+    font-size: 17px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 80px;
+    margin-left: -10px;
+    top: 80px;
+}
+
+
+
+
+/* = SWITCH
+================================================ */
+.vocproc{{{cns}}} .mod-switch {
+    background-image: url(/resources/utils/switch.png{{{ns}}});
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 90px auto;
+	position: absolute !important;
+	height: 24px;
+    width: 90px;
+    cursor: pointer;
+	z-index: 40;
+}
+.vocproc{{{cns}}} .mod-switch.on {
+    background-position:bottom center;
+}
+.vocproc{{{cns}}} .mod-switch .mod-switch-title {
+    display: block;
+    color: #fff;
+    font-size: 19px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    top: 30px;
+    left: 0px;
+}
+
+.vocproc{{{cns}}} .mod-switch.altswitch {
+    background-image: url(/resources/utils/led.png{{{ns}}});
+    background-position: right center;
+    background-size: 64px auto;
+	position: absolute !important;
+	height: 32px;
+    width: 32px;
+	z-index: 40;
+}
+.vocproc{{{cns}}} .mod-switch.altswitch.on {
+    background-position:left center;
+}
+.vocproc{{{cns}}} .mod-switch.altswitch .mod-switch-title {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    top: 8px;
+    left: 30px;
+}
+.vocproc{{{cns}}} .mod-switch div {
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    top: 38px;
+    left: 0px;
+}
+
+.vocproc{{{cns}}} .mod-switch.switch-fc_voc_switch {
+	top: 280px;
+    left: 50px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-fc_voc {
+	top: 280px;
+    left: 200px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-pitch_correction {
+	top: 280px;
+	right: 50px;
+}
+
+.vocproc{{{cns}}} .mod-switch.switch-c {
+	top:20px;
+	right:140px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-cc {
+	top:60px;
+	right:140px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-d {
+	top:100px;
+	right:140px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-dd {
+	top:140px;
+	right:140px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-e {
+	top:180px;
+	right:140px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-f {
+	top:220px;
+	right:140px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-ff {
+	top:20px;
+	right:60px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-g {
+	top:60px;
+	right:60px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-gg {
+	top:100px;
+	right:60px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-a {
+	top:140px;
+	right:60px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-aa {
+	top:180px;
+	right:60px;
+}
+.vocproc{{{cns}}} .mod-switch.switch-b {
+	top:220px;
+	right:60px;
+}
+
+
+/* = ENUMERATED LIST
+================================================ */
+.vocproc{{{cns}}} .mod-enumerated {
+	background-image:url(/resources/utils/dropdown-white.png{{{ns}}});
+	background-position: right center;
+    background-repeat: no-repeat;
+    background-color: #243139;
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    color: #ccc;
+    cursor: pointer;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+	z-index: 49;
+}
+
+.vocproc{{{cns}}} .mod-enumerated .mod-enumerated-list {
+	bottom: 25px;
+    background-color: #243139;
+    border-radius: 10px;
+    display: none;
+    width: 120px;
+    text-align: left;
+    font-size: 22px;
+    padding: 10px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    z-index: 53;
+}
+.vocproc{{{cns}}} .mod-enumerated .mod-enumerated-list > div.selected {
+    background-color: #fff;
+    color: #000;
+    border: 3px solid #FE862C;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+
+
+
+/* = Presets
+================================================ */
+.vocproc{{{cns}}} .mod-presets {
+	position: absolute;
+    top: -35px;
+    left: 15px;
+    z-index: 22;
+    font-size: 20px;
+}
+.vocproc{{{cns}}} .mod-presets > select {
+    background-color: #04102D;
+    width: 180px !important;
+	height: 30px;
+    cursor: pointer;
+	border: solid 2px #04102D;
+	font-size: 20px;
+	color:#ccc;
+}
+.vocproc{{{cns}}} .mod-presets > select > option {
+	font-size: 20px;
+	font-weight: bold;
+	color:#fff;
+}

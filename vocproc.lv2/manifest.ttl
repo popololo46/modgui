@@ -1,0 +1,8 @@
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+<http://hyperglitch.com/dev/VocProc>
+  a lv2:Plugin;
+  rdfs:seeAlso <vocproc.ttl>.
+
+<http://hyperglitch.com/dev/VocProc> rdfs:seeAlso <modgui.ttl> .

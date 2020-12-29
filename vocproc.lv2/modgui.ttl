@@ -1,0 +1,94 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://hyperglitch.com/dev/VocProc>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-vocproc.html> ;
+        modgui:stylesheet <modgui/stylesheet-vocproc.css> ;
+        modgui:screenshot <modgui/screenshot-vocproc.png> ;
+        modgui:thumbnail <modgui/thumbnail-vocproc.png> ;
+        modgui:brand "Igor Brkic" ;
+        modgui:label "VocProc" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "c" ;
+            lv2:name "C" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "cc" ;
+            lv2:name "C#" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "d" ;
+            lv2:name "D" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "dd" ;
+            lv2:name "D#" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "e" ;
+            lv2:name "E" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "f" ;
+            lv2:name "F" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "ff" ;
+            lv2:name "F#" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "g" ;
+            lv2:name "G" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "gg" ;
+            lv2:name "G#" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "a" ;
+            lv2:name "A" ;
+        ] , [
+            lv2:index 10 ;
+            lv2:symbol "aa" ;
+            lv2:name "A#" ;
+        ] , [
+            lv2:index 11 ;
+            lv2:symbol "b" ;
+            lv2:name "B" ;
+        ] , [
+            lv2:index 12 ;
+            lv2:symbol "pitch_factor" ;
+            lv2:name "Pitch" ;
+        ] , [
+            lv2:index 13 ;
+            lv2:symbol "effect" ;
+            lv2:name "Effect" ;
+        ] , [
+            lv2:index 14 ;
+            lv2:symbol "fc_voc_switch" ;
+            lv2:name "On / Off" ;
+        ] , [
+            lv2:index 15 ;
+            lv2:symbol "fc_voc" ;
+            lv2:name "0 - formant correction, 1 - vocoder" ;
+        ] , [
+            lv2:index 16 ;
+            lv2:symbol "pitch_correction" ;
+            lv2:name "Automatic pitch correction" ;
+        ] , [
+            lv2:index 17 ;
+            lv2:symbol "threshold" ;
+            lv2:name "Threshold" ;
+        ] , [
+            lv2:index 18 ;
+            lv2:symbol "attack" ;
+            lv2:name "Attack" ;
+        ] , [
+            lv2:index 19 ;
+            lv2:symbol "transpose" ;
+            lv2:name "Transpose" ;
+        ] ;
+    ] .

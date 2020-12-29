@@ -1,0 +1,50 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://www.drowaudio.co.uk/audio/audio_plugins/distortion_shaper>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-drowaudio-distortion-shaper.html> ;
+        modgui:stylesheet <modgui/stylesheet-drowaudio-distortion-shaper.css> ;
+        modgui:screenshot <modgui/screenshot-drowaudio-distortion-shaper.png> ;
+        modgui:thumbnail <modgui/thumbnail-drowaudio-distortion-shaper.png> ;
+        modgui:brand "dRow" ;
+        modgui:label "Distortion Shaper" ;
+        modgui:model "boxy" ;
+        modgui:panel "8-sliders" ;
+        modgui:color "darkblue" ;
+        modgui:knob "blue" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "input_gain" ;
+            lv2:name "Input Gain" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "output" ;
+            lv2:name "Output" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "pre_filter" ;
+            lv2:name "Pre Filter" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "post_filter" ;
+            lv2:name "Post Filter" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "x1" ;
+            lv2:name "X1" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "y1" ;
+            lv2:name "Y1" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "x2" ;
+            lv2:name "X2" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "y2" ;
+            lv2:name "Y2" ;
+        ] ;
+    ] .

@@ -1,0 +1,38 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://www.drowaudio.co.uk/audio/audio_plugins/distortion>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-drowaudio-distortion.html> ;
+        modgui:stylesheet <modgui/stylesheet-drowaudio-distortion.css> ;
+        modgui:screenshot <modgui/screenshot-drowaudio-distortion.png> ;
+        modgui:thumbnail <modgui/thumbnail-drowaudio-distortion.png> ;
+        modgui:brand "dRow" ;
+        modgui:label "Distortion" ;
+        modgui:model "boxy" ;
+        modgui:panel "5-sliders" ;
+        modgui:color "darkblue" ;
+        modgui:knob "blue" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "pre_filtering" ;
+            lv2:name "Pre Filter" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "input_gain" ;
+            lv2:name "Input Gain" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "colour" ;
+            lv2:name "Colour" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "post_filtering" ;
+            lv2:name "Post Filter" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "output_gain" ;
+            lv2:name "Output Gain" ;
+        ] ;
+    ] .

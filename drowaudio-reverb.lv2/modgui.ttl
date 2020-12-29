@@ -1,0 +1,66 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://www.drowaudio.co.uk/audio/audio_plugins/reverb>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-drowaudio-reverb.html> ;
+        modgui:stylesheet <modgui/stylesheet-drowaudio-reverb.css> ;
+        modgui:screenshot <modgui/screenshot-drowaudio-reverb.png> ;
+        modgui:thumbnail <modgui/thumbnail-drowaudio-reverb.png> ;
+        modgui:brand "dRow" ;
+        modgui:label "Reverb" ;
+        modgui:model "boxy" ;
+        modgui:panel "12-sliders" ;
+        modgui:color "darkblue" ;
+        modgui:knob "blue" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "pre_delay" ;
+            lv2:name "Pre Delay" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "room_shape" ;
+            lv2:name "Room Shape" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "early_decay_time" ;
+            lv2:name "Early Decay Time" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "early_late_mix" ;
+            lv2:name "Early Late Mix" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "rev__time" ;
+            lv2:name "Rev. Time" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "room_size" ;
+            lv2:name "Room Size" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "absorption" ;
+            lv2:name "Absor-ption" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "diffusion" ;
+            lv2:name "Diffu-sion" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "stereo_spread" ;
+            lv2:name "Stereo Spread" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "low_eq" ;
+            lv2:name "Low EQ" ;
+        ] , [
+            lv2:index 10 ;
+            lv2:symbol "high_eq" ;
+            lv2:name "High EQ" ;
+        ] , [
+            lv2:index 11 ;
+            lv2:symbol "wet_mix" ;
+            lv2:name "Wet Mix" ;
+        ] ;
+    ] .

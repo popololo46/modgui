@@ -1,0 +1,34 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://www.drowaudio.co.uk/audio/audio_plugins/flanger>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-drowaudio-flanger.html> ;
+        modgui:stylesheet <modgui/stylesheet-drowaudio-flanger.css> ;
+        modgui:screenshot <modgui/screenshot-drowaudio-flanger.png> ;
+        modgui:thumbnail <modgui/thumbnail-drowaudio-flanger.png> ;
+        modgui:brand "dRow" ;
+        modgui:label "Flanger" ;
+        modgui:model "boxy" ;
+        modgui:panel "4-sliders" ;
+        modgui:color "darkblue" ;
+        modgui:knob "blue" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "rate" ;
+            lv2:name "Rate" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "intensity" ;
+            lv2:name "Intensity" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "feedback" ;
+            lv2:name "Feed Back" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "wet_dry_mix" ;
+            lv2:name "Wet/Dry Mix" ;
+        ] ;
+    ] .

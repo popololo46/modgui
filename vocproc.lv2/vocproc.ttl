@@ -1,0 +1,282 @@
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#>.
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix doap: <http://usefulinc.com/ns/doap#>.
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix ll:   <http://ll-plugins.nongnu.org/lv2/namespace#>.
+
+@prefix guiext: <http://lv2plug.in/ns/extensions/ui#>.
+
+<http://hyperglitch.com/dev/VocProc/gui>
+  a guiext:GtkUI;
+  guiext:binary <vocproc_gui.so>;
+  guiext:requiredFeature guiext:makeResident.
+
+
+
+<http://hyperglitch.com/dev/VocProc>
+  a lv2:Plugin, lv2:PitchPlugin;
+  lv2:binary <vocproc.so>;
+  doap:name "VocProc";
+  doap:developer [
+      foaf:name "Igor Brkic";
+      foaf:homepage <http://hyperglitch.com> ;
+      foaf:mbox <mailto:igor@hyperglitch.com> ;
+  ] ;
+  doap:maintainer [
+      foaf:name "Igor Brkic";
+      foaf:homepage <http://hyperglitch.com> ;
+      foaf:mbox <mailto:igor@hyperglitch.com> ;
+  ] ;
+  doap:license <http://usefulinc.com/doap/licenses/gpl>;
+  ll:pegName "p";
+  guiext:ui <http://hyperglitch.com/dev/VocProc/gui>;
+
+
+
+  lv2:port [
+    a lv2:AudioPort, lv2:InputPort;
+    lv2:index 0;
+    lv2:symbol "voice";
+    lv2:name "Voice input";
+  ],
+  [
+    a lv2:AudioPort, lv2:InputPort;
+    lv2:index 1;
+    lv2:symbol "carrier";
+    lv2:name "Carrier input";
+  ],
+
+  [
+    a lv2:AudioPort, lv2:OutputPort;
+    lv2:index 2;
+    lv2:symbol "output";
+    lv2:name "Output";
+  ],
+
+
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 3;
+    lv2:symbol "pitch_factor";
+    lv2:name   "Pitch Factor";
+    lv2:minimum -12;
+    lv2:maximum 12;
+    lv2:default 0;
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 4;
+    lv2:symbol "effect";
+    lv2:name   "Robotize/Whisperize";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 0;
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 5;
+    lv2:symbol "fc_voc_switch";
+    lv2:name   "formant correction/vocoder";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 0;
+    lv2:scalePoint [ rdfs:label "off";  rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "on";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 6;
+    lv2:symbol "fc_voc";
+    lv2:name   "0 - formant correction, 1 - vocoder";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 0;
+    lv2:scalePoint [ rdfs:label "Formant correction";  rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "Vocoder";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 7;
+    lv2:symbol "pitch_correction";
+    lv2:name   "Automatic pitch correction";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 0;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 8;
+    lv2:symbol "threshold";
+    lv2:name   "Threshold";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 0;
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 9;
+    lv2:symbol "attack";
+    lv2:name   "Attack";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 0;
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 10;
+    lv2:symbol "transpose";
+    lv2:name   "Transpose";
+    lv2:minimum -12;
+    lv2:maximum 12;
+    lv2:default 0;
+  ],
+
+
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 11;
+    lv2:symbol "c";
+    lv2:name   "C";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 12;
+    lv2:symbol "cc";
+    lv2:name   "C#";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 13;
+    lv2:symbol "d";
+    lv2:name   "D";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 14;
+    lv2:symbol "dd";
+    lv2:name   "D#";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 15;
+    lv2:symbol "e";
+    lv2:name   "E";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 16;
+    lv2:symbol "f";
+    lv2:name   "F";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 17;
+    lv2:symbol "ff";
+    lv2:name   "F#";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 18;
+    lv2:symbol "g";
+    lv2:name   "G";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 19;
+    lv2:symbol "gg";
+    lv2:name   "G#";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 20;
+    lv2:symbol "a";
+    lv2:name   "A";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 21;
+    lv2:symbol "aa";
+    lv2:name   "A#";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+  [
+    a lv2:ControlPort, lv2:InputPort;
+    lv2:index 22;
+    lv2:symbol "b";
+    lv2:name   "B";
+    lv2:minimum 0;
+    lv2:maximum 1;
+    lv2:default 1;
+    lv2:scalePoint [ rdfs:label "Off"; rdf:value 0 ];
+    lv2:scalePoint [ rdfs:label "On";  rdf:value 1 ];
+  ],
+
+
+  [
+    a lv2:ControlPort, lv2:OutputPort;
+    lv2:index 23;
+    lv2:symbol "offset";
+    lv2:name   "Offset from tone";
+    lv2:minimum -100;
+    lv2:maximum 100;
+    lv2:default 0;
+  ].
+
+
