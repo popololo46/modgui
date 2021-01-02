@@ -9,7 +9,6 @@
 }
 
 
-
 /* BAR TOP */
 .mod-triceratops .bar-top {
 	background-color: rgba(25,25,25,1) !important;
@@ -23,16 +22,15 @@
     color: #FFF;
     background-color: rgb(25,25,25,1);
     display: block;
-    left: 5px;
+    left: 0px;
     position: absolute;
     border: solid 1px #ccc;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
-    top: -29px;
+    top: -48px;
     padding: 7px 25px;
-    font-size: 30px;
+    font-size: 35px;
 }
-
 
 
 /* ON/OFF */
@@ -55,7 +53,6 @@
 }
 
 
-
 /* TAB */
 .mod-triceratops .tab_select {
     position: absolute;
@@ -64,11 +61,11 @@
     z-index: 40
 }
 .mod-triceratops label {
-	font-size: 19px;
+	font-size: 20px;
     display: block;
-    width: 100px;
-    top: -50px;
-    left: 300px;
+    width: 110px;
+    top: -60px;
+    left: 350px;
     position: absolute;
     text-align: center;
     background-color: rgba(25,25,25,1);
@@ -79,14 +76,17 @@
     padding: 0.2em;
 	cursor: pointer !important;
 }
+#label1 {
+    left: 350px;
+}
 #label2 {
-    left: 405px;
+    left: 460px;
 }
 #label3 {
-    left: 510px;
+    left: 570px;
 }
 #label4 {
-    left: 615px;
+    left: 680px;
 }
 .tab_content{
     display: none;
@@ -95,7 +95,10 @@ input {
     display: none;
 }
 [id^="tab"]:checked + label {
-	border: 1px solid #fff70c;
+	border: solid 3px #9D0000;
+    font-size: 23px;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
 }
 [id^="tab"]:checked ~ .tab_content{
     display: block;
@@ -183,23 +186,23 @@ input {
 }
 
 
-.mod-triceratops .tabs .amp_filter {
-	width: 48%;
+.mod-triceratops .tabs .filter {
+	width: 42%;
     height: 200px;
     margin-bottom: 20px;
 }
 .mod-triceratops .tabs .echo {
-	width: 48%;
+	width: 54%;
     height: 200px;
     margin-bottom: 20px;
 }
 .mod-triceratops .tabs .reverb {
-	width: 48%;
+	width: 35%;
     height: 200px;
     margin-bottom: 20px;
 }
-.mod-triceratops .tabs .mod {
-	width: 48%;
+.mod-triceratops .tabs .amp {
+	width: 61%;
     height: 200px;
     margin-bottom: 20px;
 }
@@ -214,9 +217,9 @@ input {
 	width: 50px;
 }
 .mod-triceratops .mod-knob .mod-knob-image {
-	background: url(/resources/knobs/knob.png{{{ns}}});
+	background: url(/resources/knobs/triceratops_knob.png{{{ns}}});
 	background-repeat:no-repeat;
-    background-size:auto 50px;
+    background-size: auto 50px;
     height: 50px;
     width: 50px;
     z-index: 98;
@@ -229,7 +232,14 @@ input {
     width: 70px;
 }
 .mod-triceratops .mod-knob .mod-knob-image.knob_16 {
-	background: url(/resources/knobs/knob_16.png{{{ns}}});
+	background: url(/resources/knobs/nums.png{{{ns}}});
+	background-size: auto 42px;
+	height: 42px;
+    width: 114px;
+}
+.mod-triceratops .mod-knob .mod-knob-image.knob_pan {
+	background: url(/resources/knobs/triceratops_knob_pan.png{{{ns}}});
+	background-size: auto 50px;
 }
 .mod-triceratops .mod-knob .mod-knob-title {
     font-size: 15px;
@@ -262,8 +272,6 @@ input {
     top: 100px;
 	left: 315px;
 }
-
-
 .mod-triceratops .mod-knob.knob-volume_two {
     top: 100px;
 	left: 530px;
@@ -284,8 +292,6 @@ input {
     top: 100px;
 	left: 815px;
 }
-
-
 .mod-triceratops .mod-knob.knob-volume_three {
     top: 320px;
 	left: 30px;
@@ -308,71 +314,69 @@ input {
 }
 
 
-.mod-triceratops .mod-knob.knob-amp_drive {
-    top: 100px;
-	left: 30px;
-}
-.mod-triceratops .mod-knob.knob-master_volume {
-    top: 80px;
-    left: 390px;
-}
-
-
 .mod-triceratops .mod-knob.knob-lfo1_speed {
-    top: 100px;
-    left: 40px;
+    top: 20px;
+    left: 250px;
 }
 .mod-triceratops .mod-knob.knob-lfo1_route_one_dest {
-    top: 220px;
-    left: 260px;
+    top: 310px;
+    left: 100px;
 }
 .mod-triceratops .mod-knob.knob-lfo1_route_two_dest {
-    top: 320px;
-    left: 260px;
+    top: 310px;
+    left: 250px;
 }
-
 
 .mod-triceratops .mod-knob.knob-lfo2_speed {
-    top: 100px;
-    left: 370px;
+    top: 20px;
+    left: 580px;
 }
 .mod-triceratops .mod-knob.knob-lfo2_route_one_dest {
-    top: 220px;
-    left: 590px;
+    top: 310px;
+    left: 430px;
 }
 .mod-triceratops .mod-knob.knob-lfo2_route_two_dest {
-    top: 320px;
-    left: 590px;
+    top: 310px;
+    left: 580px;
 }
-
 
 .mod-triceratops .mod-knob.knob-lfo3_speed {
-    top: 100px;
-    left: 700px;
+    top: 20px;
+    left: 910px;
 }
 .mod-triceratops .mod-knob.knob-lfo3_route_one_dest {
-    top: 220px;
-    left: 920px;
+    top: 310px;
+    left: 760px;
 }
 .mod-triceratops .mod-knob.knob-lfo3_route_two_dest {
-    top: 320px;
-    left: 920px;
+    top: 310px;
+    left: 910px;
 }
 
 
 .mod-triceratops .mod-knob.knob-fx_echo_speed {
     top: 50px;
-    left: 620px;
+    left: 560px;
 }
 .mod-triceratops .mod-knob.knob-fx_echo_decay {
     top: 50px;
-    left: 690px;
-}
-.mod-triceratops .mod-knob.knob-midi_channel {
-    top: 300px;
-    left: 900px;
+    left: 640px;
 }
 
+
+.mod-triceratops .mod-knob.knob-master_volume {
+    top: 315px;
+    left: 905px;
+}
+.mod-triceratops .mod-knob.knob-amp_drive {
+    top: 325px;
+    left: 830px;
+}
+.mod-triceratops .mod-knob.knob-midi_channel {
+    top: 225px;
+    width: 114px;
+    left: 860px;
+}
 
 /* SLIDER */
 .mod-triceratops .mod-slider {
@@ -397,13 +401,11 @@ input {
     font-size: 15px;
     top: -15px;
     position: relative;
-	    margin-left: -15px;
 }
 .mod-triceratops .mod-slider-value {
     font-size: 13px;
     top: 5px;
     position: relative;
-	    margin-left: -15px;
 	
 }
 .mod-triceratops .adsr .mod-slider {
@@ -452,70 +454,67 @@ input {
 
 .mod-triceratops .mod-slider.slider-cutoff {
 	top: 30px;
-	left: 175px;
+	left: 180px;
 }
 .mod-triceratops .mod-slider.slider-resonance {
 	top: 30px;
-	left: 225px;
+	left: 250px;
 }
 .mod-triceratops .mod-slider.slider-filter_key_follow {
 	top: 30px;
-    left: 275px;
-}
-.mod-triceratops .mod-slider.slider-master_tune {
-	top: 30px;
-    left: 325px;
+    left: 320px;
 }
 
+
 .mod-triceratops .mod-slider.slider-lfo1_dco1_pitch {
-	top: 40px;
-    left: 140px;
+	top: 140px;
+    left: 50px;
 }
 .mod-triceratops .mod-slider.slider-lfo1_dco2_pitch {
-	top: 40px;
-    left: 200px;
+	top: 140px;
+    left: 116px;
 }
 .mod-triceratops .mod-slider.slider-lfo1_dco3_pitch {
-	top: 40px;
-    left: 260px;
+	top: 140px;
+    left: 183px;
 }
 .mod-triceratops .mod-slider.slider-lfo1_filter {
-	top: 260px;
-    left: 70px;
+	top: 140px;
+    left: 250px;
 }
 
 .mod-triceratops .mod-slider.slider-lfo2_dco1_pitch {
-	top: 40px;
-    left: 470px;
+	top: 140px;
+    left: 380px;
 }
 .mod-triceratops .mod-slider.slider-lfo2_dco2_pitch {
-	top: 40px;
-    left: 530px;
+	top: 140px;
+    left: 446px;
 }
 .mod-triceratops .mod-slider.slider-lfo2_dco3_pitch {
-	top: 40px;
-    left: 590px;
+	top: 140px;
+    left: 513px;
 }
 .mod-triceratops .mod-slider.slider-lfo2_filter {
-	top: 260px;
-    left: 400px;
+	top: 140px;
+    left: 580px;
 }
 
 .mod-triceratops .mod-slider.slider-lfo3_dco1_pitch {
-	top: 40px;
-    left: 790px;
+	top: 140px;
+    left: 710px;
 }
 .mod-triceratops .mod-slider.slider-lfo3_dco2_pitch {
-	top: 40px;
-    left: 850px;
+	top: 140px;
+    left: 776px;
 }
 .mod-triceratops .mod-slider.slider-lfo3_dco3_pitch {
-	top: 40px;
-    left: 910px;
+	top: 140px;
+    left: 843px;
 }
 .mod-triceratops .mod-slider.slider-lfo3_filter {
-	top: 260px;
-    left: 730px;
+	top: 140px;
+    left: 910px;
 }
 
 .mod-triceratops .mod-slider.slider-fx_reverb_decay {
@@ -529,15 +528,15 @@ input {
 
 .mod-triceratops .mod-slider.slider-fx_echo_eq_low {
 	top: 30px;
-    left: 780px;
+    left: 740px;
 }
 .mod-triceratops .mod-slider.slider-fx_echo_eq_mid {
 	top: 30px;
-    left: 830px;
+    left: 820px;
 }
 .mod-triceratops .mod-slider.slider-fx_echo_eq_high {
 	top: 30px;
-    left: 880px;
+    left: 900px;
 }
 
 .mod-triceratops .mod-slider.slider-adsr1_route_one_dest {
@@ -557,18 +556,23 @@ input {
     left: 170px;
 }
 
+
 .mod-triceratops .mod-slider.slider-modifier_dirt {
 	top: 260px;
-    left: 600px;
+    left: 670px;
 }
-.mod-triceratops .mod-slider.slider-modifier_ring {
+.mod-triceratops .mod-slider.slider-master_tune {
 	top: 260px;
+    left: 740px;
+}
+
+.mod-triceratops .mod-slider.slider-pitch_bend_range {
+	top: 275px;
     left: 700px;
 }
-.mod-triceratops .mod-slider.slider-pitch_bend_range {
-	top: 260px;
-    left: 800px;
-}
+
+
+
 
 .mod-triceratops .adsr .mod-slider:first-child {
     margin-left:25px;
@@ -629,34 +633,17 @@ input {
 }
 
 
-.mod-triceratops .mod-switch.switch-legato {
-    top: 35px;
-	left:30px
-}
-.mod-triceratops .mod-switch.switch-sync {
-    top: 10px;
-    left: 110px;
-}
-.mod-triceratops .mod-switch.switch-fm {
-    top: 80px;
-    left: 110px;
-}
-.mod-triceratops .mod-switch.switch-warmth {
-    top: 150px;
-    left: 110px;
-}
-
 .mod-triceratops .mod-switch.switch-lfo1_retrig {
     top: 35px;
     left: 40px;
 }
 .mod-triceratops .mod-switch.switch-lfo1_route_one {
-    top: 240px;
-    left: 180px;
+    top: 320px;
+    left: 40px;
 }
 .mod-triceratops .mod-switch.switch-lfo1_route_two {
-    top: 340px;
-    left: 180px;
+    top: 320px;
+    left: 190px;
 }
 
 .mod-triceratops .mod-switch.switch-lfo2_retrig {
@@ -664,12 +651,12 @@ input {
     left: 370px;
 }
 .mod-triceratops .mod-switch.switch-lfo2_route_one {
-    top: 240px;
-    left: 510px;
+    top: 320px;
+    left: 370px;
 }
 .mod-triceratops .mod-switch.switch-lfo2_route_two {
-    top: 340px;
-    left: 510px;
+    top: 320px;
+    left: 520px;
 }
 
 .mod-triceratops .mod-switch.switch-lfo3_retrig {
@@ -677,26 +664,26 @@ input {
     left: 700px;
 }
 .mod-triceratops .mod-switch.switch-lfo3_route_one {
-    top: 240px;
-    left: 840px;
+    top: 320px;
+    left: 700px;
 }
 .mod-triceratops .mod-switch.switch-lfo3_route_two {
-    top: 340px;
-    left: 840px;
+    top: 320px;
+    left: 850px;
 }
 
 .mod-triceratops .mod-switch.switch-fx_reverb_active {
-    top: 250px;
+    top: 260px;
     left: 35px;
 }
-.mod-triceratops .mod-switch.switch-stereo_mode {
-    top: 300px;
-    left: 330px;
-}
+
+
 .mod-triceratops .mod-switch.switch-fx_echo_active {
     top: 35px;
-    left: 530px;
+    left: 480px;
 }
+
+
 .mod-triceratops .mod-switch.switch-adsr1_route_one {
     top: 260px;
     left: 30px;
@@ -726,13 +713,42 @@ input {
     left: 900px;
 }
 
+
+.mod-triceratops .mod-switch.switch-legato {
+    top: 260px;
+    left: 420px;
+}
+.mod-triceratops .mod-switch.switch-sync {
+    top: 345px;
+    left: 420px;
+}
+.mod-triceratops .mod-switch.switch-fm {
+    top: 260px;
+    left: 500px;
+}
+.mod-triceratops .mod-switch.switch-warmth {
+    top: 345px;
+    left: 500px;
+}
+.mod-triceratops .mod-switch.switch-modifier_ring {
+    top: 260px;
+    left: 580px;
+}
+.mod-triceratops .mod-switch.switch-stereo_mode {
+    top: 345px;
+    left: 580px;
+}
+
+
+
+
 /*    LIST    */
 .mod-triceratops .mod-enumerated {
     background: rgba(35,35,35,1) !important;
     height: 40px;
     z-index: 100000 !important;
 	position: absolute;
-    width: 80px;
+    width: 100px;
     cursor: pointer;
 	border-radius: 7px;
 }
@@ -755,7 +771,7 @@ input {
 .mod-triceratops .mod-enumerated-list {
     background-color: rgba(45,45,45,1) !important;;
     display: none;
-    width: 100px;
+    width: 120px;
     font-size: 20px;
     padding: 0 10px;
     margin-top: 10px;
@@ -769,57 +785,61 @@ input {
 	background: #ccc;
     color: black;
 }
+.mod-triceratops  .mod-enumerated-option.selected{
+	background: #ccc;
+    color: #000;
+	border: solid 1px #410000;
+    border-radius: 0.4em;
+}
 
 .mod-triceratops  .mod-enumerated.enum-wave_one{
-    top: 20px;
-    left: 115px;
+    top: 40px;
+    left: 100px;
 }
 .mod-triceratops  .mod-enumerated.enum-wave_two{
-    top: 20px;
-    left: 615px;
+    top: 40px;
+    left: 600px;
 }
 .mod-triceratops  .mod-enumerated.enum-wave_three{
-    top: 240px;
-    left: 115px;
+    top: 260px;
+    left: 100px;
 }
 
 .mod-triceratops  .mod-enumerated.enum-filter_mode{
-    top: 20px;
-    left: 390px;
+    top: 30px;
+    left: 50px;
 }
 
 .mod-triceratops  .mod-enumerated.enum-lfo1_wave{
-    top: 195px;
-    left: 30px;
+    top: 35px;
+    left: 125px;
 }
 .mod-triceratops  .mod-enumerated.enum-lfo2_wave{
-    top: 195px;
-    left: 360px;
+    top: 35px;
+    left: 455px;
 }
 .mod-triceratops  .mod-enumerated.enum-lfo3_wave{
-    top: 195px;
-    left: 690px;
+    top: 35px;
+    left: 785px;
 }
 
 /* PRESETS */
 .mod-triceratops .mod-presets {
 	position: absolute;
-    width: 200px !important;
-    height: 35px;
-    top: -45px;
-    left: 250px;
-    z-index: 22;
-    text-align: center;
+    width: 180px !important;
+    height: 40px;
+    top: 10px;
+    left: 80px;
+    z-index: 40;
 }
 .mod-triceratops .mod-presets > select {
 	background-color: rgb(25,25,25,1);
-    width: 200px !important;
+    width: 180px !important;
     height: 40px;
     cursor: pointer;
     padding: 0 10px;
-    font-size: 25px;
+    font-size: 30px;
     color: #fff;
-    text-align: center;
 }
 .mod-triceratops .mod-presets > select > option {
 	font-size: 20px;

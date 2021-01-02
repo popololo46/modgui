@@ -1,0 +1,145 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<https://bsutherland.github.io/JuceOPLVSTi/>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-juceopl.html> ;
+        modgui:stylesheet <modgui/stylesheet-juceopl.css> ;
+        modgui:screenshot <modgui/screenshot-juceopl.png> ;
+        modgui:thumbnail <modgui/thumbnail-juceopl.png> ;
+        modgui:brand "Plainweave" ;
+        modgui:label "JuceOPL" ;
+        modgui:model "boxy-small" ;
+        modgui:panel "1-footswitch-presets" ;
+        modgui:color "blue" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "carrier_wave" ;
+            lv2:name "Wave" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "modulator_wave" ;
+            lv2:name "Wave" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "carrier_frequency_multiplier" ;
+            lv2:name "Frequency Multiplier" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "modulator_frequency_multiplier" ;
+            lv2:name "Frequency Multiplier" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "carrier_attenuation" ;
+            lv2:name "Attenuation" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "modulator_attenuation" ;
+            lv2:name "Attenuation" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "tremolo_depth" ;
+            lv2:name "Tremolo Depth" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "vibrato_depth" ;
+            lv2:name "Vibrato Depth" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "carrier_tremolo" ;
+            lv2:name "Tremolo" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "carrier_vibrato" ;
+            lv2:name "Vibrato" ;
+        ] , [
+            lv2:index 10 ;
+            lv2:symbol "carrier_sustain" ;
+            lv2:name "Sustain" ;
+        ] , [
+            lv2:index 11 ;
+            lv2:symbol "carrier_keyscale_rate" ;
+            lv2:name "Keyscale Rate" ;
+        ] , [
+            lv2:index 12 ;
+            lv2:symbol "modulator_tremolo" ;
+            lv2:name "Tremolo" ;
+        ] , [
+            lv2:index 13 ;
+            lv2:symbol "modulator_vibrato" ;
+            lv2:name "Vibrato" ;
+        ] , [
+            lv2:index 14 ;
+            lv2:symbol "modulator_sustain" ;
+            lv2:name "Sustain" ;
+        ] , [
+            lv2:index 15 ;
+            lv2:symbol "modulator_keyscale_rate" ;
+            lv2:name "Keyscale Rate" ;
+        ] , [
+            lv2:index 16 ;
+            lv2:symbol "carrier_keyscale_level" ;
+            lv2:name "Keyscale Level" ;
+        ] , [
+            lv2:index 17 ;
+            lv2:symbol "modulator_keyscale_level" ;
+            lv2:name "Keyscale Level" ;
+        ] , [
+            lv2:index 18 ;
+            lv2:symbol "algorithm" ;
+            lv2:name "Algorithm" ;
+        ] , [
+            lv2:index 19 ;
+            lv2:symbol "modulator_feedback" ;
+            lv2:name "F" ;
+        ] , [
+            lv2:index 20 ;
+            lv2:symbol "carrier_attack" ;
+            lv2:name "A" ;
+        ] , [
+            lv2:index 21 ;
+            lv2:symbol "carrier_decay" ;
+            lv2:name "D" ;
+        ] , [
+            lv2:index 22 ;
+            lv2:symbol "carrier_sustain_level" ;
+            lv2:name "S" ;
+        ] , [
+            lv2:index 23 ;
+            lv2:symbol "carrier_release" ;
+            lv2:name "R" ;
+        ] , [
+            lv2:index 24 ;
+            lv2:symbol "modulator_attack" ;
+            lv2:name "A" ;
+        ] , [
+            lv2:index 25 ;
+            lv2:symbol "modulator_decay" ;
+            lv2:name "D" ;
+        ] , [
+            lv2:index 26 ;
+            lv2:symbol "modulator_sustain_level" ;
+            lv2:name "S" ;
+        ] , [
+            lv2:index 27 ;
+            lv2:symbol "modulator_release" ;
+            lv2:name "R" ;
+        ] , [
+            lv2:index 28 ;
+            lv2:symbol "carrier_velocity_sensitivity" ;
+            lv2:name "Velocity Sens" ;
+        ] , [
+            lv2:index 29 ;
+            lv2:symbol "modulator_velocity_sensitivity" ;
+            lv2:name "Velocity Sens" ;
+        ] , [
+            lv2:index 30 ;
+            lv2:symbol "emulator" ;
+            lv2:name "Emulator" ;
+        ] , [
+            lv2:index 31 ;
+            lv2:symbol "percussion_mode" ;
+            lv2:name "Percussion Mode" ;
+        ] ;
+    ] .

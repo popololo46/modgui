@@ -1,0 +1,468 @@
+.mod-juceopl {
+	background-color: rgb(0,0,0,1);
+	background-size: 900px 400px;
+    position: relative;
+	height: 400px;
+    width: 900px;
+    color: #014C02;
+}
+
+
+
+/* BAR TOP */
+.mod-juceopl .bar-top {
+	background-color: rgba(0,0,0,1) !important;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.mod-juceopl .bar-top .title {
+    color: #FFF;
+    background-color: rgb(0,0,0,1);
+    display: block;
+    left: 5px;
+    position: absolute;
+    border: solid 1px #ccc;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    top: -29px;
+    padding: 7px 25px;
+    font-size: 30px;
+}
+
+
+
+/* ON/OFF */
+.mod-juceopl .bar-top .off-or-on {
+    background-image: url(/resources/utils/on-off.png{{{ns}}});
+    background-size: auto 64px;
+    cursor: pointer;
+    height: 32px;
+    z-index: 100;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 120px;
+}
+.mod-juceopl .bar-top .on {
+    background-position: bottom center;
+}
+.mod-juceopl .bar-top .off {
+    background-position: top center;
+}
+
+
+
+/* BLOC */
+.mod-juceopl .bloc {
+    border: solid 1px #014C02;
+    border-radius: 7px;
+    background: rgba(0,0,0,1) !important;
+	height: 250px;
+}
+.mod-juceopl .left {
+    float: left;
+	margin: 40px 0 20px 12px !important;
+}
+.mod-juceopl .right {
+    float: right;
+	margin: 40px 12px 20px 0 !important;
+}
+.mod-juceopl .title-bloc {
+    background: #000;
+    color: #014C02;
+    font-size: 15px;
+    margin-left: 6px;
+    padding: 0 5px;
+    margin-top: -11px;
+    position: absolute;
+}
+.mod-juceopl .modulator{
+	width: 48%;
+    margin-bottom: 20px;
+}
+.mod-juceopl .carrier {
+    width: 48%;
+    margin-bottom: 20px;
+}
+.mod-juceopl .common {
+	width: 97%;
+    height: 90px;
+	float: left;
+    margin-left: 13px !important;
+}
+
+
+/* KNOB */
+.mod-juceopl .mod-knob {
+    float: left;
+    text-align: center;
+	position: absolute;
+	
+	
+}
+.mod-juceopl .mod-knob .mod-knob-image {
+	background: url(/resources/knobs/juceopl_knob.png{{{ns}}});
+	background-repeat:no-repeat;
+    background-size:auto 50px;
+    height: 50px;
+    width: 50px;
+    z-index: 98;
+    cursor: pointer !important;
+    position: absolute
+}
+.mod-juceopl .mod-knob .mod-knob-image.knob_big {
+	background-size:auto 70px;
+    height: 70px;
+    width: 70px;
+}
+.mod-juceopl .mod-knob .mod-knob-image.knob_16 {
+	background: url(/resources/knobs/knob_16.png{{{ns}}});
+}
+.mod-juceopl .mod-knob .mod-knob-title {
+    font-size: 13px;
+    position: relative;
+}
+.mod-juceopl .mod-knob .mod-knob-value {
+    font-size: 13px;
+    position: relative;
+    top: 50px;
+}
+
+
+.mod-juceopl .mod-knob.knob-modulator_wave {
+    top: 50px;
+	left: 50px;
+}
+.mod-juceopl .mod-knob.knob-modulator_frequency_multiplier {
+    top: 50px;
+	left: 130px;
+}
+.mod-juceopl .mod-knob.knob-carrier_wave {
+    top: 50px;
+	left: 492px;
+}
+.mod-juceopl .mod-knob.knob-carrier_frequency_multiplier {
+    top: 50px;
+	left: 572px;
+}
+.mod-juceopl .mod-knob.knob-modulator_velocity_sensitivity{
+    top: 150px;
+    left: 250px;
+}
+.mod-juceopl .mod-knob.knob-modulator_keyscale_level{
+    top: 170px;
+    left: 340px;
+}
+.mod-juceopl .mod-knob.knob-carrier_velocity_sensitivity{
+    top: 150px;
+    left: 692px;
+}
+.mod-juceopl .mod-knob.knob-carrier_keyscale_level{
+    top: 170px;
+    left: 782px;
+}
+.mod-juceopl .mod-knob.knob-algorithm{
+    top: 320px;
+    left: 350px;
+}
+.mod-juceopl .mod-knob.knob-percussion_mode{
+    top: 320px;
+    left: 450px;
+}
+.mod-juceopl .mod-knob.knob-emulator{
+    top: 320px;
+    left: 550px;
+}
+
+/* SLIDER */
+.mod-juceopl .mod-slider {
+    float: left;
+	position: absolute;
+    text-align: center;
+	z-index: 50;
+
+}
+.mod-juceopl .mod-slider.slidergroup {
+    float: left;
+	position: relative;
+    text-align: center;
+	width: 10%;
+	top:85px;
+
+}
+.mod-juceopl .mod-slider-image {
+    background: url(/resources/knobs/juceopl_slider_v.png{{{ns}}});
+	background-size:auto 128px;
+	background-repeat:no-repeat;
+    height: 128px;
+    cursor: pointer;
+    z-index: 100;
+    width: 32px;
+    margin: 0 10px;
+}
+.mod-juceopl .littleslider .mod-slider-image {
+    background: url(/resources/knobs/juceopl_slider_v_little.png{{{ns}}});
+	background-size:auto 80px;
+    height: 80px;
+    cursor: pointer;
+    width: 32px;
+    margin: 0 10px;
+}
+.mod-juceopl .mod-slider-title {
+    font-size: 13px;
+    left: 5px;
+    position: relative;
+}
+.mod-juceopl .mod-slider-value {
+    font-size: 13px;
+    left: 5px;
+    position: relative;
+    padding: 0 5px;
+    border: solid 1px #014C02;
+    border-radius: 7px;
+}
+
+.mod-juceopl .horizontalslider .mod-slider-image {
+    background: url(/resources/knobs/juceopl_slider_h.png{{{ns}}});
+	background-size: auto 32px;
+    height: 32px;
+    cursor: pointer;
+    width: 128px;
+    margin: 0 10px;
+}
+.mod-juceopl .horizontalslider .mod-slider-title {
+    top: 27px;
+    left: -110px;
+	
+}
+.mod-juceopl .horizontalslider .mod-slider-value {
+    top: -25px;
+    left: 90px;
+}
+
+.mod-juceopl .adsr .mod-slider {
+	float: left;
+    position: relative;
+    width: 23%;
+	padding-top: 30px;
+}
+.mod-juceopl .adsr .mod-slider-title {
+    font-size: 15px;
+    top: -15px;
+    position: relative;
+	margin-left: -30px;
+}
+.mod-juceopl .adsr .mod-slider-value {
+    font-size: 13px;
+    top: 5px;
+    position: relative;
+	margin-left: -30px;
+}
+
+.mod-juceopl .mod-slider.slider-modulator_attenuation {
+	top: 230px;
+    left: 200px;
+}
+.mod-juceopl .mod-slider.slider-carrier_attenuation {
+	top: 230px;
+    left: 642px;
+}
+.mod-juceopl .mod-slider.slider-tremolo_depth {
+	top: 300px;
+    left: 130px;
+}
+.mod-juceopl .mod-slider.slider-vibrato_depth {
+	top: 340px;
+    left: 130px;
+}
+
+/* SWITCH */
+.mod-juceopl .mod-switch {
+	background: url(/resources/utils/switch.png{{{ns}}}) 0 20px;
+	background-position:top center;
+	background-size: 20px auto;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+	position: absolute;
+	text-align: center;
+	z-index: 50;
+}
+.mod-juceopl .mod-switch.on {
+    background-position:bottom center;
+}
+.mod-juceopl .mod-switch .mod-switch-title {
+    font-size: 13px;
+    /* top: -20px; */
+    left: 25px;
+    position: relative;
+    width: 40px;
+}
+
+.mod-juceopl .mod-switch.switch-modulator_vibrato {
+    top: 80px;
+	left:240px
+}
+.mod-juceopl .mod-switch.switch-modulator_tremolo {
+    top: 80px;
+	left:320px
+}
+.mod-juceopl .mod-switch.switch-modulator_sustain {
+    top: 120px;
+	left:240px
+}
+.mod-juceopl .mod-switch.switch-modulator_keyscale_rate {
+    top: 120px;
+	left:320px
+}
+
+.mod-juceopl .mod-switch.switch-carrier_vibrato {
+    top: 80px;
+	left:684px
+}
+.mod-juceopl .mod-switch.switch-carrier_tremolo {
+    top: 80px;
+	left:764px
+}
+.mod-juceopl .mod-switch.switch-carrier_sustain {
+    top: 120px;
+	left:684px
+}
+.mod-juceopl .mod-switch.switch-carrier_keyscale_rate {
+    top: 120px;
+	left:764px
+}
+
+
+/*    LIST    */
+.mod-juceopl .mod-enumerated {
+    background: rgba(10,10,10,1) !important;
+    height: 40px;
+    z-index: 100000 !important;
+    position: absolute;
+    width: 80px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+.mod-juceopl .mod-enumerated:hover, .mod-juceopl .mod-enumerated:active {
+    background: #333;
+}
+.mod-juceopl  .mod-enumerated-selected:before {
+    content: '\25BE \a0';
+}
+.mod-juceopl  .mod-enumerated-selected {
+    display: block;
+    padding: 0px;
+    position: relative;
+    margin: 5px 0 0 10px;
+    top: 7px;
+    width: 80px;
+    color: #fff;
+    font-size: 16px;
+    z-index: 100;
+}
+.mod-juceopl .mod-enumerated-list {
+    background-color: rgba(10,10,10,1) !important;
+    display: none;
+    width: 120px;
+    font-size: 20px;
+    padding: 5px 25px;
+    line-height: 1.7em;
+    margin-top: 10px;
+    z-index: 1000;
+    /* color: white !important; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+}
+.mod-juceopl  .mod-enumerated-list div:hover{
+	background: #ccc;
+    color: black;
+}
+.mod-juceopl .mod-enum-title {
+    font-size: 13px;
+    position: absolute;
+}
+
+.mod-juceopl  .mod-enumerated.enum-modulator_wave{
+    top: 60px;
+    left: 30px;
+}
+.mod-juceopl  .mod-enumerated.enum-modulator_frequency_multiplier{
+    top: 60px;
+    left: 130px;
+}
+.mod-juceopl  .mod-enumerated.enum-carrier_wave{
+    top: 60px;
+    left: 474px;
+}
+.mod-juceopl  .mod-enumerated.enum-carrier_frequency_multiplier{
+    top: 60px;
+    left: 574px;
+}
+.mod-juceopl  .mod-enumerated.enum-modulator_velocity_sensitivity{
+    top: 170px;
+    left: 250px;
+}
+.mod-juceopl  .mod-enumerated.enum-modulator_keyscale_level{
+    top: 170px;
+    left: 350px;
+}
+.mod-juceopl  .mod-enumerated.enum-carrier_velocity_sensitivity{
+    top: 170px;
+    left: 694px;
+}
+.mod-juceopl  .mod-enumerated.enum-carrier_keyscale_level{
+    top: 170px;
+    left: 794px;
+}
+.mod-juceopl  .mod-enumerated.enum-algorithm{
+    top: 340px;
+    left: 400px;
+}
+.mod-juceopl  .mod-enumerated.enum-percussion_mode{
+    top: 340px;
+    left: 500px;
+}
+.mod-juceopl  .mod-enumerated.enum-emulator{
+    top: 340px;
+    left: 600px;
+}
+/* PRESETS */
+.mod-juceopl .mod-presets {
+	position: absolute;
+    width: 200px !important;
+    height: 40px;
+    bottom: 20px;
+    right: 32px;
+    z-index: 22;
+    text-align: center;
+}
+.mod-juceopl .mod-presets > select {
+	background-color: #000;
+    width: 200px !important;
+    height: 40px;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    border: solid 1px #014C02;
+    border-radius: 7px;
+}
+.mod-juceopl .mod-presets > select > option {
+	font-size: 20px;
+    color: #eee;
+    background-color: rgb(25,25,25,1);
+}
+
+
+
+
+
+
+

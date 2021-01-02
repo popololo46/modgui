@@ -52,7 +52,7 @@
         ] , [
             lv2:index 9 ;
             lv2:symbol "warmth" ;
-            lv2:name "Warm" ;
+            lv2:name "Warmth" ;
         ] , [
             lv2:index 10 ;
             lv2:symbol "fm" ;
@@ -240,15 +240,15 @@
         ] , [
             lv2:index 56 ;
             lv2:symbol "adsr3_lfo1_amount" ;
-            lv2:name "To LFO1" ;
+            lv2:name "LFO1" ;
         ] , [
             lv2:index 57 ;
             lv2:symbol "adsr3_lfo2_amount" ;
-            lv2:name "To LFO2" ;
+            lv2:name "LFO2" ;
         ] , [
             lv2:index 58 ;
             lv2:symbol "adsr3_lfo3_amount" ;
-            lv2:name "To LFO3" ;
+            lv2:name "LFO3" ;
         ] , [
             lv2:index 59 ;
             lv2:symbol "lfo1_retrig" ;
@@ -264,19 +264,19 @@
         ] , [
             lv2:index 62 ;
             lv2:symbol "lfo1_dco1_pitch" ;
-            lv2:name "TO DCO1" ;
+            lv2:name "DCO1" ;
         ] , [
             lv2:index 63 ;
             lv2:symbol "lfo1_dco2_pitch" ;
-            lv2:name "TO DCO2" ;
+            lv2:name "DCO2" ;
         ] , [
             lv2:index 64 ;
             lv2:symbol "lfo1_dco3_pitch" ;
-            lv2:name "TO DCO3" ;
+            lv2:name "DCO3" ;
         ] , [
             lv2:index 65 ;
             lv2:symbol "lfo1_filter" ;
-            lv2:name "TO FILTER" ;
+            lv2:name "FILTER" ;
         ] , [
             lv2:index 66 ;
             lv2:symbol "lfo1_route_one" ;
@@ -308,19 +308,19 @@
         ] , [
             lv2:index 73 ;
             lv2:symbol "lfo2_dco1_pitch" ;
-            lv2:name "TO DCO1" ;
+            lv2:name "DCO1" ;
         ] , [
             lv2:index 74 ;
             lv2:symbol "lfo2_dco2_pitch" ;
-            lv2:name "TO DCO2" ;
+            lv2:name "DCO2" ;
         ] , [
             lv2:index 75 ;
             lv2:symbol "lfo2_dco3_pitch" ;
-            lv2:name "TO DCO3" ;
+            lv2:name "DCO3" ;
         ] , [
             lv2:index 76 ;
             lv2:symbol "lfo2_filter" ;
-            lv2:name "TO FILTER" ;
+            lv2:name "FILTER" ;
         ] , [
             lv2:index 77 ;
             lv2:symbol "lfo2_route_one" ;
@@ -352,19 +352,19 @@
         ] , [
             lv2:index 84 ;
             lv2:symbol "lfo3_dco1_pitch" ;
-            lv2:name "TO DCO1" ;
+            lv2:name "DCO1" ;
         ] , [
             lv2:index 85 ;
             lv2:symbol "lfo3_dco2_pitch" ;
-            lv2:name "TO DCO2" ;
+            lv2:name "DCO2" ;
         ] , [
             lv2:index 86 ;
             lv2:symbol "lfo3_dco3_pitch" ;
-            lv2:name "TO DCO3" ;
+            lv2:name "DCO3" ;
         ] , [
             lv2:index 87 ;
             lv2:symbol "lfo3_filter" ;
-            lv2:name "TO FILTER" ;
+            lv2:name "FILTER" ;
         ] , [
             lv2:index 88 ;
             lv2:symbol "lfo3_route_one" ;

@@ -17,11 +17,12 @@
     <div mod-role="drag-handle" class="mod-drag-handle"></div>
 	
     <div class="tabs">
-        <section>
+	
+        <section class="DCO" id="DCO">
             <input type="radio" name="tabs" id="tab1" checked /> 
-            <label for="tab1">DCO</label>
+            <label for="tab1" id="label1">DCO</label>
             <div class="tab_content" id="content1">
-			
+
 			<div class="dco1 bloc left">
 				<span class="title-bloc">DCO1</span>
 				{{#controls.12}}
@@ -40,7 +41,7 @@
 				{{#controls.14}}
                     <div class="mod-knob knob-{{symbol}}">
                         <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                        <div class="mod-knob-image knob_pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
                         <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.14}}
@@ -48,23 +49,23 @@
                     <div class="mod-enumerated enum-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
                     <div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
                         <div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
-						  
-                          <div mod-role="enumeration-option" mod-port-value="0.000000">SAW</div> 
-						  <div mod-role="enumeration-option" mod-port-value="0.250000">TEST</div> 
+                          <div mod-role="enumeration-option" mod-port-value="0.00">SAW</div> 
+						  <div mod-role="enumeration-option" mod-port-value="1.00">SQUARE</div> 
+						  <div mod-role="enumeration-option" mod-port-value="3.00">SINE</div> 
                         </div>
                     </div>
 				{{/controls.15}}
 				{{#controls.107}}
                     <div class="mod-knob knob-{{symbol}}">
                         <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                        <div class="mod-knob-image knob_pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
                         <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.107}}
 				{{#controls.16}}
                     <div class="mod-knob knob-{{symbol}}">
                         <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                        <div class="mod-knob-image knob_pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
                         <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.16}}
@@ -107,7 +108,7 @@
 				{{#controls.22}}
                     <div class="mod-knob knob-{{symbol}}">
                         <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                        <div class="mod-knob-image knob_pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
                         <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.22}}
@@ -115,23 +116,23 @@
                     <div class="mod-enumerated enum-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
                     <div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
                         <div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
-						  
-                          <div mod-role="enumeration-option" mod-port-value="0.000000">SAW</div> 
-						  <div mod-role="enumeration-option" mod-port-value="0.250000">TEST</div> 
+                          <div mod-role="enumeration-option" mod-port-value="0.00">SAW</div> 
+						  <div mod-role="enumeration-option" mod-port-value="1.00">SQUARE</div> 
+						  <div mod-role="enumeration-option" mod-port-value="3.00">SINE</div> 
                         </div>
                     </div>
 				{{/controls.23}}
 				{{#controls.108}}
                     <div class="mod-knob knob-{{symbol}}">
                         <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                        <div class="mod-knob-image knob_pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
                         <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.108}}
 				{{#controls.24}}
                     <div class="mod-knob knob-{{symbol}}">
                         <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                        <div class="mod-knob-image knob_pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
                         <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.24}}
@@ -174,7 +175,7 @@
 				{{#controls.30}}
                     <div class="mod-knob knob-{{symbol}}">
                         <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                        <div class="mod-knob-image knob_pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
                         <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.30}}
@@ -182,23 +183,23 @@
                     <div class="mod-enumerated enum-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
                     <div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
                         <div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
-						  
-                          <div mod-role="enumeration-option" mod-port-value="0.000000">SAW</div> 
-						  <div mod-role="enumeration-option" mod-port-value="0.250000">TEST</div> 
+						  <div mod-role="enumeration-option" mod-port-value="0.00">SAW</div> 
+						  <div mod-role="enumeration-option" mod-port-value="1.00">SQUARE</div> 
+						  <div mod-role="enumeration-option" mod-port-value="3.00">SINE</div> 
                         </div>
                     </div>
 				{{/controls.31}}
 				{{#controls.109}}
                     <div class="mod-knob knob-{{symbol}}">
                         <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                        <div class="mod-knob-image knob_pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
                         <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.109}}
 				{{#controls.32}}
                     <div class="mod-knob knob-{{symbol}}">
                         <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                        <div class="mod-knob-image knob_pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
                         <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.32}}
@@ -280,9 +281,13 @@
                     <div class="mod-enumerated enum-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
                     <div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
                         <div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
-						  
-                          <div mod-role="enumeration-option" mod-port-value="0.000000">SAW</div> 
-						  <div mod-role="enumeration-option" mod-port-value="0.250000">TEST</div> 
+						  <div mod-role="enumeration-option" mod-port-value="0.00">SAW</div>
+						  <div mod-role="enumeration-option" mod-port-value="1.00">SQUARE</div> 
+						  <div mod-role="enumeration-option" mod-port-value="2.00">SINE</div> 
+						  <div mod-role="enumeration-option" mod-port-value="3.00">RANDOM</div>
+						  <div mod-role="enumeration-option" mod-port-value="4.00">NOISE</div>
+						  <div mod-role="enumeration-option" mod-port-value="5.00">SAW-Inver</div>
+						  <div mod-role="enumeration-option" mod-port-value="6.00">PULSE</div>
                         </div>
                     </div>
 				{{/controls.61}}
@@ -358,12 +363,17 @@
                     <div class="mod-enumerated enum-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
                     <div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
                         <div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
-						  
-                          <div mod-role="enumeration-option" mod-port-value="0.000000">SAW</div> 
-						  <div mod-role="enumeration-option" mod-port-value="0.250000">TEST</div> 
+						  <div mod-role="enumeration-option" mod-port-value="0.00">SAW</div>
+						  <div mod-role="enumeration-option" mod-port-value="1.00">SQUARE</div> 
+						  <div mod-role="enumeration-option" mod-port-value="2.00">SINE</div> 
+						  <div mod-role="enumeration-option" mod-port-value="3.00">RANDOM</div>
+						  <div mod-role="enumeration-option" mod-port-value="4.00">NOISE</div>
+						  <div mod-role="enumeration-option" mod-port-value="5.00">SAW-Inver</div>
+						  <div mod-role="enumeration-option" mod-port-value="6.00">PULSE</div>
                         </div>
                     </div>
 				{{/controls.72}}
+				
 				{{#controls.73}}
                     <div class="mod-slider slider-{{symbol}}">
                         <span class="mod-slider-title">{{name}}</span>
@@ -436,12 +446,17 @@
                     <div class="mod-enumerated enum-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
                     <div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
                         <div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
-						  
-                          <div mod-role="enumeration-option" mod-port-value="0.000000">SAW</div> 
-						  <div mod-role="enumeration-option" mod-port-value="0.250000">TEST</div> 
+						  <div mod-role="enumeration-option" mod-port-value="0.00">SAW</div>
+						  <div mod-role="enumeration-option" mod-port-value="1.00">SQUARE</div> 
+						  <div mod-role="enumeration-option" mod-port-value="2.00">SINE</div> 
+						  <div mod-role="enumeration-option" mod-port-value="3.00">RANDOM</div>
+						  <div mod-role="enumeration-option" mod-port-value="4.00">NOISE</div>
+						  <div mod-role="enumeration-option" mod-port-value="5.00">SAW-Inver</div>
+						  <div mod-role="enumeration-option" mod-port-value="6.00">PULSE</div>
                         </div>
                     </div>
 				{{/controls.83}}
+				
 				{{#controls.84}}
                     <div class="mod-slider slider-{{symbol}}">
                         <span class="mod-slider-title">{{name}}</span>
@@ -672,21 +687,9 @@
             <input type="radio" name="tabs" id="tab4" />
             <label for="tab4" id="label4">EFFECTS</label>
             <div class="tab_content" id="content4">
-				<div class="amp_filter bloc left">
-				<span class="title-bloc">AMP/FILTER</span>
-				{{#controls.7}}
-					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
-						<span class="mod-switch-title">{{name}}</span><br />
-                    </div>
-				{{/controls.7}}
-
-				{{#controls.2}}
-                    <div class="mod-knob knob-{{symbol}}">
-                        <span class="mod-knob-title">{{name}}</span><br />
-                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
-                        <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
-                    </div>
-				{{/controls.2}}
+				<div class="filter bloc left">
+				<span class="title-bloc">FILTER</span>
+				
 				{{#controls.3}}
                     <div class="mod-enumerated enum-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
                     <div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
@@ -721,35 +724,7 @@
                         <span class="mod-slider-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></span>
                     </div>
 				{{/controls.6}}
-				{{#controls.1}}
-                    <div class="mod-slider slider-{{symbol}}">
-                        <span class="mod-slider-title">{{name}}</span>
-                        <div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>                        
-                        <span class="mod-slider-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></span>
-                    </div>
-				{{/controls.1}}
-				{{#controls.8}}
-					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
-						<span class="mod-switch-title">{{name}}</span><br />
-                    </div>
-				{{/controls.8}}
-				{{#controls.9}}
-					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
-						<span class="mod-switch-title">{{name}}</span><br />
-                    </div>
-				{{/controls.9}}
-				{{#controls.10}}
-					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
-						<span class="mod-switch-title">{{name}}</span><br />
-                    </div>
-				{{/controls.10}}
-				{{#controls.0}}
-                    <div class="mod-knob knob-{{symbol}}">
-                        <span class="mod-knob-title" style="margin-left: 10px;">{{name}}</span><br />
-                        <div class="mod-knob-image knob_big" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
-                        <div class="mod-knob-value" style="top: 80px; left: 15px; margin-left: 10px;" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
-                    </div>
-				{{/controls.0}}
+				
 				</div>
 				
 				<div class="echo bloc right">
@@ -817,17 +792,51 @@
                         <span class="mod-slider-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></span>
                     </div>
 				{{/controls.105}}
-				{{#controls.106}}
-					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
-						<span class="mod-switch-title">{{name}}</span><br />
-                    </div>
-				{{/controls.106}}
-				
 				
 				</div>
 				
-				<div class="amp_filter bloc right">
-				<span class="title-bloc">MOD</span>
+				<div class="amp bloc right">
+				<span class="title-bloc">AMP/MOD</span>
+				
+				{{#controls.0}}
+                    <div class="mod-knob knob-{{symbol}}">
+                        <span class="mod-knob-title" style="margin-left: 10px;">{{name}}</span><br />
+                        <div class="mod-knob-image knob_big" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                    </div>
+				{{/controls.0}}
+				{{#controls.1}}
+                    <div class="mod-slider slider-{{symbol}}">
+                        <span class="mod-slider-title">{{name}}</span>
+                        <div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>                        
+                        <span class="mod-slider-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></span>
+                    </div>
+				{{/controls.1}}
+				{{#controls.2}}
+                    <div class="mod-knob knob-{{symbol}}">
+                        <span class="mod-knob-title">{{name}}</span><br />
+                        <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+                    </div>
+				{{/controls.2}}
+				{{#controls.7}}
+					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
+						<span class="mod-switch-title">{{name}}</span><br />
+                    </div>
+				{{/controls.7}}
+				{{#controls.8}}
+					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
+						<span class="mod-switch-title">{{name}}</span><br />
+                    </div>
+				{{/controls.8}}
+				{{#controls.9}}
+					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
+						<span class="mod-switch-title">{{name}}</span><br />
+                    </div>
+				{{/controls.9}}
+				{{#controls.10}}
+					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
+						<span class="mod-switch-title">{{name}}</span><br />
+                    </div>
+				{{/controls.10}}
 				{{#controls.102}}
                     <div class="mod-slider slider-{{symbol}}">
                         <span class="mod-slider-title">{{name}}</span>
@@ -836,34 +845,34 @@
                     </div>
 				{{/controls.102}}
 				{{#controls.110}}
-                    <div class="mod-slider slider-{{symbol}}">
-                        <span class="mod-slider-title">{{name}}</span>
-                        <div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>                        
-                        <span class="mod-slider-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></span>
+                    <div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
+						<span class="mod-switch-title">{{name}}</span><br />
                     </div>
 				{{/controls.110}}
-				{{#controls.112}}
+				{{#controls.106}}
+					<div class="mod-switch switch-{{symbol}}" mod-role="input-control-port" mod-port-symbol="{{symbol}}" mod-widget="switch">
+						<span class="mod-switch-title">{{name}}</span><br />
+                    </div>
+				{{/controls.106}}
+			<!--	{{#controls.112}}
                     <div class="mod-slider slider-{{symbol}}">
                         <span class="mod-slider-title">{{name}}</span>
                         <div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>                        
                         <span class="mod-slider-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></span>
                     </div>
-				{{/controls.112}}
+				{{/controls.112}}   -->
 				{{#controls.113}}
                     <div class="mod-knob knob-{{symbol}}">
-                        <span class="mod-knob-title">{{name}}</span><br />
+                        <span class="mod-knob-title" style="">{{name}}</span><br />
                         <div class="mod-knob-image knob_16" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
-                        <div class="mod-knob-value" mod-role="input-control-value" mod-port-symbol="{{symbol}}"></div>
                     </div>
 				{{/controls.113}}
 				</div>
             </div>
         </section>
 		
-		
-		
     </div>
-</div>
+
     <div class="mod-pedal-input">
         {{#effect.ports.audio.input}}
         <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-audio-port" mod-port-symbol="{{symbol}}">
