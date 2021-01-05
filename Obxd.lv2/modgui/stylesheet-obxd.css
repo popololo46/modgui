@@ -1,0 +1,422 @@
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/nexa/stylesheet.css);
+
+
+/* CONTAINER
+================================================ */
+.obxd{{{cns}}} {
+	background-color: #5A5B5D;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:820px 557px;
+    height: 557px;
+    position: absolute;
+    width: 820px;
+	border: 1px solid #fff;
+    border-radius: 1.5em;
+}
+
+.mod-pedal .mod-drag-handle {
+    height: 40px;
+    width: 700px;
+    z-index: 20;
+}	
+	
+/* BAR TOP 
+================================================ */
+.obxd{{{cns}}} .bar-top {
+	background-color: #191919 !important;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+    width: 100%;
+}
+.obxd{{{cns}}} .title-obxd {
+    color: #FFF;
+    background-color: rgb(25,25,25,1);
+    display: block;
+    left: 20px;
+    position: absolute;
+    border: solid 2px #ccc;
+    border-top-left-radius: 0.7em;
+    border-top-right-radius: 0.7em;
+    top: -36px;
+    padding: 5px 20px;
+    font-size: 35px;
+}
+
+
+
+/* ON/OFF 
+================================================ */
+.obxd{{{cns}}} .mod-footswitch {
+	background-image: url(/resources/utils/switch.png{{{ns}}});
+    background-size: auto 60px;
+    cursor: pointer;
+    height: 30px;
+    z-index: 100;
+    position: relative;
+    left: 4px;
+    top: 20px;
+    width: 110px;
+}
+.obxd{{{cns}}} .on {
+    background-position: bottom center;
+}
+.obxd{{{cns}}} .off {
+    background-position: top center;
+}
+
+
+
+
+/* PORTS
+================================================ */
+
+.obxd{{{cns}}} .mod-pedal-input,
+.obxd{{{cns}}} .mod-pedal-output {
+    top: 100px;
+}
+
+
+
+/* BLOC 
+================================================ */
+.obxd{{{cns}}} .bloc {
+    border: solid 1px #15191E;
+    border-radius: 7px;
+	background: #191919 !important;
+	margin-bottom: 12px;
+}
+.obxd{{{cns}}} .left {
+    float: left;
+    margin-left: 12px !important;
+}
+.obxd{{{cns}}} .right {
+    float: right;
+    margin-right: 12px !important;
+}
+.obxd{{{cns}}} .title-bloc {
+    background: #191919;
+    color: #FFF;
+    font-size: 13px;
+    margin-left: 2px;
+    padding: 0px 5px;
+    margin-top: -10px;
+    border: solid 1px #056ee4;
+    border-radius: 7px;
+    position: absolute;
+}
+
+
+.obxd{{{cns}}}  .master{
+	width: 120px;
+    height: 397px;
+}
+.obxd{{{cns}}}  .osc{
+	width: 190px;
+    height: 300px;
+}
+.obxd{{{cns}}}  .mixer{
+	width: 194px;
+    height: 85px;
+    position: absolute;
+    top: 312px;
+    left: 129px;
+}
+.obxd{{{cns}}}  .control{
+	width: 323px;
+    height: 95px;
+    position: absolute;
+    top: 406px;
+    left: 0px;
+}
+.obxd{{{cns}}}  .filter{
+	width: 220px;
+    height: 165px;
+}
+.obxd{{{cns}}}  .modulation{
+	width: 220px;
+    height: 325px;
+    margin-top: 177px;
+    margin-left: -218px !important;
+}
+.obxd{{{cns}}}  .filterenv{
+	width: 230px;
+    height: 88px;
+}
+.obxd{{{cns}}}  .ampenv{
+	width: 230px;
+    height: 88px;
+}
+.obxd{{{cns}}}  .voicevar{
+	width: 230px;
+    height: 300px;
+}
+
+.obxd{{{cns}}} .littlebloc {
+    border: solid 1px #1f2e42;
+    border-radius: 7px;
+	background: #191919;
+	margin: 5px 0 0 6px;
+	float: left
+}
+.obxd{{{cns}}}  .lfo{
+	width: 65px;
+    height: 310px;
+}
+.obxd{{{cns}}}  .freq{
+	width: 65px;
+    height: 310px;
+}
+.obxd{{{cns}}}  .pw{
+	width: 65px;
+    height: 310px;
+}
+
+.obxd{{{cns}}}  .osc1{
+	width: 55px;
+    height: 200px;
+}
+.obxd{{{cns}}}  .pw1{
+	width: 55px;
+    height: 200px;
+}
+.obxd{{{cns}}}  .osc2{
+	width: 55px;
+    height: 200px;
+}
+.obxd{{{cns}}}  .pw2{
+	width: 178px;
+    height: 85px;
+}
+.obxd{{{cns}}}  .pan{
+	width: 216px;
+    height: 143px;
+	margin-top: 18px;
+}
+
+/* KNOBS
+================================================ */
+
+.obxd{{{cns}}} .mod-control-group {
+    position:relative;
+	top: 40px;
+    z-index:30;
+}
+
+.obxd{{{cns}}} .mod-control-group .mod-knob {
+    position: relative;
+    float: left;
+    height: 50px;
+    width: 50px;
+    padding: 10px 0px;
+    margin: 5px 0px 10px 5px;
+}
+
+.obxd{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+	background-image: url(/resources/knobs/knob.png{{{ns}}});
+    background-repeat:no-repeat;
+	background-size:auto 40px;
+    width: 40px;
+    height: 40px;
+	position: absolute;
+}
+.obxd{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knob-pan {
+	background-image: url(/resources/knobs/knob_pan.png{{{ns}}}) !important;
+}
+.obxd{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knobbig {
+	background-size:auto 60px;
+    width: 60px;
+    height: 60px;
+}
+.obxd{{{cns}}} .mod-knob-title {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 50px;
+    margin-left: -5px;
+    top: 44px;
+	overflow: visible;
+}
+.obxd{{{cns}}} .voicevar .mod-knob {
+    margin: 5px 0px 10px 0px;
+}
+
+.obxd{{{cns}}} .mod-control-group .mod-knob.obxd-volume {
+	top: 42px;
+    left: 22px;
+}
+.obxd{{{cns}}} .mod-control-group .mod-knob.obxd-tune{
+	top: 180px;
+    position: absolute;
+    left: 20px;
+}
+.obxd{{{cns}}} .mod-control-group .mod-knob.obxd-octave {
+	top: 180px;
+    position: absolute;
+    left: 70px;
+}
+.obxd{{{cns}}} .mod-control-group .mod-knob.obxd-legatomode {
+	top: 200px;
+    position: absolute;
+    left: 20px;
+}
+.obxd{{{cns}}} .mod-control-group .mod-knob.obxd-voicecount {
+	top: 200px;
+    position: absolute;
+    left: 70px;
+}
+
+
+/* SWITCH
+================================================ */
+.obxd{{{cns}}} .mod-switch {
+    background-image: url(/resources/utils/switch-toggle.png{{{ns}}});
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 40px auto;
+    position: relative !important;
+    height: 40px;
+    float: left;
+    width: 40px;
+    margin: 15px 10px 10px 10px;
+    cursor: pointer;
+    z-index: 40;
+}
+.obxd{{{cns}}} .mod-switch.on {
+    background-position:top center;
+}
+.obxd{{{cns}}} .mod-switch-title {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 60px;
+    margin-left: -16px;
+    top: 44px;
+}
+
+.obxd{{{cns}}} .mod-switch.altswitch {
+    background-image: url(/resources/utils/led.png{{{ns}}});
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 24px auto;
+	position: absolute !important;
+	height: 24px;
+    width: 24px;
+    cursor: pointer;
+	z-index: 40;
+}
+.obxd{{{cns}}} .mod-switch.altswitch.on {
+    background-position-y: bottom !important
+}
+
+
+
+/* ENUMERATED LIST
+================================================ */
+.obxd{{{cns}}} .mod-enumerated {
+	background-image:url(/resources/utils/dropdown-white.png{{{ns}}});
+	background-position: right center;
+    background-repeat: no-repeat;
+    background-color: #5A5B5D;
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    color: #fff;
+    cursor: pointer;
+    padding: 3px 0 0 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 49;
+}
+.obxd{{{cns}}} .mod-enumerated .mod-enumerated-list {
+	bottom: -3px;
+    background-color: #191919;
+    border-radius: 10px;
+    display: none;
+    width: 160px;
+    position: relative;
+    text-align: left;
+    font-size: 22px;
+    padding: 8px;
+    border: 2px solid #FE862C;
+    line-height: 1.6;
+    text-transform: uppercase;
+    z-index: 53;
+}
+.obxd{{{cns}}} .mod-enumerated .mod-enumerated-selected {
+    font-size: 18px;
+    margin-top: -12px;
+}
+.obxd{{{cns}}} .mod-enumerated .mod-enumerated-list > div.selected {
+    background-color: #fff;
+    color: #000;
+    border: 3px solid #FE862C;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+.obxd{{{cns}}} .mod-enum-title {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin-left: -10px;
+    top: -21px;
+}
+
+.obxd{{{cns}}} .mod-enumerated.obxd-voicecount {
+    left: 65px;
+    top: 350px;
+}
+.obxd{{{cns}}} .mod-enumerated.obxd-legatomode {
+    left: 15px;
+    top: 285px;
+    width: 114px;
+}
+
+
+/* Presets
+================================================ */
+.obxd{{{cns}}} .mod-presets {
+	position: relative;
+    width: 110px !important;
+    top: 40px;
+    left: 5px;
+    z-index: 22;
+    font-size: 18px;
+}
+.obxd{{{cns}}} .mod-presets > select {
+    background-color: #5A5B5D;
+    width: 110px !important;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 2px;
+    color: #ccc;
+}
+.obxd{{{cns}}} .mod-presets > select > option {
+	background-color: #191919;
+	font-size: 20px;
+	color:#ccc;
+}
+
+
+
+
+
+
