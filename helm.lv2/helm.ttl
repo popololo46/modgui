@@ -1,0 +1,1318 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ui:   <http://lv2plug.in/ns/extensions/ui#> .
+
+<http://tytel.org/helm>
+    a lv2:InstrumentPlugin, lv2:Plugin ;
+    lv2:requiredFeature <http://lv2plug.in/ns/ext/buf-size#boundedBlockLength> ,
+                        <http://lv2plug.in/ns/ext/urid#map> ;
+    lv2:extensionData <http://lv2plug.in/ns/ext/options#interface> ,
+                      <http://lv2plug.in/ns/ext/state#interface> ,
+                      <http://kxstudio.sf.net/ns/lv2ext/programs#Interface> ;
+
+    ui:ui <http://tytel.org/helm#ExternalUI> ,
+          <http://tytel.org/helm#ParentUI> ;
+
+    lv2:port [
+        a lv2:InputPort, atom:AtomPort ;
+        atom:bufferType atom:Sequence ;
+        atom:supports <http://lv2plug.in/ns/ext/midi#MidiEvent> ;
+        atom:supports <http://lv2plug.in/ns/ext/time#Position> ;
+        lv2:index 0 ;
+        lv2:symbol "lv2_events_in" ;
+        lv2:name "Events Input" ;
+        lv2:designation lv2:control ;
+    ] ;
+
+    lv2:port [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 1 ;
+        lv2:symbol "lv2_freewheel" ;
+        lv2:name "Freewheel" ;
+        lv2:default 0.0 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+        lv2:designation <http://lv2plug.in/ns/lv2core#freeWheeling> ;
+        lv2:portProperty lv2:toggled, <http://lv2plug.in/ns/ext/port-props#notOnGUI> ;
+    ] ;
+
+    lv2:port [
+        a lv2:OutputPort, lv2:ControlPort ;
+        lv2:index 2 ;
+        lv2:symbol "lv2_latency" ;
+        lv2:name "Latency" ;
+        lv2:designation <http://lv2plug.in/ns/lv2core#latency> ;
+        lv2:portProperty lv2:reportsLatency, lv2:integer ;
+    ] ;
+
+    lv2:port [
+        a lv2:OutputPort, lv2:AudioPort ;
+        lv2:index 3 ;
+        lv2:symbol "lv2_audio_out_1" ;
+        lv2:name "Audio Output 1" ;
+    ] ,
+    [
+        a lv2:OutputPort, lv2:AudioPort ;
+        lv2:index 4 ;
+        lv2:symbol "lv2_audio_out_2" ;
+        lv2:name "Audio Output 2" ;
+    ] ;
+
+    lv2:port [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 5 ;
+        lv2:symbol "amp_attack" ;
+        lv2:name "amp_attack" ;
+        lv2:default 0.027386 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 6 ;
+        lv2:symbol "amp_decay" ;
+        lv2:name "amp_decay" ;
+        lv2:default 0.375000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 7 ;
+        lv2:symbol "amp_release" ;
+        lv2:name "amp_release" ;
+        lv2:default 0.075000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 8 ;
+        lv2:symbol "amp_sustain" ;
+        lv2:name "amp_sustain" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 9 ;
+        lv2:symbol "arp_frequency" ;
+        lv2:name "arp_frequency" ;
+        lv2:default 0.600000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 10 ;
+        lv2:symbol "arp_gate" ;
+        lv2:name "arp_gate" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 11 ;
+        lv2:symbol "arp_octaves" ;
+        lv2:name "arp_octaves" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 12 ;
+        lv2:symbol "arp_on" ;
+        lv2:name "arp_on" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 13 ;
+        lv2:symbol "arp_pattern" ;
+        lv2:name "arp_pattern" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 14 ;
+        lv2:symbol "arp_sync" ;
+        lv2:name "arp_sync" ;
+        lv2:default 0.333333 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 15 ;
+        lv2:symbol "arp_tempo" ;
+        lv2:name "arp_tempo" ;
+        lv2:default 0.818182 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 16 ;
+        lv2:symbol "beats_per_minute" ;
+        lv2:name "beats_per_minute" ;
+        lv2:default 0.357143 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 17 ;
+        lv2:symbol "cross_modulation" ;
+        lv2:name "cross_modulation" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 18 ;
+        lv2:symbol "cutoff" ;
+        lv2:name "cutoff" ;
+        lv2:default 0.525253 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 19 ;
+        lv2:symbol "delay_dry_wet" ;
+        lv2:name "delay_dry_wet" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 20 ;
+        lv2:symbol "delay_feedback" ;
+        lv2:name "delay_feedback" ;
+        lv2:default 0.700000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 21 ;
+        lv2:symbol "delay_frequency" ;
+        lv2:name "delay_frequency" ;
+        lv2:default 0.571429 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 22 ;
+        lv2:symbol "delay_on" ;
+        lv2:name "delay_on" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 23 ;
+        lv2:symbol "delay_sync" ;
+        lv2:name "delay_sync" ;
+        lv2:default 0.333333 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 24 ;
+        lv2:symbol "delay_tempo" ;
+        lv2:name "delay_tempo" ;
+        lv2:default 0.818182 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 25 ;
+        lv2:symbol "distortion_drive" ;
+        lv2:name "distortion_drive" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 26 ;
+        lv2:symbol "distortion_mix" ;
+        lv2:name "distortion_mix" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 27 ;
+        lv2:symbol "distortion_on" ;
+        lv2:name "distortion_on" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 28 ;
+        lv2:symbol "distortion_type" ;
+        lv2:name "distortion_type" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 29 ;
+        lv2:symbol "fil_attack" ;
+        lv2:name "fil_attack" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 30 ;
+        lv2:symbol "fil_decay" ;
+        lv2:name "fil_decay" ;
+        lv2:default 0.375000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 31 ;
+        lv2:symbol "fil_env_depth" ;
+        lv2:name "fil_env_depth" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 32 ;
+        lv2:symbol "fil_release" ;
+        lv2:name "fil_release" ;
+        lv2:default 0.375000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 33 ;
+        lv2:symbol "fil_sustain" ;
+        lv2:name "fil_sustain" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 34 ;
+        lv2:symbol "filter_blend" ;
+        lv2:name "filter_blend" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 35 ;
+        lv2:symbol "filter_drive" ;
+        lv2:name "filter_drive" ;
+        lv2:default 0.375000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 36 ;
+        lv2:symbol "filter_on" ;
+        lv2:name "filter_on" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 37 ;
+        lv2:symbol "filter_shelf" ;
+        lv2:name "filter_shelf" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 38 ;
+        lv2:symbol "filter_style" ;
+        lv2:name "filter_style" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 39 ;
+        lv2:symbol "formant_on" ;
+        lv2:name "formant_on" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 40 ;
+        lv2:symbol "formant_x" ;
+        lv2:name "formant_x" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 41 ;
+        lv2:symbol "formant_y" ;
+        lv2:name "formant_y" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 42 ;
+        lv2:symbol "keytrack" ;
+        lv2:name "keytrack" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 43 ;
+        lv2:symbol "legato" ;
+        lv2:name "legato" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 44 ;
+        lv2:symbol "mod_attack" ;
+        lv2:name "mod_attack" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 45 ;
+        lv2:symbol "mod_decay" ;
+        lv2:name "mod_decay" ;
+        lv2:default 0.375000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 46 ;
+        lv2:symbol "mod_release" ;
+        lv2:name "mod_release" ;
+        lv2:default 0.375000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 47 ;
+        lv2:symbol "mod_sustain" ;
+        lv2:name "mod_sustain" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 48 ;
+        lv2:symbol "mono_lfo_1_amplitude" ;
+        lv2:name "mono_lfo_1_amplitude" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 49 ;
+        lv2:symbol "mono_lfo_1_frequency" ;
+        lv2:name "mono_lfo_1_frequency" ;
+        lv2:default 0.615385 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 50 ;
+        lv2:symbol "mono_lfo_1_retrigger" ;
+        lv2:name "mono_lfo_1_retrigger" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 51 ;
+        lv2:symbol "mono_lfo_1_sync" ;
+        lv2:name "mono_lfo_1_sync" ;
+        lv2:default 0.333333 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 52 ;
+        lv2:symbol "mono_lfo_1_tempo" ;
+        lv2:name "mono_lfo_1_tempo" ;
+        lv2:default 0.545455 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 53 ;
+        lv2:symbol "mono_lfo_1_waveform" ;
+        lv2:name "mono_lfo_1_waveform" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 54 ;
+        lv2:symbol "mono_lfo_2_amplitude" ;
+        lv2:name "mono_lfo_2_amplitude" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 55 ;
+        lv2:symbol "mono_lfo_2_frequency" ;
+        lv2:name "mono_lfo_2_frequency" ;
+        lv2:default 0.615385 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 56 ;
+        lv2:symbol "mono_lfo_2_retrigger" ;
+        lv2:name "mono_lfo_2_retrigger" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 57 ;
+        lv2:symbol "mono_lfo_2_sync" ;
+        lv2:name "mono_lfo_2_sync" ;
+        lv2:default 0.333333 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 58 ;
+        lv2:symbol "mono_lfo_2_tempo" ;
+        lv2:name "mono_lfo_2_tempo" ;
+        lv2:default 0.636364 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 59 ;
+        lv2:symbol "mono_lfo_2_waveform" ;
+        lv2:name "mono_lfo_2_waveform" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 60 ;
+        lv2:symbol "noise_volume" ;
+        lv2:name "noise_volume" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 61 ;
+        lv2:symbol "num_steps" ;
+        lv2:name "num_steps" ;
+        lv2:default 0.225806 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 62 ;
+        lv2:symbol "osc_1_transpose" ;
+        lv2:name "osc_1_transpose" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 63 ;
+        lv2:symbol "osc_1_tune" ;
+        lv2:name "osc_1_tune" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 64 ;
+        lv2:symbol "osc_1_unison_detune" ;
+        lv2:name "osc_1_unison_detune" ;
+        lv2:default 0.100000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 65 ;
+        lv2:symbol "osc_1_unison_voices" ;
+        lv2:name "osc_1_unison_voices" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 66 ;
+        lv2:symbol "osc_1_volume" ;
+        lv2:name "osc_1_volume" ;
+        lv2:default 0.547723 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 67 ;
+        lv2:symbol "osc_1_waveform" ;
+        lv2:name "osc_1_waveform" ;
+        lv2:default 0.400000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 68 ;
+        lv2:symbol "osc_2_transpose" ;
+        lv2:name "osc_2_transpose" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 69 ;
+        lv2:symbol "osc_2_tune" ;
+        lv2:name "osc_2_tune" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 70 ;
+        lv2:symbol "osc_2_unison_detune" ;
+        lv2:name "osc_2_unison_detune" ;
+        lv2:default 0.100000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 71 ;
+        lv2:symbol "osc_2_unison_voices" ;
+        lv2:name "osc_2_unison_voices" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 72 ;
+        lv2:symbol "osc_2_volume" ;
+        lv2:name "osc_2_volume" ;
+        lv2:default 0.547723 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 73 ;
+        lv2:symbol "osc_2_waveform" ;
+        lv2:name "osc_2_waveform" ;
+        lv2:default 0.400000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 74 ;
+        lv2:symbol "osc_feedback_amount" ;
+        lv2:name "osc_feedback_amount" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 75 ;
+        lv2:symbol "osc_feedback_transpose" ;
+        lv2:name "osc_feedback_transpose" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 76 ;
+        lv2:symbol "osc_feedback_tune" ;
+        lv2:name "osc_feedback_tune" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 77 ;
+        lv2:symbol "pitch_bend_range" ;
+        lv2:name "pitch_bend_range" ;
+        lv2:default 0.041667 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 78 ;
+        lv2:symbol "poly_lfo_amplitude" ;
+        lv2:name "poly_lfo_amplitude" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 79 ;
+        lv2:symbol "poly_lfo_frequency" ;
+        lv2:name "poly_lfo_frequency" ;
+        lv2:default 0.615385 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 80 ;
+        lv2:symbol "poly_lfo_sync" ;
+        lv2:name "poly_lfo_sync" ;
+        lv2:default 0.333333 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 81 ;
+        lv2:symbol "poly_lfo_tempo" ;
+        lv2:name "poly_lfo_tempo" ;
+        lv2:default 0.636364 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 82 ;
+        lv2:symbol "poly_lfo_waveform" ;
+        lv2:name "poly_lfo_waveform" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 83 ;
+        lv2:symbol "polyphony" ;
+        lv2:name "polyphony" ;
+        lv2:default 0.096774 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 84 ;
+        lv2:symbol "portamento" ;
+        lv2:name "portamento" ;
+        lv2:default 0.250000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 85 ;
+        lv2:symbol "portamento_type" ;
+        lv2:name "portamento_type" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 86 ;
+        lv2:symbol "resonance" ;
+        lv2:name "resonance" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 87 ;
+        lv2:symbol "reverb_damping" ;
+        lv2:name "reverb_damping" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 88 ;
+        lv2:symbol "reverb_dry_wet" ;
+        lv2:name "reverb_dry_wet" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 89 ;
+        lv2:symbol "reverb_feedback" ;
+        lv2:name "reverb_feedback" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 90 ;
+        lv2:symbol "reverb_on" ;
+        lv2:name "reverb_on" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 91 ;
+        lv2:symbol "step_frequency" ;
+        lv2:name "step_frequency" ;
+        lv2:default 0.636364 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 92 ;
+        lv2:symbol "step_seq_00" ;
+        lv2:name "step_seq_00" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 93 ;
+        lv2:symbol "step_seq_01" ;
+        lv2:name "step_seq_01" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 94 ;
+        lv2:symbol "step_seq_02" ;
+        lv2:name "step_seq_02" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 95 ;
+        lv2:symbol "step_seq_03" ;
+        lv2:name "step_seq_03" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 96 ;
+        lv2:symbol "step_seq_04" ;
+        lv2:name "step_seq_04" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 97 ;
+        lv2:symbol "step_seq_05" ;
+        lv2:name "step_seq_05" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 98 ;
+        lv2:symbol "step_seq_06" ;
+        lv2:name "step_seq_06" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 99 ;
+        lv2:symbol "step_seq_07" ;
+        lv2:name "step_seq_07" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 100 ;
+        lv2:symbol "step_seq_08" ;
+        lv2:name "step_seq_08" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 101 ;
+        lv2:symbol "step_seq_09" ;
+        lv2:name "step_seq_09" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 102 ;
+        lv2:symbol "step_seq_10" ;
+        lv2:name "step_seq_10" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 103 ;
+        lv2:symbol "step_seq_11" ;
+        lv2:name "step_seq_11" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 104 ;
+        lv2:symbol "step_seq_12" ;
+        lv2:name "step_seq_12" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 105 ;
+        lv2:symbol "step_seq_13" ;
+        lv2:name "step_seq_13" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 106 ;
+        lv2:symbol "step_seq_14" ;
+        lv2:name "step_seq_14" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 107 ;
+        lv2:symbol "step_seq_15" ;
+        lv2:name "step_seq_15" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 108 ;
+        lv2:symbol "step_seq_16" ;
+        lv2:name "step_seq_16" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 109 ;
+        lv2:symbol "step_seq_17" ;
+        lv2:name "step_seq_17" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 110 ;
+        lv2:symbol "step_seq_18" ;
+        lv2:name "step_seq_18" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 111 ;
+        lv2:symbol "step_seq_19" ;
+        lv2:name "step_seq_19" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 112 ;
+        lv2:symbol "step_seq_20" ;
+        lv2:name "step_seq_20" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 113 ;
+        lv2:symbol "step_seq_21" ;
+        lv2:name "step_seq_21" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 114 ;
+        lv2:symbol "step_seq_22" ;
+        lv2:name "step_seq_22" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 115 ;
+        lv2:symbol "step_seq_23" ;
+        lv2:name "step_seq_23" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 116 ;
+        lv2:symbol "step_seq_24" ;
+        lv2:name "step_seq_24" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 117 ;
+        lv2:symbol "step_seq_25" ;
+        lv2:name "step_seq_25" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 118 ;
+        lv2:symbol "step_seq_26" ;
+        lv2:name "step_seq_26" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 119 ;
+        lv2:symbol "step_seq_27" ;
+        lv2:name "step_seq_27" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 120 ;
+        lv2:symbol "step_seq_28" ;
+        lv2:name "step_seq_28" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 121 ;
+        lv2:symbol "step_seq_29" ;
+        lv2:name "step_seq_29" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 122 ;
+        lv2:symbol "step_seq_30" ;
+        lv2:name "step_seq_30" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 123 ;
+        lv2:symbol "step_seq_31" ;
+        lv2:name "step_seq_31" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 124 ;
+        lv2:symbol "step_sequencer_retrigger" ;
+        lv2:name "step_sequencer_retrigger" ;
+        lv2:default 1.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 125 ;
+        lv2:symbol "step_sequencer_sync" ;
+        lv2:name "step_sequencer_sync" ;
+        lv2:default 0.333333 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 126 ;
+        lv2:symbol "step_sequencer_tempo" ;
+        lv2:name "step_sequencer_tempo" ;
+        lv2:default 0.636364 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 127 ;
+        lv2:symbol "step_smoothing" ;
+        lv2:name "step_smoothing" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 128 ;
+        lv2:symbol "stutter_frequency" ;
+        lv2:name "stutter_frequency" ;
+        lv2:default 0.428571 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 129 ;
+        lv2:symbol "stutter_on" ;
+        lv2:name "stutter_on" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 130 ;
+        lv2:symbol "stutter_resample_frequency" ;
+        lv2:name "stutter_resample_frequency" ;
+        lv2:default 0.727273 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 131 ;
+        lv2:symbol "stutter_resample_sync" ;
+        lv2:name "stutter_resample_sync" ;
+        lv2:default 0.333333 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 132 ;
+        lv2:symbol "stutter_resample_tempo" ;
+        lv2:name "stutter_resample_tempo" ;
+        lv2:default 0.545455 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 133 ;
+        lv2:symbol "stutter_softness" ;
+        lv2:name "stutter_softness" ;
+        lv2:default 0.200000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 134 ;
+        lv2:symbol "stutter_sync" ;
+        lv2:name "stutter_sync" ;
+        lv2:default 0.333333 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 135 ;
+        lv2:symbol "stutter_tempo" ;
+        lv2:name "stutter_tempo" ;
+        lv2:default 0.400000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 136 ;
+        lv2:symbol "sub_octave" ;
+        lv2:name "sub_octave" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 137 ;
+        lv2:symbol "sub_shuffle" ;
+        lv2:name "sub_shuffle" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 138 ;
+        lv2:symbol "sub_volume" ;
+        lv2:name "sub_volume" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 139 ;
+        lv2:symbol "sub_waveform" ;
+        lv2:name "sub_waveform" ;
+        lv2:default 0.200000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 140 ;
+        lv2:symbol "unison_1_harmonize" ;
+        lv2:name "unison_1_harmonize" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 141 ;
+        lv2:symbol "unison_2_harmonize" ;
+        lv2:name "unison_2_harmonize" ;
+        lv2:default 0.000000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 142 ;
+        lv2:symbol "velocity_track" ;
+        lv2:name "velocity_track" ;
+        lv2:default 0.500000 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ,
+    [
+        a lv2:InputPort, lv2:ControlPort ;
+        lv2:index 143 ;
+        lv2:symbol "volume" ;
+        lv2:name "volume" ;
+        lv2:default 0.499969 ;
+        lv2:minimum 0.0 ;
+        lv2:maximum 1.0 ;
+    ] ;
+
+    doap:name "Helm" ;
+    doap:maintainer [ foaf:name "Matt Tytel" ] .
+
