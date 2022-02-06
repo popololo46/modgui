@@ -8,6 +8,17 @@
 @prefix time: <http://lv2plug.in/ns/ext/time#> .
 @prefix urid: <http://lv2plug.in/ns/ext/urid#> .
 @prefix midi: <http://lv2plug.in/ns/ext/midi#> .
+@prefix pg:      <http://lv2plug.in/ns/ext/port-groups#> .
+
+<http://devcurmudgeon.com/alo#loop>
+    a pg:InputGroup ;
+    lv2:name "Loop" ;
+    lv2:symbol "loop" .
+
+<http://devcurmudgeon.com/alo#param>
+    a pg:InputGroup ;
+    lv2:name "Param" ;
+    lv2:symbol "param" .
 
 <http://devcurmudgeon.com/alo>
 a lv2:Plugin, lv2:UtilityPlugin;
@@ -79,6 +90,7 @@ lv2:port
 	lv2:minimum 0;
 	lv2:maximum 1;
 	lv2:portProperty lv2:integer, lv2:toggled;
+    pg:group <http://devcurmudgeon.com/alo#loop> ;
 ],
 [
 	a lv2:ControlPort, lv2:InputPort;
@@ -89,6 +101,7 @@ lv2:port
 	lv2:minimum 0;
 	lv2:maximum 1;
 	lv2:portProperty lv2:integer, lv2:toggled;
+    pg:group <http://devcurmudgeon.com/alo#loop> ;
 ],
 [
 	a lv2:ControlPort, lv2:InputPort;
@@ -99,6 +112,7 @@ lv2:port
 	lv2:minimum 0;
 	lv2:maximum 1;
 	lv2:portProperty lv2:integer, lv2:toggled;
+    pg:group <http://devcurmudgeon.com/alo#loop> ;
 ],
 [
 	a lv2:ControlPort, lv2:InputPort;
@@ -109,6 +123,7 @@ lv2:port
 	lv2:minimum 0;
 	lv2:maximum 1;
 	lv2:portProperty lv2:integer, lv2:toggled;
+    pg:group <http://devcurmudgeon.com/alo#loop> ;
 ],
 [
 	a lv2:ControlPort, lv2:InputPort;
@@ -119,6 +134,7 @@ lv2:port
 	lv2:minimum 0;
 	lv2:maximum 1;
 	lv2:portProperty lv2:integer, lv2:toggled;
+    pg:group <http://devcurmudgeon.com/alo#loop> ;
 ],
 [
 	a lv2:ControlPort, lv2:InputPort;
@@ -129,6 +145,7 @@ lv2:port
 	lv2:minimum 0;
 	lv2:maximum 1;
 	lv2:portProperty lv2:integer, lv2:toggled;
+    pg:group <http://devcurmudgeon.com/alo#loop> ;
 ],
 [
 	a lv2:InputPort, lv2:ControlPort;
@@ -139,6 +156,7 @@ lv2:port
 	lv2:minimum -90;
 	lv2:maximum 24;
 	lv2:portProperty lv2:integer;
+    pg:group <http://devcurmudgeon.com/alo#param> ;
 ],
 [
 	a atom:AtomPort, lv2:InputPort;
@@ -167,6 +185,7 @@ lv2:port
 	lv2:minimum 0;
 	lv2:maximum 6;
 	lv2:portProperty lv2:integer;
+    pg:group <http://devcurmudgeon.com/alo#param> ;
 ],
 [
 	a lv2:ControlPort, lv2:InputPort;
@@ -177,6 +196,7 @@ lv2:port
 	lv2:minimum 0;
 	lv2:maximum 10;
 	lv2:portProperty lv2:integer;
+    pg:group <http://devcurmudgeon.com/alo#param> ;
 ],
 [
 	a lv2:ControlPort, lv2:InputPort;
@@ -187,6 +207,7 @@ lv2:port
 	lv2:minimum 1;
 	lv2:maximum 32;
 	lv2:portProperty lv2:integer;
+    pg:group <http://devcurmudgeon.com/alo#param> ;
 ],
 [
 	a lv2:InputPort, atom:AtomPort ;
