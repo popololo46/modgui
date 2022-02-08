@@ -1,0 +1,161 @@
+@prefix lv2:  <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ui:   <http://lv2plug.in/ns/extensions/ui#> .
+
+<https://obxd.wordpress.com>
+    a lv2:Plugin ;
+    lv2:binary <Obxd.so> ;
+    rdfs:seeAlso <Obxd.ttl> .
+
+<https://obxd.wordpress.com#ExternalUI>
+    a <http://kxstudio.sf.net/ns/lv2ext/external-ui#Widget> ;
+    ui:binary <Obxd.so> ;
+    lv2:requiredFeature <http://lv2plug.in/ns/ext/instance-access> ;
+    lv2:optionalFeature ui:touch ;
+    lv2:extensionData <http://kxstudio.sf.net/ns/lv2ext/programs#UIInterface> .
+
+<https://obxd.wordpress.com#ParentUI>
+    a ui:X11UI ;
+    ui:binary <Obxd.so> ;
+    lv2:requiredFeature <http://lv2plug.in/ns/ext/instance-access> ;
+   lv2:optionalFeature ui:idleInterface, ui:noUserResize, ui:touch ;
+    lv2:extensionData ui:idleInterface, <http://kxstudio.sf.net/ns/lv2ext/programs#UIInterface> .
+
+<Old_Stringmachine.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<BzPAD_Bright_Wave.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<O_Bells_1_IW.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Vox_Humana.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<PWM_Strings_1_IW.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<BzPER_Big_Drum__E3_.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<PAD___RandnHold_FB.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Persuaders.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<BzBRS_Blade_Brass.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<BP_Strings_1_IW.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Phobos.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<BzBEL_Meditation_Bowl.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Vangelis_Brass__MW_.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Saw_Strings_IW.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Sahara.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<XTFoamPad___02.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Influx_Strings_IW.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Deimos.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<30th_anniversary.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Vintage_Pad.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<SYNTH___Polly_Jean_FB.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<BzBEL_5th_Dimnsn___1.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<PD_Reso_Satellites.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Oxygene_Brass_IW.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<OBX_goes_PPG.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Oberheim_Diaries.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+<Fat_Moog_Bazz.ttl>
+	a pset:Preset ;
+	rdfs:seeAlso <factorypresets.ttl> ;
+	lv2:appliesTo <https://obxd.wordpress.com> .
+
+
+<https://obxd.wordpress.com> rdfs:seeAlso <modgui.ttl> .

@@ -1,0 +1,1146 @@
+<div class="helm{{{cns}}}">
+	<header class="bar-top">
+        <span class="title-helm">HELM</span>
+		<div class="mod-footswitch" mod-role="bypass"></div>
+		<div class="mod-presets clearfix">
+			<select mod-role="presets">
+				<option value="">Presets</option>
+				{{#effect.presets}}
+				<option mod-role="preset-label" value="{{uri}}">{{label}}</option>
+				{{/effect.presets}}
+			</select>
+		</div>
+    </header>
+    <div mod-role="drag-handle" class="mod-drag-handle"></div>
+	
+	<div class="mod-control-group clearfix">
+		
+		<div class="osc bloc">
+		
+		<div class="osc1 bloc">
+			<span class="title-bloc title-master">OSC</span>
+			{{#controls.57}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.57}}
+			{{#controls.58}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.58}}
+			{{#controls.59}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.59}}
+			{{#controls.60}}
+			<div class="mod-slider helm-{{symbol}} slider-num" mod-role="icon-button" mod-button-type="slider">
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-slider-title">{{name}}</span>
+			</div>
+			{{/controls.60}}
+			{{#controls.62}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.62}}
+			{{#controls.135}}
+			<div class="mod-switch helm-{{symbol}}" mod-role="input-control-port" style="margin-left: 12px;" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title" style="margin-left: 50px; margin-top: -16px;">{{name}}</div>
+			</div>
+			{{/controls.135}}
+		</div>		
+			
+			{{#controls.12}}
+			<div class="mod-slider helm-{{symbol}} slider-long" style="margin: 10px -2px 0 -2px;" mod-role="icon-button" style="" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.12}}
+			
+		<div class="osc2 bloc">
+			{{#controls.63}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.63}}
+			{{#controls.64}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.64}}
+			{{#controls.65}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.65}}
+			{{#controls.66}}
+			<div class="mod-slider helm-{{symbol}} slider-num" mod-role="icon-button" mod-button-type="slider">
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-slider-title">{{name}}</span>
+			</div>
+			{{/controls.66}}
+			{{#controls.68}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}} 
+				</div>
+			</div>
+			{{/controls.68}}
+			{{#controls.136}}
+			<div class="mod-switch helm-{{symbol}}" mod-role="input-control-port" style="margin-left: 12px;" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title" style="margin-left: 50px; margin-top: -16px;">{{name}}</div>
+			</div>
+			{{/controls.136}}
+		</div>	
+		</div>
+		
+
+		<div class="feedback bloc">
+			<span class="title-bloc title-master">FEEDBACK</span>
+			{{#controls.69}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.69}}
+			{{#controls.70}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.70}}
+			{{#controls.71}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-pan" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.71}}
+		</div>
+		
+		
+		<div class="mixer bloc">
+			<span class="title-bloc title-master">MIXER</span>
+			{{#controls.61}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.61}}
+			{{#controls.67}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.67}}
+			{{#controls.133}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.133}}
+			{{#controls.55}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.55}}
+		</div>
+		
+		
+		<div class="sub bloc">
+			<span class="title-bloc title-master">SUB</span>
+			{{#controls.134}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="margin-top: 10px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.134}}
+			{{#controls.132}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.132}}
+			{{#controls.131}}
+			<div class="mod-switch helm-{{symbol}}" mod-role="input-control-port" style="margin: 19px 0px 0px 15px;" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title">{{name}}</div>
+			</div>
+			{{/controls.131}}
+		</div>
+		
+		
+		<div class="filter bloc">
+			{{#controls.31}}
+			<div class="mod-switch helm-{{symbol}} switch-bloc" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title">{{name}}</div>
+			</div>
+			{{/controls.31}}
+			<span class="title-bloc title-master">FILTER</span>
+			{{#controls.32}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.32}}
+			{{#controls.33}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="margin-top: 20px; margin-left: 15px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.33}}
+			{{#controls.13}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 20px 0 15px -20px;">
+				<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.13}}
+			{{#controls.81}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 20px 0 15px -1px;">
+				<div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.81}}
+			
+			{{#controls.30}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 5px 0 0px 5px; top: 55px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.30}}
+			{{#controls.26}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-pan" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.26}}
+			{{#controls.29}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.29}}
+			
+			{{#controls.37}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" style="bottom: 50px; left: 50px;" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.37}}
+		</div>
+		
+		
+		<div class="arp bloc">
+			{{#controls.7}}
+			<div class="mod-switch helm-{{symbol}} switch-bloc" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title">{{name}}</div>
+			</div>
+			{{/controls.7}}
+			<span class="title-bloc">ARP</span>
+			{{#controls.9}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.9}}
+			{{#controls.10}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 50px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.10}}
+			
+			{{#controls.4}}
+			<div class="mod-knob helm-{{symbol}}" style="margin-top: 9px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.4}}
+			{{#controls.5}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.5}}
+			{{#controls.6}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-4" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.6}}
+			{{#controls.8}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="top: 15px; margin-right: 74px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.8}}
+		</div>	
+
+
+		<div class="stutter bloc">
+			{{#controls.124}}
+			<div class="mod-switch helm-{{symbol}} switch-bloc" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title">{{name}}</div>
+			</div>
+			{{/controls.124}}
+			<span class="title-bloc">STUTTER</span>
+			{{#controls.129}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="margin-top: 10px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.129}}
+			{{#controls.130}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 50px; margin-top: 10px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.130}}
+			{{#controls.123}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 5px 0px 30px 110px;">
+				<div class="mod-knob-image knob-blue" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.123}}
+			
+			{{#controls.126}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.126}}
+			{{#controls.127}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 50px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.127}}
+			{{#controls.125}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 5px 5px 15px 111px;" mod-port-symbol="{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.125}}
+			
+			{{#controls.128}}
+			<div class="mod-slider helm-{{symbol}} slider-long" mod-role="icon-button" style="bottom: 175px;" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.128}}
+		</div>
+		
+		
+		<div class="formant bloc">
+			{{#controls.34}}
+			<div class="mod-switch helm-{{symbol}} switch-bloc" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title">{{name}}</div>
+			</div>
+			{{/controls.34}}
+			<span class="title-bloc">FORMANT</span>
+			{{#controls.35}}
+			<div class="mod-knob helm-{{symbol}}" style="margin-left: -15px;">
+				<div class="mod-knob-image knob-blue" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.35}}
+			{{#controls.36}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-blue" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.36}}
+		</div>
+		
+		
+		<div class="dist bloc">
+			{{#controls.22}}
+			<div class="mod-switch helm-{{symbol}} switch-bloc" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title">{{name}}</div>
+			</div>
+			{{/controls.22}}
+			<span class="title-bloc">DISTORSION</span>
+			{{#controls.23}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port"  style="width:90px; top: 35px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.23}}
+			{{#controls.20}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.20}}
+			{{#controls.21}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.21}}
+			
+			
+		</div>	
+		
+		
+		<div class="delay bloc">
+			{{#controls.17}}
+			<div class="mod-switch helm-{{symbol}} switch-bloc" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title">{{name}}</div>
+			</div>
+			{{/controls.17}}
+			<span class="title-bloc">DELAY</span>
+			{{#controls.18}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port"  style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.18}}
+			{{#controls.19}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 50px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.19}}
+			
+			{{#controls.14}}
+			<div class="mod-knob helm-{{symbol}}" style="margin-top: 9px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.14}}
+			{{#controls.15}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.15}}
+			{{#controls.16}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.16}}
+
+		</div>
+		
+		
+		<div class="reverb bloc">
+			{{#controls.85}}
+			<div class="mod-switch helm-{{symbol}} switch-bloc" mod-role="input-control-port" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title">{{name}}</div>
+			</div>
+			{{/controls.85}}
+			<span class="title-bloc">REVERB</span>
+			{{#controls.82}}
+			<div class="mod-knob helm-{{symbol}}" style="margin-left: -15px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.82}}
+			{{#controls.83}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.83}}
+			{{#controls.84}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.84}}
+		</div>
+		
+		
+		<div class="amp-env bloc">
+			<span class="title-bloc title-master">AMP ENV</span>
+			{{#controls.0}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.0}}
+			{{#controls.1}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.1}}
+			{{#controls.2}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.2}}
+			{{#controls.3}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.3}}
+		</div>
+		
+		
+		<div class="filter-env bloc">
+			<span class="title-bloc title-master">FILTER ENV</span>
+			{{#controls.24}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.24}}
+			{{#controls.25}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.25}}
+			{{#controls.28}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.28}}
+			{{#controls.27}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.27}}
+		</div>
+		
+		
+		<div class="mod-env bloc">
+			<span class="title-bloc title-master">MOD ENV</span>
+			{{#controls.39}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.39}}
+			{{#controls.40}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.40}}
+			{{#controls.42}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.42}}
+			{{#controls.41}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.41}}
+		</div>
+		
+		
+		<div class="lfo1 bloc">
+			<span class="title-bloc title-master">LFO1</span>
+			{{#controls.46}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.46}}
+			{{#controls.47}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 50px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.47}}
+			{{#controls.43}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 9px 5px 15px 20px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.43}}
+			{{#controls.44}}
+			<div class="mod-knob helm-{{symbol}}" style="">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.44}}
+			
+			{{#controls.45}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 90px; top: 30px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.45}}
+			{{#controls.48}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 90px; top: 55px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.48}}
+		</div>
+		
+		<div class="lfo2 bloc">
+			<span class="title-bloc title-master">LFO2</span>
+			{{#controls.52}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.52}}
+			{{#controls.53}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 50px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.53}}
+			{{#controls.49}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 9px 5px 15px 20px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.49}}
+			{{#controls.50}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.50}}
+			
+			{{#controls.51}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 90px; top: 30px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.51}}
+			{{#controls.54}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 90px; top: 55px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.54}}
+		</div>
+		
+		<div class="polylfo bloc">
+			<span class="title-bloc title-master">POLY-LFO</span>
+			{{#controls.75}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.75}}
+			{{#controls.76}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 50px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.76}}
+			{{#controls.73}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 9px 5px 15px 20px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.73}}
+			{{#controls.74}}
+			<div class="mod-knob helm-{{symbol}}">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.74}}
+			
+			{{#controls.77}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 90px; top: 35px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.77}}
+		</div>
+		
+		
+		<div class="stepseq bloc">
+			<span class="title-bloc title-master">STEP SEQ</span>
+			{{#controls.120}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.120}}
+			{{#controls.121}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 50px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.121}}
+			{{#controls.119}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 90px; margin-left: 535px;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+			{{/controls.119}}
+			{{#controls.87}}
+			<div class="mod-slider helm-{{symbol}} slider-step" style="margin-left: 10px;" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.87}}
+			{{#controls.88}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.88}}
+			{{#controls.89}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.89}}
+			{{#controls.90}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.90}}
+			{{#controls.91}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.91}}
+			{{#controls.92}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.92}}
+			{{#controls.93}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.93}}
+			{{#controls.94}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.94}}
+			{{#controls.95}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.95}}
+			{{#controls.96}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.96}}
+			{{#controls.97}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.97}}
+			{{#controls.98}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.98}}
+			{{#controls.99}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.99}}
+			
+			{{#controls.100}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.100}}
+			{{#controls.101}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.101}}
+			{{#controls.102}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.102}}
+			{{#controls.103}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.103}}
+			{{#controls.104}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.104}}
+			{{#controls.105}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.105}}
+			{{#controls.106}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.106}}
+			{{#controls.107}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.107}}
+			{{#controls.108}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.108}}
+			{{#controls.109}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.109}}
+			{{#controls.110}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.110}}
+			{{#controls.111}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.111}}
+			
+			{{#controls.112}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.112}}
+			{{#controls.113}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.113}}
+			{{#controls.114}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.114}}
+			{{#controls.115}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.115}}
+			{{#controls.116}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.116}}
+			{{#controls.117}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.117}}
+			{{#controls.118}}
+			<div class="mod-slider helm-{{symbol}} slider-step" mod-role="icon-button" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.118}}
+			
+			
+			{{#controls.86}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 5px 40px 15px 15px;" >
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.86}}
+			{{#controls.56}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 5px 0px 15px 15px;">
+				<div class="mod-knob-image knob-32" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.56}}
+			{{#controls.122}}
+			<div class="mod-slider helm-{{symbol}}" mod-role="icon-button" style="float: right; bottom: 60px; width: 65px;" mod-button-type="slider">
+				<span class="mod-slider-title">{{name}}</span>
+				<div class="mod-slider-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+			</div>
+			{{/controls.122}}
+		</div>
+		
+		<div class="control bloc">
+			<span class="title-bloc title-master">CONTROL</span>
+			{{#controls.78}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 15px 15px 15px 15px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.78}}
+			{{#controls.72}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 15px 15px 15px 15px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.72}}
+			{{#controls.79}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 15px 15px 15px 15px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.79}}
+			{{#controls.137}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 15px 15px 15px 15px;">
+				<div class="mod-knob-image knob-yellow" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title">{{name}}</span>
+			</div>
+			{{/controls.137}}
+			{{#controls.80}}
+			<div class="mod-enumerated helm-{{symbol}}" mod-role="input-control-port" style="width: 60px; margin: 20px 15px 15px 15px; float: left;" mod-port-symbol="{{symbol}}" mod-widget="custom-select">
+				<span class="mod-enum-title">{{name}}</span>
+				<div mod-role="input-control-value" mod-port-symbol="{{symbol}}" class="mod-enumerated-selected" contenteditable="false"></div>
+				<div class="mod-enumerated-list" mod-widget-property="hidden" style="display: none">
+					{{#scalePoints}}
+					<div mod-role="enumeration-option" mod-port-value="{{value}}">{{label}}</div>
+					{{/scalePoints}}
+				</div>
+			</div>
+
+			{{/controls.80}}
+			{{#controls.38}}
+			<div class="mod-switch helm-{{symbol}}" mod-role="input-control-port" style="width: 60px; margin: 20px 5px 10px 7px;" mod-widget="switch" mod-port-symbol="{{symbol}}" title="{{comment}}">
+				<div class="mod-switch-title">{{name}}</div>
+			</div>
+			{{/controls.38}}
+			{{#controls.138}}
+			<div class="mod-knob helm-{{symbol}}" style="margin: 20px 0px 15px 5px;right: 50px;">
+				<div class="mod-knob-image knob-big" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+				<span class="mod-knob-title"style="margin: 25px 0px 0px 0px; width: 70px; font-size: 15px;">{{name}}</span>
+			</div>
+			{{/controls.138}}
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>	
+
+    <div class="mod-pedal-input">
+	
+        {{#effect.ports.audio.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.audio.input}}
+        {{#effect.ports.midi.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.midi.input}}
+        {{#effect.ports.cv.input}}
+        <div class="mod-input mod-input-disconnected" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input}}
+    </div>
+
+    <div class="mod-pedal-output">
+        {{#effect.ports.audio.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.audio.output}}
+        {{#effect.ports.midi.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-midi-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.midi.output}}
+        {{#effect.ports.cv.output}}
+        <div class="mod-output mod-output-disconnected" title="{{name}}" mod-role="output-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.cv.output}}
+    </div>
+</div>

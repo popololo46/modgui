@@ -1,0 +1,531 @@
+@import url(/fonts/nexa/stylesheet.css);
+@import url(/fonts/nexa/stylesheet.css);
+
+
+/* CONTAINER
+================================================ */
+.helm{{{cns}}} {
+	background-color: #5A5B5D;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1120px 657px;
+    height: 725px;
+    position: absolute;
+    width: 1015px;
+    border: 1px solid #fff;
+    border-radius: 1.5em;
+}
+
+.mod-pedal .mod-drag-handle {
+    height: 40px;
+    width: 1000px;
+    z-index: 20;
+}
+.helm{{{cns}}} .mod-control-group {
+    position:relative;
+	top: 40px;
+    z-index:30;
+}	
+	
+/* BAR TOP 
+================================================ */
+.helm{{{cns}}} .bar-top {
+	background-color: #191919 !important;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+    width: 100%;
+}
+.helm{{{cns}}} .title-helm {
+    color: #FFF;
+    background-color: rgb(25,25,25,1);
+    display: block;
+    left: 20px;
+    position: absolute;
+    border: solid 2px #ccc;
+    border-top-left-radius: 0.7em;
+    border-top-right-radius: 0.7em;
+    top: -36px;
+    padding: 5px 24px;
+    font-size: 35px;
+}
+
+
+
+/* ON/OFF 
+================================================ */
+.helm{{{cns}}} .mod-footswitch {
+	background-image: url(/resources/utils/switch-green.png{{{ns}}});
+    background-size: auto 60px;
+    cursor: pointer;
+    height: 30px;
+    z-index: 100;
+    position: relative;
+    left: 445px;
+    top: -3px;
+    width: 110px;
+}
+.helm{{{cns}}} .on {
+    background-position: bottom center;
+}
+.helm{{{cns}}} .off {
+    background-position: top center;
+}
+
+
+
+
+/* PORTS
+================================================ */
+
+.helm{{{cns}}} .mod-pedal-input,
+.helm{{{cns}}} .mod-pedal-output {
+    top: 100px;
+}
+
+
+
+/* BLOC 
+================================================ */
+.helm{{{cns}}} .bloc {
+    border: solid 1px #15191E;
+    border-radius: 7px;
+	background: #191919 !important;
+	margin-bottom: 12px;
+	margin-left: 12px;
+	position: absolute;
+}
+
+.helm{{{cns}}} .title-bloc {
+    background: #191919;
+    color: #FFF;
+    font-size: 13px;
+    margin-left: 2px;
+    padding: 0px 7px;
+    margin-top: -9px;
+    /* margin-left: 0px; */
+    border: solid 1px #1A84B8;
+    border-radius: 7px;
+    position: absolute;
+}
+
+.helm{{{cns}}}  .osc {
+	width: 320px;
+    height: 210px;
+}
+.helm{{{cns}}}  .osc1 {
+	width: 130px;
+    height: 200px;
+    background: #212121 !important;
+    position: relative;
+    float: left;
+    margin: 0;
+}
+.helm{{{cns}}}  .osc2 {
+	width: 130px;
+    height: 200px;
+    background: #212121 !important;
+    position: relative;
+    float: right;
+    margin: 0;
+}
+
+.helm{{{cns}}}  .feedback {
+	width: 170px;
+    height: 85px;
+    top: 220px;
+    left: 150px;
+}
+.helm{{{cns}}}  .mixer {
+	width: 215px;
+    height: 120px;
+    top: 185px;
+    left: 330px;
+}
+.helm{{{cns}}}  .sub {
+	width: 145px;
+    height: 85px;
+    top: 220px;
+    left: 0px;
+}
+.helm{{{cns}}}  .filter {
+	width: 215px;
+    height: 175px;
+    left: 330px;
+    top: 0px;
+}
+.helm{{{cns}}}  .arp {
+	width: 235px;
+    height: 110px;
+    right: 10px;
+}
+.helm{{{cns}}}  .stutter {
+	width: 190px;
+    height: 210px;
+    top: 0px;
+    left: 555px;
+}
+.helm{{{cns}}}  .formant {
+	width: 140px;
+    height: 120px;
+    left: 645px;
+    top: 315px;
+}
+.helm{{{cns}}}  .dist {
+	width: 235px;
+    height: 85px;
+    top: 215px;
+    right: 10px;
+}
+.helm{{{cns}}}  .delay {
+	width: 235px;
+    height: 85px;
+    right: 10px;
+    top: 120px;
+}
+.helm{{{cns}}}  .reverb {
+	width: 190px;
+    height: 85px;
+    left: 555px;
+    top: 220px;
+}
+.helm{{{cns}}}  .amp-env {
+	width: 205px;
+    height: 120px;
+    top: 315px;
+}
+.helm{{{cns}}}  .filter-env {
+	width: 205px;
+    height: 120px;
+    top: 315px;
+    left: 215px;
+}
+.helm{{{cns}}}  .mod-env {
+	width: 205px;
+    height: 120px;
+    top: 315px;
+    left: 430px;
+}
+.helm{{{cns}}}  .lfo1 {
+	width: 255px;
+    height: 85px;
+    top: 445px;
+}
+.helm{{{cns}}}  .lfo2 {
+	width: 255px;
+    height: 85px;
+    top: 445px;
+	left: 265px;
+}
+.helm{{{cns}}}  .polylfo {
+	width: 255px;
+    height: 85px;
+    top: 445px;
+	left: 530px;
+}
+.helm{{{cns}}}  .stepseq {
+	width: 785px;
+    height: 135px;
+    top: 540px;
+    left: 0px;
+}
+.helm{{{cns}}}  .control {
+	width: 170px;
+    height: 345px;
+    right: 20px;
+    top: 318px;
+    border: 2px solid #FEC930;
+}
+
+
+
+/* KNOBS
+================================================ */
+.helm{{{cns}}} .mod-control-group .mod-knob {
+    position: relative;
+    float: left;
+    height: 50px;
+    width: 50px;
+    padding: 10px 5px;
+    margin: 5px 0px 15px 5px;
+}
+.helm{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+	background-image: url(/resources/knobs/knob-blue.png{{{ns}}});
+    background-repeat:no-repeat;
+	background-size:auto 40px;
+    width: 40px;
+    height: 40px;
+	position: absolute;
+}
+.helm{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knob-pan {
+	background-image: url(/resources/knobs/knob-pan.png{{{ns}}}) !important;
+}
+.helm{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knob-yellow {
+	background-image: url(/resources/knobs/knob-yellow.png{{{ns}}}) !important;
+}
+.helm{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knob-4 {
+	background-image: url(/resources/knobs/knob-4.png{{{ns}}}) !important;
+}
+.helm{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knob-32 {
+	background-image: url(/resources/knobs/knob-32.png{{{ns}}}) !important;
+}
+.helm{{{cns}}} .mod-control-group .mod-knob .mod-knob-image.knob-big {
+	background-image: url(/resources/knobs/knob-big.png{{{ns}}}) !important;
+	background-size:auto 70px;
+    width: 70px;
+    height: 70px;
+}
+.helm{{{cns}}} .mod-knob-title {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 50px;
+    margin-left: -5px;
+    top: 44px;
+	overflow: visible;
+}
+
+
+.helm{{{cns}}} .mod-control-group .mod-knob.helm-volume {
+
+}
+
+
+
+
+/* SLIDER
+================================================ */
+.helm{{{cns}}} .mod-slider {
+    float:left;
+    height:110px;
+	margin-top: 10px;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    width:50px;
+}
+.helm{{{cns}}} .mod-slider .mod-slider-title {
+    display: block;
+	color:#fff;
+    font-size: 12px;
+    line-height: 1;
+    overflow: hidden;
+    padding: 3px 0px;
+    position: relative;
+}
+.helm{{{cns}}} .mod-slider .mod-slider-image {
+	background-image:url(/resources/knobs/slider-little.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 75px;
+    height: 75px;
+    margin: 5px auto;
+    width: 50px;
+}
+
+.helm{{{cns}}} .mod-slider.slider-long {
+    width: 60px;
+	height: 170px;
+	margin: 10px -5px 0 -5px;
+}
+.helm{{{cns}}} .mod-slider.slider-long .mod-slider-image {
+	background-image:url(/resources/knobs/slider-long.png{{{ns}}});
+    background-size: auto 150px;
+    height: 150px;
+    margin: 2px auto;
+    width: 60px;
+}
+
+.helm{{{cns}}} .mod-slider.slider-num {
+    width: 54px;
+	height: 60px;
+	margin: 15px 0 5px 5px;
+}
+.helm{{{cns}}} .mod-slider.slider-num .mod-slider-image {
+	background-image:url(/resources/knobs/num-1-15.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 32px;
+    height: 32px;
+    width: 54px;
+	margin-left: -10px;
+}
+
+.helm{{{cns}}} .mod-slider.slider-step {
+    width: 20px;
+	margin: 10px 0 0 0;
+}
+.helm{{{cns}}} .mod-slider.slider-step .mod-slider-image {
+	background-image:url(/resources/knobs/slider-step.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 100px;
+    height: 100px;
+    width: 20px;
+}
+
+.helm{{{cns}}} .mod-slider .mod-slider-image:hover {
+    cursor:pointer;
+}
+
+
+
+
+/* SWITCH
+================================================ */
+.helm{{{cns}}} .mod-switch {
+    background-image: url(/resources/utils/switch.png{{{ns}}});
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 48px auto;
+    position: relative !important;
+    height: 14px;
+    float: left;
+    width: 48px;
+    margin: 10px 5px 10px 5px;
+    cursor: pointer;
+    z-index: 40;
+}
+.helm{{{cns}}} .mod-switch.on {
+    background-position:top center;
+}
+.helm{{{cns}}} .mod-switch-title {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 64px;
+    margin-left: -6px;
+    top: 15px;
+}
+
+.helm{{{cns}}} .mod-switch.switch-bloc {
+    background-image: url(/resources/utils/switch-bloc.png{{{ns}}});
+	background-color: #191919;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 23px auto;
+    position: relative !important;
+    height: 23px;
+    width: 23px;
+	border-radius: 12px;
+    margin-top: -9px;
+    cursor: pointer;
+    z-index: 40;
+}
+.helm{{{cns}}} .mod-switch.switch-bloc.on {
+    background-position-y: top !important
+}
+.helm{{{cns}}} .mod-switch.switch-bloc .mod-switch-title {
+    display: none;
+}
+
+
+
+/* ENUMERATED LIST
+================================================ */
+.helm{{{cns}}} .mod-enumerated {
+	background-image:url(/resources/utils/dropdown-white.png{{{ns}}});
+	background-position: right center;
+    background-repeat: no-repeat;
+    background-color: #5A5B5D;
+    position: relative;
+    width: 80px;
+    height: 20px;
+    color: #fff;
+    cursor: pointer;
+    padding: 1px 0 0 4px;
+    margin: -8px 2px;
+    border: 2px solid #212121;
+    text-transform: uppercase;
+    float: right;
+}
+.helm{{{cns}}} .mod-enumerated .mod-enumerated-list {
+	bottom: -3px;
+    background-color: #191919;
+    border-radius: 10px;
+    display: none;
+    width: 160px;
+    position: relative;
+    text-align: left;
+    font-size: 22px;
+    padding: 8px;
+    border: 2px solid #FE862C;
+    line-height: 1.6;
+    text-transform: uppercase;
+    z-index: 53;
+}
+.helm{{{cns}}} .mod-enumerated .mod-enumerated-selected {
+    font-size: 15px;
+}
+.helm{{{cns}}} .mod-enumerated .mod-enumerated-list > div.selected {
+    background-color: #fff;
+    color: #000;
+    border: 3px solid #FE862C;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+.helm{{{cns}}} .mod-enum-title {
+    display: none;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin-left: -10px;
+    top: -21px;
+}
+
+.helm{{{cns}}} .osc .mod-enumerated {
+    width: 100px;
+	height: 24px;
+    margin: 0px 10px;
+    float: left;
+}
+    
+
+
+/* Presets
+================================================ */
+.helm{{{cns}}} .mod-presets {
+	position: absolute;
+    width: 160px !important;
+    top: -22px;
+    left: 150px;
+    z-index: 22;
+    font-size: 18px;
+}
+.helm{{{cns}}} .mod-presets > select {
+    width: 200px !important;
+    height: 50px;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 2px;
+    color: #ccc;
+    color: #FFF;
+    background-color: rgb(25,25,25,1);
+    display: block;
+    left: 20px;
+    position: absolute;
+    border: solid 2px #ccc;
+    border-top-left-radius: 0.7em;
+    border-top-right-radius: 0.7em;
+}
+.helm{{{cns}}} .mod-presets > select > option {
+	background-color: #191919;
+	font-size: 20px;
+	color:#ccc;
+}
+
+
+
+
+
+
